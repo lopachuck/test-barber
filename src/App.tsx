@@ -4,17 +4,20 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import Layout from "./components/Layout/Layout";
 
-const appProps = {}
+export interface IAppProps {
+    setTitle: any
+}
+
+
+
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          {/*<Route  path="/" element={<><h1>HOLLA</h1></>} />*/}
-          <Route  path="/" element={<Layout {...appProps}/>}>
-            <Route path="contacts" element={<Contacts />}/>
-
+          <Route  path="/" element={<Layout />}>
+            <Route path="contacts" element={<Contacts  />}/>
           </Route>
 
         </Routes>
