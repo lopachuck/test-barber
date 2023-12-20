@@ -9,12 +9,6 @@ import Menu from "../../components/Menu/menu";
 const Header: FC = () => {
     return (
         <>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'anonymous'} />
-            <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-            />
             <S.HeaderContainer>
               <S.LogoWrapper>
                 <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'}/>

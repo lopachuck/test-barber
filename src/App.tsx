@@ -12,18 +12,25 @@ export interface IAppProps {
 
 const App: React.FC = () => {
   return (
-    <>
-      <GlobalStyle />
-      <BrowserRouter>
-        <Routes>
-          <Route  path="/" element={<Layout />}>
-            <Route path="contacts" element={<Contacts  />}/>
-          </Route>
-
-        </Routes>
-      </BrowserRouter>
-
-    </>
+      <>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'anonymous'}/>
+          <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+          />
+          
+          <GlobalStyle/>
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/" element={<Layout/>}>
+                      <Route path="contacts" element={<Contacts/>}/>
+                  </Route>
+              
+              </Routes>
+          </BrowserRouter>
+      
+      </>
   )
 }
 export default App;
