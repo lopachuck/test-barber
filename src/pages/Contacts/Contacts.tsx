@@ -1,6 +1,6 @@
-import {FC, useEffect} from 'react';
-import {IAppProps} from "../../App";
+import {FC} from 'react';
 import * as S from "./contacts.styles"
+import {t} from "../../utils/translate/t";
 
 const Contacts: FC = () => {
   return (
@@ -11,24 +11,42 @@ const Contacts: FC = () => {
                 <S.ContactInfo>
                     <a href={'#'} >
                         <img src={"/svg/icons/location.svg"} alt="loc"/>
-                        <span>Fr.R.Kreutzwaldi 7, 10126 Tallinn</span>
+                        <span>{t('contacts_address')}</span>
                     </a>
                     <S.WorkTime>
                         <img src={"/svg/icons/time.svg"} alt="loc"/>
-                        <span>Mon-Fri  10:00 - 20:00 <br/>Sat 10:00 - 19:00, Sun 10:00 - 16:00</span>
+                        <span>{t('contacts_mon_fri')} 10:00 - 20:00 <br/>{t('contacts_sat')} 10:00 - 19:00, {t('contacts_sun')} 10:00 - 16:00</span>
                     </S.WorkTime>
-                    <a href={''} >
+                    <a href={'tel:+37258365820'} >
                         <img src={"/svg/icons/phone.svg"} alt="loc"/>
                         <span>+37258365820</span>
                     </a>
-                    <a href={''} >
+                    <a href={'mailto:unclevebarbershop@gmail.com'} >
                         <img src={"/svg/icons/letter.svg"} alt="loc"/>
                         <span>unclevebarbershop@gmail.com</span>
                     </a>
                 </S.ContactInfo>
-                <S.SocialLinks></S.SocialLinks>
+                <S.SocialWrapper>
+                    <span>Subcscribe to our social media</span>
+                    <S.SocialIconWrapper>
+                        <S.SocialIcon to={'https://instagram.com'} target={'_blank'}>
+                            <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
+                        </S.SocialIcon>
+                        <S.SocialIcon to={'https://facebook.com'} target={'_blank'}>
+                            <img src={'/svg/icons/facebook.svg'} alt={'insta'}/>
+                        </S.SocialIcon>
+                    </S.SocialIconWrapper>
+                </S.SocialWrapper>
             </S.PageInfoWrapper>
-            <S.MapWrapper></S.MapWrapper>
+            <S.MapWrapper>
+                <iframe
+                    width={1160}
+                    height={524}
+                    style={{border:0}}
+                    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzf-0Cw2EmKJfG3YlNnIMKQGxUSieGkRw&center=59.4365019,24.7689061&zoom=19"
+                    allowFullScreen
+                ></iframe>
+            </S.MapWrapper>
         </S.PageWrapper>
     </>
   );
