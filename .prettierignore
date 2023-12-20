@@ -1,0 +1,5 @@
+# Ignore artifacts:
+build
+coverage
+my-show
+src/utils/translate/lang/en.ts

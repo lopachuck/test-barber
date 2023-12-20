@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from './styles/global'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Contacts from "./pages/Contacts/Contacts";
+import Layout from "./components/Layout/Layout";
 
-function App() {
+const appProps = {}
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Routes>
+          {/*<Route  path="/" element={<><h1>HOLLA</h1></>} />*/}
+          <Route  path="/" element={<Layout {...appProps}/>}>
+            <Route path="contacts" element={<Contacts />}/>
 
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
+
+    </>
+  )
+}
 export default App;
