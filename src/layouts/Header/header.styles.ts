@@ -7,6 +7,7 @@ export const HeaderContainer = styled.div`
     flex-direction: row;
     width: 100%;
     height: 80px;
+    
 `
 export const LogoWrapper = styled.div`
     width: 60px;
@@ -21,18 +22,40 @@ export const LangMenuWrapper = styled.div`
     height: 100%;
     width: 72px;
     padding-left: 185px;
+    align-items: center;
+`
+export const LangMenu = styled.span`
+    display: flex;
+    height: 32px;
+    align-items: center;
+    color:  #FFF;
+    /* Actions-Navigation */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    text-transform: uppercase;
+    &:after {
+        content: url('/svg/icons/down.svg');
+        width: 32px;
+        height: 32px;
+        align-self: center;
+    }
 `
 export const BookingBtnWrapper = styled.div`
   display: flex;
     height: 100%;
     align-items: center;
     padding-left: 32px;
+    justify-self: flex-end;
+    margin-left: auto;
 `
 export const BookingBtn = styled(NavLink)`
     text-decoration: none;
     display: flex;
     height: 40px;
-    padding: 10px 28px;
+    width: 136px;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -48,21 +71,7 @@ export const BookingBtn = styled(NavLink)`
     line-height: 20px; /* 142.857% */
     text-transform: uppercase;
 `
-export const LangMenu = styled.span`
-    color:  #FFF;
-    /* Actions-Navigation */
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px; /* 150% */
-    text-transform: uppercase;
-    &:after {
-        content: url('/svg/icons/arrow.svg');
-        width: 10px;
-        height: 10px;
-        margin: 0 5px;
-    }
-`
+
 export const Logo = styled.img`
     width: 60px;
     padding-top: 7px;
