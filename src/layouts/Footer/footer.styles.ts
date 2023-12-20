@@ -1,18 +1,76 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
+import {Link} from "react-router-dom";
 
 export const FooterWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 314px;
     
 `
 export const InfoWrapper = styled.div`
-    display: flex;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 275px;
+    padding: 43px 0;
+    height: 206px;
     width: 100%;
     border-top: 1px solid #6B6B6B;
+    border-bottom: 1px solid #6B6B6B;
 `
-export const SocialWrapper = styled.div``
-export const Logo = styled.div``
-export const AddressWrapper = styled.div``
-export const CopyrightWrapper = styled.div``
+export const SocialWrapper = styled.div`
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    &>span{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+`
+export const SocialIconWrapper = styled.div``
+export const InfoTitle = styled.div`
+    color: #ffffff;
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.252px;
+`
+export const SocialIcon = styled(Link)`
+    width: 32px;
+    margin-right: 16px;
+`
+export const Logo = styled.img``
+export const ContactsWrapper = styled.div`
+`
+export const ContactsDetails = styled.div`
+    color: #ABABAB;
+    /* Caption */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+`
+export const Address = styled.div``
+export const Phone = styled.div``
+export const Mail = styled.div``
+export const CopyrightWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`
+export const CopyrightText = styled.span`
+    color: #ABABAB;
+    /* Caption */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 36px;
+    padding-bottom: 100px;
+`
