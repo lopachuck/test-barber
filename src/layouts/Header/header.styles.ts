@@ -29,7 +29,7 @@ export const LangMenu = styled.span`
     display: flex;
     height: 32px;
     align-items: center;
-    color:  #FFF;
+    color: ${({ theme }) => theme.colors.white};
     /* Actions-Navigation */
     font-size: 16px;
     font-style: normal;

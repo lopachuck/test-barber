@@ -15,7 +15,7 @@ export const PageTitle = styled.div`
     font-weight: 700;
     line-height: 48px; /* 120% */
     letter-spacing: -0.8px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
     margin: 0 auto;
 `
 export const PageInfoWrapper = styled.div`
@@ -27,7 +27,7 @@ export const ContactInfo = styled.div`
     flex-direction: column;
     & > a {
         text-decoration: none;
-        color: #ffffff;
+        color: ${({ theme }) => theme.colors.white};
         display: flex;
         align-items: center;
         padding-bottom: 12px;
@@ -37,7 +37,7 @@ export const ContactInfo = styled.div`
     }
 `
 export const WorkTime = styled.div`
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
     display: flex;
     padding-bottom: 12px;
     & > img {
@@ -45,7 +45,7 @@ export const WorkTime = styled.div`
     }
 `
 export const SocialWrapper = styled.div`
-    color:  #FFF;
+    color:  ${({ theme }) => theme.colors.white};
     text-align: right;
     /* Headline4 */
     font-size: 18px;
