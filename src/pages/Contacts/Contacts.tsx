@@ -40,7 +40,7 @@ const Contacts: FC = () => {
             </S.PageInfoWrapper>
             <S.MapWrapper>
                 <iframe
-                    width={1160}
+                    width={'100%'}
                     height={524}
                     style={{border:0}}
                     src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzf-0Cw2EmKJfG3YlNnIMKQGxUSieGkRw&center=59.4365019,24.7689061&zoom=19"

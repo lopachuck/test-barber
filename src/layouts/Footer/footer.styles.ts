@@ -11,16 +11,17 @@ export const FooterWrapper = styled.div`
 `
 export const InfoWrapper = styled.div`
     display: inline-flex;
-    align-items: flex-start;
-    gap: 275px;
+    align-items: center;
+    justify-content: space-between;
+    //gap: 275px;
     padding: 43px 0;
     height: 206px;
     width: 100%;
-    border-top: 1px solid #6B6B6B;
-    border-bottom: 1px solid #6B6B6B;
+    border-top: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.elementsGrey};
 `
 export const SocialWrapper = styled.div`
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,7 +35,7 @@ export const SocialWrapper = styled.div`
 `
 export const SocialIconWrapper = styled.div``
 export const InfoTitle = styled.div`
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
     padding-bottom: 12px;
     font-size: 18px;
     font-style: normal;
@@ -50,7 +51,7 @@ export const Logo = styled.img``
 export const ContactsWrapper = styled.div`
 `
 export const ContactsDetails = styled.div`
-    color: #ABABAB;
+    color: ${({ theme }) => theme.colors.textSecondary};
     /* Caption */
     font-size: 16px;
     font-style: normal;
@@ -65,7 +66,7 @@ export const CopyrightWrapper = styled.div`
     justify-content: center;
 `
 export const CopyrightText = styled.span`
-    color: #ABABAB;
+    color: ${({ theme }) => theme.colors.textSecondary};
     /* Caption */
     font-size: 16px;
     font-style: normal;

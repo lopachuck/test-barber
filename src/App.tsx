@@ -3,6 +3,8 @@ import GlobalStyle from './styles/global'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import Layout from "./components/Layout/Layout";
+import { ThemeContext } from 'styled-components'
+import {darkTheme} from "./theme";
 
 export interface IAppProps {
     setTitle: any
@@ -12,14 +14,13 @@ export interface IAppProps {
 
 const App: React.FC = () => {
   return (
-      <>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <ThemeContext.Provider value={darkTheme}>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'anonymous'}/>
           <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
           />
-          
           <GlobalStyle/>
           <BrowserRouter>
               <Routes>
@@ -29,8 +30,7 @@ const App: React.FC = () => {
               
               </Routes>
           </BrowserRouter>
-      
-      </>
+      </ThemeContext.Provider>
   )
 }
 export default App;

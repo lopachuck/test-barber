@@ -83,7 +83,6 @@ function getMenuItems(
     }
     items.push(item)
   })
-  console.log('menu item:', items)
   return items
 }
 
