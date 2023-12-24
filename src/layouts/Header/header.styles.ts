@@ -22,7 +22,6 @@ export const LangMenuWrapper = styled.div`
     display: flex;
     height: 100%;
     width: 72px;
-    padding-left: 185px;
     align-items: center;
 `
 export const LangMenu = styled.span`
@@ -47,8 +46,8 @@ export const BookingBtnWrapper = styled.div`
   display: flex;
     height: 100%;
     align-items: center;
-    padding-left: 32px;
-    justify-self: flex-end;
+    gap: 32px;
+    //justify-self: flex-end;
     margin-left: auto;
 `
 export const BookingBtn = styled(NavLink)`
