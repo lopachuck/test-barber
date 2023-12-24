@@ -19,13 +19,13 @@ export default createGlobalStyle`
       min-height: 100%;
       height: max-content;
       margin: 0 140px;
-      @media ${devices.lg} {
+      @media ${devices.xl} {
           margin: 0 100px;
       }
       @media ${devices.md} {
           margin: 0 60px;
       }
-      @media ${devices.sm} {
+      @media ${devices.xs} {
           margin: 0 16px;
       }
       

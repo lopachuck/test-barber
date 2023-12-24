@@ -17,11 +17,15 @@ export const MenuWrapper = styled.div`
     display: flex;
     flex-direction: row;
     margin-left: 60px;
+    @media ${devices.xl} {
+        margin-left: 32px;
+    }
+
 `
 export const LangMenuWrapper = styled.div`
     display: flex;
     height: 100%;
-    width: 72px;
+    width: 70px;
     align-items: center;
 `
 export const LangMenu = styled.span`
