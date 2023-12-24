@@ -1,9 +1,11 @@
 import {FC} from 'react';
 import * as S from "./contacts.styles"
 import {t} from "../../utils/translate/t";
+import CustomGoogleMap from "../../components/GoogleMap/CustomGoogleMap";
+
 
 const Contacts: FC = () => {
-  return (
+    return (
     <>
         <S.PageWrapper>
             <S.PageTitle>Contacts</S.PageTitle>
@@ -39,13 +41,7 @@ const Contacts: FC = () => {
                 </S.SocialWrapper>
             </S.PageInfoWrapper>
             <S.MapWrapper>
-                <iframe
-                    width={'100%'}
-                    height={524}
-                    style={{border:0}}
-                    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzf-0Cw2EmKJfG3YlNnIMKQGxUSieGkRw&center=59.4365019,24.7689061&zoom=19"
-                    allowFullScreen
-                ></iframe>
+                <CustomGoogleMap/>
             </S.MapWrapper>
         </S.PageWrapper>
     </>

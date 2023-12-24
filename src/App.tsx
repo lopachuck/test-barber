@@ -15,11 +15,11 @@ export interface IAppProps {
 const App: React.FC = () => {
   return (
       <ThemeContext.Provider value={darkTheme}>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'anonymous'}/>
           <link
               rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
           />
           <GlobalStyle/>
           <BrowserRouter>

@@ -1,6 +1,5 @@
 import { FC, useState } from 'react'
 import * as S from './footer.styles'
-import {InfoTitle} from "./footer.styles";
 
 const Footer: FC = () => {
     return (

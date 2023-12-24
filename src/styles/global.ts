@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {devices} from "../devices";
 
 
 export default createGlobalStyle`
@@ -7,7 +8,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-      background-color: #252429;
+    
       
       
   }
@@ -18,7 +19,15 @@ export default createGlobalStyle`
       min-height: 100%;
       height: max-content;
       margin: 0 140px;
-      
+      @media ${devices.lg} {
+          margin: 0 100px;
+      }
+      @media ${devices.md} {
+          margin: 0 60px;
+      }
+      @media ${devices.sm} {
+          margin: 0 16px;
+      }
       
   }
   
@@ -26,7 +35,7 @@ export default createGlobalStyle`
       height: 100%;
       width: 100%;
       margin: 0 auto;
-
+      background-color: ${({theme}) =>theme.colors.background};
       font-family: 'Inter', sans-serif;
       
   }
