@@ -17,7 +17,11 @@ const Contacts: FC = () => {
                     </a>
                     <S.WorkTime>
                         <img src={"/svg/icons/time.svg"} alt="loc"/>
-                        <span>{t('contacts_mon_fri')} 10:00 - 20:00 <br/>{t('contacts_sat')} 10:00 - 19:00, {t('contacts_sun')} 10:00 - 16:00</span>
+                        <div>
+                            <span>{t('contacts_mon_fri')} 10:00 - 20:00 </span>
+                            <p>{t('contacts_sat')} 10:00 - 19:00, </p>
+                            <p>{t('contacts_sun')} 10:00 - 16:00</p>
+                        </div>
                     </S.WorkTime>
                     <a href={'tel:+37258365820'} >
                         <img src={"/svg/icons/phone.svg"} alt="loc"/>

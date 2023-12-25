@@ -43,6 +43,9 @@ export const WorkTime = styled.div`
     & > img {
         padding-right: 8px;
     }
+    & > div > span, & > div > p {
+        white-space: nowrap;
+    }
 `
 export const SocialWrapper = styled.div`
     color:  ${({ theme }) => theme.colors.white};

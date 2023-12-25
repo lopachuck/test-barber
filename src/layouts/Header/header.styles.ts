@@ -94,7 +94,8 @@ export const BookingBtn = styled(NavLink)`
     height: 40px;
     width: 136px;
     box-sizing: border-box;
-    justify-content: center;
+    //justify-content: center;
+    padding-left: 28px;
     align-items: center;
     gap: 10px;
     border-radius: 24px;
@@ -108,6 +109,23 @@ export const BookingBtn = styled(NavLink)`
     font-weight: 700;
     line-height: 20px; /* 142.857% */
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    &:before{
+        position: absolute;
+        content: url("/svg/icons/shape.svg");
+        transform: translateX(-45px);
+    }
+    &:hover{
+        background: ${({theme}) => theme.colors.white};
+        padding-left: 38px;
+        &:before{
+            left: 18px;
+            transform: translateX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+    
 `
 
 export const Logo = styled.img`
