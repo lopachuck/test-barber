@@ -15,9 +15,12 @@ const Header: FC = () => {
                 </S.MenuWrapper>
                 <S.BookingBtnWrapper>
                     <S.LangMenuWrapper>
-                        <S.LangMenu>
+                        <S.LangMenuBtn>
                             {t('LANG_BTN_ENG')}
-                        </S.LangMenu>
+                        </S.LangMenuBtn>
+                        <S.LangMenuOptions >
+                            <S.LangMenuOption ></S.LangMenuOption>
+                        </S.LangMenuOptions>
                     </S.LangMenuWrapper>
                     <S.BookingBtn to={'#'}>
                         {t('header_bookNow_btn')}
