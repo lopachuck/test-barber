@@ -110,9 +110,10 @@ const Menu: FC = () => {
             location,
             closeMenuEvent)}
           <S.MobileLangWrapper>
-            <div>ENG</div>
+            <div className={'selected'}>ENG</div>
             <div>EST</div>
             <div>UKR</div>
+            <div>RU</div>
           </S.MobileLangWrapper>
         </S.DesktopMenuWrapper>
       </>
