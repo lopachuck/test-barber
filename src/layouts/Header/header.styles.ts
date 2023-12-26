@@ -4,12 +4,25 @@ import {NavLink} from "react-router-dom";
 
 export const HeaderContainer = styled.div`
     display: flex;
+    position: fixed;
+    background: ${({ theme }) => theme.colors.background};
+    max-width: 1160px;
+    width: calc(100% - 200px);
+    top: 0;
     flex-direction: row;
-    width: 100%;
     height: 80px;
+    z-index: 10;
+    @media ${devices.lg} {
+        width: calc(100% - 200px);
+    }
     @media ${devices.md} {
         flex-wrap: wrap;
         margin: 0 auto;
+        width: calc(100% - 120px);
+        height: fit-content;
+    }
+    @media ${devices.xs} {
+        width: calc(100% - 32px);
     }
 `
 export const LogoWrapper = styled.div`
@@ -28,7 +41,7 @@ export const MenuWrapper = styled.div`
     display: flex;
     flex-direction: row;
     margin-left: 60px;
-    @media ${devices.xl} {
+    @media ${devices.md} {
         margin-left: unset;
     }
 
@@ -82,7 +95,6 @@ export const BookingBtnWrapper = styled.div`
     height: 100%;
     align-items: center;
     gap: 32px;
-    //justify-self: flex-end;
     margin-left: auto;
     @media ${devices.md} {
         height: 60px;
@@ -94,7 +106,6 @@ export const BookingBtn = styled(NavLink)`
     height: 40px;
     width: 136px;
     box-sizing: border-box;
-    //justify-content: center;
     padding-left: 28px;
     align-items: center;
     gap: 10px;
@@ -121,7 +132,7 @@ export const BookingBtn = styled(NavLink)`
         padding-left: 38px;
         &:before{
             left: 18px;
-            transform: translateX(0);
+            transform: translateX(-4px);
             transition: transform 0.3s ease-in-out;
         }
     }

@@ -8,9 +8,6 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    
-      
-      
   }
   
   #root {
@@ -37,9 +34,10 @@ export default createGlobalStyle`
       margin: 0 auto;
       background-color: ${({theme}) =>theme.colors.background};
       font-family: 'Inter', sans-serif;
+      max-width: 1440px;
       
   }
   body {
-      max-width: 1440px;
+  
   }
 `

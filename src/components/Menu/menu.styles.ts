@@ -6,6 +6,21 @@ export const DesktopMenuWrapper = styled.div`
     display: flex;
     @media ${devices.md} {
         display: none;
+        &.openMenu{
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            height: calc(100% - 60px);
+            width: calc(100% - 120px);
+            z-index: 100;
+            padding-top: 215px;
+            align-items: center;
+            justify-content: center;
+            background: ${({theme}) => theme.colors.background};
+        }
+    }
+    @media ${devices.xs} {
+        width: calc(100% - 32px);
     }
 `
 export const MenuItem = styled.div`
@@ -13,6 +28,13 @@ export const MenuItem = styled.div`
     display: flex;
     height: 100%;
     align-items: center;
+    @media ${devices.md} {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        padding-right: unset;
+    }
 `
 export const MenuItemLink = styled(NavLink)`
     text-decoration: none;
@@ -39,14 +61,14 @@ export const MobileMenuWrapper = styled.div`
 
 export const BurgerBtn = styled.div`
     display: none;
-    @media (max-width: 1000px) {
+    @media ${devices.md} {
         display: flex;
         align-items: center;
         margin-left: 15px;
         position: relative;
         min-width: 30px;
         min-height: 30px;
-        z-index: 1;
+        z-index: 200;
         cursor: pointer;
         background-color: ${({ theme }) => theme.colors.textCurrentItemMenu};
         border-radius: 50%;
@@ -102,5 +124,19 @@ export const Cross = styled.div`
             transform: rotate(-45deg);
             top: 9px;
         }
+    }
+`
+export const MobileLangWrapper = styled.div`
+    display: none;
+    align-self: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: auto;
+    color: ${({theme}) => theme.colors.white};
+    border-top: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+    padding-top: 20px;
+    padding-bottom: 80px;
+    @media ${devices.md} {
+        display: flex;
     }
 `

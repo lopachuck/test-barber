@@ -104,11 +104,16 @@ const Menu: FC = () => {
             </S.Cross>
           </S.BurgerBtn>
         </S.MobileMenuWrapper>
-        <S.DesktopMenuWrapper>
+        <S.DesktopMenuWrapper className={'openMenu'}>
           {getMenuItems(
             menuItems,
             location,
             closeMenuEvent)}
+          <S.MobileLangWrapper>
+            <div>ENG</div>
+            <div>EST</div>
+            <div>UKR</div>
+          </S.MobileLangWrapper>
         </S.DesktopMenuWrapper>
       </>
   );
