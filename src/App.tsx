@@ -5,6 +5,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Layout from "./components/Layout/Layout";
 import { ThemeContext } from 'styled-components'
 import {darkTheme} from "./theme";
+import Barbers from "./pages/Barbers/Barbers";
 
 export interface IAppProps {
     setTitle: any
@@ -26,6 +27,7 @@ const App: React.FC = () => {
               <Routes>
                   <Route path="/" element={<Layout/>}>
                       <Route path="contacts" element={<Contacts/>}/>
+                      <Route path="barbers" element={<Barbers/>}/>
                   </Route>
               
               </Routes>

@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 export const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 60px;
     width: 100%;
 `
 export const PageTitle = styled.div`

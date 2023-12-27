@@ -103,16 +103,15 @@ export const BookingBtnWrapper = styled.div`
 export const BookingBtn = styled(NavLink)`
     text-decoration: none;
     display: flex;
+    flex-direction: column;
     height: 40px;
     width: 136px;
     box-sizing: border-box;
-    padding-left: 28px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 24px;
-    border: 1px solid  #6B6B6B;
-    background:  #FFC32A;
-    color:  #252429;
+    //padding-left: 28px;
+    //align-items: center;
+    //gap: 10px;
+    border-radius: 12px;
+    border: 1px solid  ${({ theme }) => theme.colors.elementsGrey};
     text-align: center;
     /* Button */
     font-size: 14px;
@@ -120,22 +119,44 @@ export const BookingBtn = styled(NavLink)`
     font-weight: 700;
     line-height: 20px; /* 142.857% */
     text-transform: uppercase;
-    position: relative;
     overflow: hidden;
-    &:before{
-        position: absolute;
-        content: url("/svg/icons/shape.svg");
-        transform: translateX(-45px);
+    &>span{
+        display: flex;
+        flex: 0 0 auto;
+        width: 136px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background:  ${({theme}) => theme.colors.accentColor};
+        transition: transform 0.3s ease-in-out;
     }
-    &:hover{
+    &>p{
+        display: flex;
+        flex: 0 0 auto;
+        width: 136px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
         background: ${({theme}) => theme.colors.white};
-        padding-left: 38px;
+        color:  ${({theme}) => theme.colors.background};
+        transition: transform 0.3s ease-in-out;
         &:before{
-            left: 18px;
-            transform: translateX(-4px);
-            transition: transform 0.3s ease-in-out;
+            padding-right: 8px;
+            content: url("/svg/icons/shape.svg");
         }
     }
+    &:hover{
+        //padding-left: 38px;
+        //&:before{
+        //    left: 18px;
+        //    transform: translateX(-4px);
+        //    transition: transform 0.3s ease-in-out;
+        //}
+        &>p,span{
+            transform: translateY(-40px);
+        }
+    }
+    
     
 `
 

@@ -23,7 +23,8 @@ const Header: FC = () => {
                         </S.LangMenuOptions>
                     </S.LangMenuWrapper>
                     <S.BookingBtn to={'#'}>
-                        {t('header_bookNow_btn')}
+                        <span>{t('btn_header_bookNow')}</span>
+                        <p>{t('btn_header_bookNow')}</p>
                     </S.BookingBtn>
                 </S.BookingBtnWrapper>
             </S.HeaderContainer>

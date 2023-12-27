@@ -8,7 +8,7 @@ const Contacts: FC = () => {
     return (
     <>
         <S.PageWrapper>
-            <S.PageTitle>Contacts</S.PageTitle>
+            <S.PageTitle>{t('contacts_title')}</S.PageTitle>
             <S.PageInfoWrapper>
                 <S.ContactInfo>
                     <a href={'#'} >

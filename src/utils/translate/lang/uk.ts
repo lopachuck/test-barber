@@ -2,6 +2,7 @@ import {ITranslations} from "../t";
 
 export const uk: ITranslations = {
     "contacts_title": "контакти",
+    "barbers_title": "Барбери",
     "header_bookNow_btn": "Записатись",
     "LANG_BTN_ENG": "ENG",
     "LANG_BTN_EST": "EST",
