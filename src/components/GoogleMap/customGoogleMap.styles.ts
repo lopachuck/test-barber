@@ -7,5 +7,10 @@ export const MarkerInfoWrapper = styled.div `
     &>p{
         text-transform: uppercase;
         font-size: 16px;
+        color: ${({theme}) => theme.colors.background};
+    }
+    &>a{
+        text-decoration: none;
+        border-bottom: 1px solid ${({theme}) => theme.colors.background};
     }
 `

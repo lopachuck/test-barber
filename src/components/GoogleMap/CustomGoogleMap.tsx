@@ -90,7 +90,7 @@ const CustomGoogleMap: React.FC =() => {
                                 <InfoWindowF position={customMarker.position}>
                                     <MarkerInfoWrapper>
                                         <p>{customMarker.name}</p>
-                                        <a href={"#"}>Direction</a>
+                                        <a href={"https://maps.app.goo.gl/7zoPyoGGGntH9KuX7"} target={'_blank'}>Direction</a>
                                     </MarkerInfoWrapper>
                                 </InfoWindowF>
                             </MarkerF>

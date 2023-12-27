@@ -104,9 +104,24 @@ export const ContactsDetails = styled.div`
     font-weight: 400;
     line-height: 24px; /* 150% */
 `
-export const Address = styled.div``
-export const Phone = styled.div``
-export const Mail = styled.div``
+export const Address = styled.div`
+    &>a{
+        text-decoration: none;
+        color: ${({theme}) => theme.colors.textSecondary};
+    }
+`
+export const Phone = styled.div`
+    &>a{
+        text-decoration: none;
+        color: ${({theme}) => theme.colors.textSecondary};
+    }
+`
+export const Mail = styled.div`
+    &>a{
+        text-decoration: none;
+        color: ${({theme}) => theme.colors.textSecondary};
+    }
+`
 export const CopyrightWrapper = styled.div`
     display: flex;
     justify-content: center;
