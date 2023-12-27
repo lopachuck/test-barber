@@ -2,6 +2,8 @@ import React, {FC, ReactElement, useState} from 'react';
 import * as S from './menu.styles'
 import {useLocation} from "react-router-dom";
 import {t} from "../../utils/translate/t";
+import {useDispatch, useSelector} from "react-redux";
+import {openMenu} from "../../store/menu/menu.slice";
 export interface IMenuItem {
   active: boolean
   text: string // @TODO add translate
@@ -88,12 +90,17 @@ function getMenuItems(
 }
 
 const Menu: FC = () => {
-  const location = useLocation()
-  const closeMenuEvent = () => {}
-  // const { isMenuOpen } = useSelector((state: any) => state.menu)
+  const dispatch = useDispatch()
+  const { isMenuOpen } = useSelector((state: any) => state.menu)
   const [isMenuVisible, setIsMenuVisible] = useState(false)
   const handleClick = () => {
-    // dispatch(openMenu(!isMenuOpen))
+    dispatch(openMenu(!isMenuOpen))
+    setIsMenuVisible(!isMenuOpen)
+  }
+  
+  const location = useLocation()
+  const closeMenuEvent = () => {
+    dispatch(openMenu(!isMenuOpen))
     setIsMenuVisible(!isMenuVisible)
   }
   return (
@@ -105,7 +112,7 @@ const Menu: FC = () => {
             </S.Cross>
           </S.BurgerBtn>
         </S.MobileMenuWrapper>
-        <S.DesktopMenuWrapper >
+        <S.DesktopMenuWrapper isMenuOpen={ isMenuOpen }>
           {getMenuItems(
             menuItems,
             location,

@@ -154,6 +154,11 @@ export const BookingBtn = styled(NavLink)`
         &>p,span{
             transform: translateY(-40px);
         }
+        @media ${devices.md} {
+            &>p,span{
+                transform: unset;
+            }
+        }
     }
     
     
