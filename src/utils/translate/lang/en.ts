@@ -11,7 +11,7 @@ export const en: ITranslations = {
     
     "LANG_BTN_ENG": "ENG",
     "LANG_BTN_EST": "EST",
-    "LANG_BTN_UA": "US",
+    "LANG_BTN_UKR": "UKR",
     "LANG_BTN_RU": "RU",
     
     "title_page_contacts": "Contacts",

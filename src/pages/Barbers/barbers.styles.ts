@@ -32,6 +32,8 @@ export const PageTitle = styled.div`
 `
 export const BarbersInfo = styled.div`
     display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
     max-width: 1160px;
     height: auto;
     margin: 40px 0;

@@ -1,4 +1,4 @@
-import { uk } from './lang/uk';
+import { ukr } from './lang/ukr';
 import {en} from './lang/en';
 
 /*
@@ -41,7 +41,7 @@ export const t = (key: string) => {
 
   //const translations={ bn, zh, cs, en, fr, de, el, hi, hu, id, it, ja, jw, ko, ms, fa, pl, pt, ro, ru, es, th, tr, vi, ar, bg, nl, tl, fi, iw }
   
-  const translations = { en,uk }
+  const translations = { en,uk: ukr }
 
   //const lang = Store.get( 'lang' ) || 'en'
   const lang = 'en'

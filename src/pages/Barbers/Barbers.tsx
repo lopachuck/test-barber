@@ -17,9 +17,21 @@ const Barbers: FC = () => {
                         <S.BarberName>Valeri</S.BarberName>
                         <S.BarberPosition>Barber</S.BarberPosition>
                     </S.BarberInfo>
-                    <S.BarberInfo></S.BarberInfo>
-                    <S.BarberInfo></S.BarberInfo>
-                    <S.BarberInfo></S.BarberInfo>
+                    <S.BarberInfo>
+                        <S.BarberPhoto/>
+                        <S.BarberName>Valeri</S.BarberName>
+                        <S.BarberPosition>Barber</S.BarberPosition>
+                    </S.BarberInfo>
+                    <S.BarberInfo>
+                        <S.BarberPhoto/>
+                        <S.BarberName>Valeri</S.BarberName>
+                        <S.BarberPosition>Barber</S.BarberPosition>
+                    </S.BarberInfo>
+                    <S.BarberInfo>
+                        <S.BarberPhoto/>
+                        <S.BarberName>Valeri</S.BarberName>
+                        <S.BarberPosition>Barber</S.BarberPosition>
+                    </S.BarberInfo>
                 </S.BarbersInfo>
                 <S.JoinUsInfoWrapper>
                     <S.InfoTitle>{t('barbers_info_title')}</S.InfoTitle>
