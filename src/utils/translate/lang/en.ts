@@ -60,7 +60,7 @@ export const en: ITranslations = {
     "btn_services_book": "Book",
     
     "contacts_address": "Fr.R.Kreutzwaldi 7, 10126 Tallinn",
-    "contacts_subscribe": "Subcscribe to our social media",
+    "contacts_subscribe": "Subscribe to our social media",
     "contacts_stay_up": "Stay Up to Date",
     "contacts_brand_name": "Uncle Ve",
     "contacts_mon_fri": "Mon-Fri",

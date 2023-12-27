@@ -8,7 +8,7 @@ const Contacts: FC = () => {
     return (
     <>
         <S.PageWrapper>
-            <S.PageTitle>{t('contacts_title')}</S.PageTitle>
+            <S.PageTitle>{t('title_page_contacts')}</S.PageTitle>
             <S.PageInfoWrapper>
                 <S.ContactInfo>
                     <a href={'#'} >
@@ -33,7 +33,7 @@ const Contacts: FC = () => {
                     </a>
                 </S.ContactInfo>
                 <S.SocialWrapper>
-                    <span>Subcscribe to our social media</span>
+                    <span>{t('contacts_subscribe')}</span>
                     <S.SocialIconWrapper>
                         <S.SocialIcon to={'https://instagram.com'} target={'_blank'}>
                             <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>

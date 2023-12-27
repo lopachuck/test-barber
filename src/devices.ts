@@ -1,5 +1,5 @@
 export const breakpoints = {
-    xs: '360px',
+    xs: '460px',
     sm: '768px',
     md: '1150px',
     // md: '865px',
@@ -9,9 +9,12 @@ export const breakpoints = {
 }
 
 export const devices = {
-    xs: `(max-width: ${breakpoints.xs}) or ((orientation: landscape) and (max-height: ${breakpoints.xs}))`,
-    sm: `(max-width: ${breakpoints.sm}) or ((orientation: landscape) and (max-height: ${breakpoints.sm}))`,
-    md: `(max-width: ${breakpoints.md}) or ((orientation: landscape)and (max-height: ${breakpoints.sm}))`,
+    // xs: `(max-width: ${breakpoints.xs}) or ((orientation: landscape) and (max-height: ${breakpoints.xs}))`,
+    xs: `(max-width: ${breakpoints.xs})`,
+    sm: `(max-width: ${breakpoints.sm})`,
+    // sm: `(max-width: ${breakpoints.sm}) or ((orientation: landscape) and (max-height: ${breakpoints.sm}))`,
+    // md: `(max-width: ${breakpoints.md}) or ((orientation: landscape)and (max-height: ${breakpoints.md}))`,
+    md: `(max-width: ${breakpoints.md})`,
     lg: `(max-width: ${breakpoints.lg}) `,
     xl: `(max-width: ${breakpoints.xl})`,
     // xxl: `(max-width: ${breakpoints.xxl})`,
