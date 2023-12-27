@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {devices} from "../../devices";
 
 export const PageTitleWrapper = styled.div`
     display: flex;
@@ -37,14 +38,33 @@ export const BarbersInfo = styled.div`
     max-width: 1160px;
     height: auto;
     margin: 40px 0;
+    @media ${devices.md} {
+        gap: 24px;
+    }
+    @media ${devices.xs} {
+        gap: 12px;
+    }
 `
-export const BarberPhoto = styled.div`
+export const BarberPhoto = styled.img`
+    display: flex;
+    width: 100%;
+    height: 100%;
+`
+export const BarberPhotoWrapper = styled.div`
     display: flex;
     width: 360px;
     height: 360px;
-    background: url('/public/img/barber_Valeri.jpeg'), lightgray -154.561px -11.278px / 219.389% 146.121% no-repeat;
+    @media ${devices.md} {
+        width: 200px;
+        height: 200px;
+    }
+    @media ${devices.xs} {
+        width: 158px;
+        height: 158px;
+    }
 `
 export const BarberName = styled.div`
+    padding-top: 16px;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;

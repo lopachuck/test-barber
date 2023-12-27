@@ -8,29 +8,37 @@ const Barbers: FC = () => {
         <>
             <PageWrapper>
                 <S.PageTitleWrapper>
-                    <S.PageTitle>{t('barbers_title')}</S.PageTitle>
+                    <S.PageTitle>{t('title_page_barbers')}</S.PageTitle>
                     <S.PageSubtitle>{t('barbers_subtitle')}</S.PageSubtitle>
                 </S.PageTitleWrapper>
                 <S.BarbersInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto/>
-                        <S.BarberName>Valeri</S.BarberName>
-                        <S.BarberPosition>Barber</S.BarberPosition>
+                        <S.BarberPhotoWrapper>
+                            <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
+                        </S.BarberPhotoWrapper>
+                        <S.BarberName>Valeria</S.BarberName>
+                        <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto/>
-                        <S.BarberName>Valeri</S.BarberName>
-                        <S.BarberPosition>Barber</S.BarberPosition>
+                        <S.BarberPhotoWrapper>
+                            <S.BarberPhoto src={'/img/barbers/Valerii.png'}/>
+                        </S.BarberPhotoWrapper>
+                        <S.BarberName>Valerii</S.BarberName>
+                        <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto/>
-                        <S.BarberName>Valeri</S.BarberName>
-                        <S.BarberPosition>Barber</S.BarberPosition>
+                        <S.BarberPhotoWrapper>
+                            <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
+                        </S.BarberPhotoWrapper>
+                        <S.BarberName>Viktoria</S.BarberName>
+                        <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto/>
-                        <S.BarberName>Valeri</S.BarberName>
-                        <S.BarberPosition>Barber</S.BarberPosition>
+                        <S.BarberPhotoWrapper>
+                            <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
+                        </S.BarberPhotoWrapper>
+                        <S.BarberName>Viktoria Li</S.BarberName>
+                        <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                 </S.BarbersInfo>
                 <S.JoinUsInfoWrapper>
