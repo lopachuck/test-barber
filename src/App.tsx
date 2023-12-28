@@ -7,6 +7,7 @@ import Layout from "./components/Layout/Layout";
 import { ThemeContext } from 'styled-components'
 import {darkTheme} from "./theme";
 import {t} from "./utils/translate/t";
+import Home from "./pages/Home/Home";
 
 export interface IAppProps {
     setTitle: any
@@ -19,9 +20,6 @@ const App: React.FC = () => {
         title,
         setTitle,
     }
-    // let a = 'skjlkj'
-    let a = process.env.REACT_APP_MAP_LNG
-    let b
   return (
       <ThemeContext.Provider value={darkTheme}>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -34,9 +32,8 @@ const App: React.FC = () => {
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<Layout />}>
+                      <Route index element={<Home {...appProps}/>}/>
                       <Route path="contacts" element={<Contacts {...appProps}/>}/>
-                      <Route path="a" element={<>
-                          <br/><br/><br/><br/><br/>{a}</>}/>
                   </Route>
               
               </Routes>

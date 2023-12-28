@@ -1,7 +1,7 @@
 import React from 'react';
 import {GoogleMap, InfoWindowF, MarkerF, useLoadScript} from "@react-google-maps/api";
 import {MarkerInfoWrapper} from "./customGoogleMap.styles";
-import {BARBERSHOP_LNG, BARBERSHOP_LAT, MAP_API_KEY} from "../../config/config";
+import {BARBERSHOP_LNG, BARBERSHOP_LAT, MAP_API_KEY, BARBERSHOP_NAME} from "../../config/config";
 
 interface IMapMarker {
     name: string,
@@ -14,7 +14,7 @@ interface IMapMarker {
 }
 
 const customMarker: IMapMarker = {
-    name: 'Barbershop "Uncle VE"' ,
+    name: BARBERSHOP_NAME ,
     position: { lat: BARBERSHOP_LAT, lng: BARBERSHOP_LNG },
     width: 50,
     height: 50
