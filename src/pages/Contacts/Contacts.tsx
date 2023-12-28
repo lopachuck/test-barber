@@ -1,10 +1,14 @@
-import {FC} from 'react';
+import {FC, useEffect} from 'react';
 import * as S from "./contacts.styles"
 import {t} from "../../utils/translate/t";
 import CustomGoogleMap from "../../components/GoogleMap/CustomGoogleMap";
+import {IAppProps} from "../../App";
 
 
-const Contacts: FC = () => {
+const Contacts: FC<IAppProps> = (props) => {
+    useEffect(() => {
+        props.setTitle(t('contacts_title'))
+    }, [])
     return (
     <>
         <S.PageWrapper>
