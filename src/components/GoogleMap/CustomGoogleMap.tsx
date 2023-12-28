@@ -1,6 +1,7 @@
 import React from 'react';
 import {GoogleMap, InfoWindowF, MarkerF, useLoadScript} from "@react-google-maps/api";
 import {MarkerInfoWrapper} from "./customGoogleMap.styles";
+import {BARBERSHOP_LNG, BARBERSHOP_LAT, MAP_API_KEY} from "../../config/config";
 
 interface IMapMarker {
     name: string,
@@ -12,13 +13,9 @@ interface IMapMarker {
     height: 50
 }
 
-// const lat = process.env.REACT_APP_MAP_API_LAT!
-const lat = 59.436553
-// const lng = process.env.REACT_APP_MAP_API_LNG!
-const lng = 24.769528
 const customMarker: IMapMarker = {
     name: 'Barbershop "Uncle VE"' ,
-    position: { lat: lat, lng: lng },
+    position: { lat: BARBERSHOP_LAT, lng: BARBERSHOP_LNG },
     width: 50,
     height: 50
 }
@@ -76,14 +73,14 @@ const nightModeStyles = [
         stylers: [{ color: '#757575' }]
     }
 ];
-const apiKey: string = 'AIzaSyB5PzIu2_AoRZfqHjkNC3Fmz6B5BrrDWT0'
-// const apiKey = process.env.REACT_APP_MAP_KEY!
+const apiKey: string = MAP_API_KEY
 
 const CustomGoogleMap: React.FC =() => {
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: apiKey,
     });
+    
     return (
         <>
             <div style={{height: "526px", width: "100%"}}>
