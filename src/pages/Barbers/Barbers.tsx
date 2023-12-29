@@ -37,7 +37,7 @@ const Barbers: FC = () => {
                         <S.BarberPhotoWrapper>
                             <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
                         </S.BarberPhotoWrapper>
-                        <S.BarberName>Viktoria Li</S.BarberName>
+                        <S.BarberName>Alina</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                 </S.BarbersInfo>

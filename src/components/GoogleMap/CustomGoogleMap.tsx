@@ -1,7 +1,13 @@
 import React from 'react';
 import {GoogleMap, InfoWindowF, MarkerF, useLoadScript} from "@react-google-maps/api";
 import {MarkerInfoWrapper} from "./customGoogleMap.styles";
-import {BARBERSHOP_LNG, BARBERSHOP_LAT, MAP_API_KEY, BARBERSHOP_NAME} from "../../config/config";
+import {
+    BARBERSHOP_LNG,
+    BARBERSHOP_LAT,
+    MAP_API_KEY,
+    BARBERSHOP_NAME,
+    BARBERSHOP_DIRECTION_LINK
+} from "../../config/config";
 
 interface IMapMarker {
     name: string,
@@ -98,7 +104,7 @@ const CustomGoogleMap: React.FC =() => {
                                 <InfoWindowF position={customMarker.position}>
                                     <MarkerInfoWrapper>
                                         <p>{customMarker.name}</p>
-                                        <a href={"https://maps.app.goo.gl/7zoPyoGGGntH9KuX7"} target={'_blank'}>Direction</a>
+                                        <a href={BARBERSHOP_DIRECTION_LINK} target={'_blank'}>Direction</a>
                                     </MarkerInfoWrapper>
                                 </InfoWindowF>
                             </MarkerF>

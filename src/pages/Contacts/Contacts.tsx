@@ -3,6 +3,12 @@ import * as S from "./contacts.styles"
 import {t} from "../../utils/translate/t";
 import CustomGoogleMap from "../../components/GoogleMap/CustomGoogleMap";
 import {IAppProps} from "../../App";
+import {
+    BARBERSHOP_FACEBOOK_LINK,
+    BARBERSHOP_INSTAGRAM_LINK,
+    BARBERSHOP_MAIL_ADDRESS,
+    BARBERSHOP_PHONE
+} from "../../config/config";
 
 
 const Contacts: FC<IAppProps> = (props) => {
@@ -27,23 +33,23 @@ const Contacts: FC<IAppProps> = (props) => {
                             <p>{t('contacts_sun')} 10:00 - 16:00</p>
                         </div>
                     </S.WorkTime>
-                    <a href={'tel:+37258365820'} >
+                    <a href={`tel:${BARBERSHOP_PHONE}`} >
                         <img src={"/svg/icons/phone.svg"} alt="loc"/>
-                        <span>+37258365820</span>
+                        <span>{BARBERSHOP_PHONE}</span>
                     </a>
-                    <a href={'mailto:unclevebarbershop@gmail.com'} >
+                    <a href={`mailto:${BARBERSHOP_FACEBOOK_LINK}`} >
                         <img src={"/svg/icons/letter.svg"} alt="loc"/>
-                        <span>unclevebarbershop@gmail.com</span>
+                        <span>{BARBERSHOP_FACEBOOK_LINK}</span>
                     </a>
                 </S.ContactInfo>
                 <S.SocialWrapper>
                     <span>{t('contacts_subscribe')}</span>
                     <S.SocialIconWrapper>
-                        <S.SocialIcon to={'https://instagram.com'} target={'_blank'}>
+                        <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'}>
                             <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
                         </S.SocialIcon>
-                        <S.SocialIcon to={'https://facebook.com'} target={'_blank'}>
-                            <img src={'/svg/icons/facebook.svg'} alt={'insta'}/>
+                        <S.SocialIcon to={BARBERSHOP_MAIL_ADDRESS} target={'_blank'}>
+                            <img src={'/svg/icons/facebook.svg'} alt={'fb'}/>
                         </S.SocialIcon>
                     </S.SocialIconWrapper>
                 </S.SocialWrapper>
