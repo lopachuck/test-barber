@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {openMenu} from "../../store/menu/menu.slice";
 export interface IMenuItem {
   active: boolean
-  text: string // @TODO add translate
+  text: string 
   type: string
   url?: string
 }
