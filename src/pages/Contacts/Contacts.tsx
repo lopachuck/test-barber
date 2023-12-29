@@ -15,6 +15,7 @@ const Contacts: FC<IAppProps> = (props) => {
     useEffect(() => {
         props.setTitle(t('contacts_title'))
     }, [])
+    console.log(BARBERSHOP_MAIL_ADDRESS)
     return (
     <>
         <S.PageWrapper>
@@ -37,9 +38,9 @@ const Contacts: FC<IAppProps> = (props) => {
                         <img src={"/svg/icons/phone.svg"} alt="loc"/>
                         <span>{BARBERSHOP_PHONE}</span>
                     </a>
-                    <a href={`mailto:${BARBERSHOP_FACEBOOK_LINK}`} >
+                    <a href={`mailto:${BARBERSHOP_MAIL_ADDRESS}`} >
                         <img src={"/svg/icons/letter.svg"} alt="loc"/>
-                        <span>{BARBERSHOP_FACEBOOK_LINK}</span>
+                        <span>{BARBERSHOP_MAIL_ADDRESS}</span>
                     </a>
                 </S.ContactInfo>
                 <S.SocialWrapper>
@@ -48,7 +49,7 @@ const Contacts: FC<IAppProps> = (props) => {
                         <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'}>
                             <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
                         </S.SocialIcon>
-                        <S.SocialIcon to={BARBERSHOP_MAIL_ADDRESS} target={'_blank'}>
+                        <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'}>
                             <img src={'/svg/icons/facebook.svg'} alt={'fb'}/>
                         </S.SocialIcon>
                     </S.SocialIconWrapper>

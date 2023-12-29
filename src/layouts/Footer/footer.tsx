@@ -1,5 +1,11 @@
 import { FC, useState } from 'react'
 import * as S from './footer.styles'
+import {
+    BARBERSHOP_FACEBOOK_LINK,
+    BARBERSHOP_INSTAGRAM_LINK,
+    BARBERSHOP_MAIL_ADDRESS,
+    BARBERSHOP_PHONE
+} from "../../config/config";
 
 const Footer: FC = () => {
     return (
@@ -10,10 +16,10 @@ const Footer: FC = () => {
                         <S.InfoTitle>Stay Up to Date</S.InfoTitle>
                         <span>Subcscribe to our social media</span>
                         <S.SocialIconWrapper>
-                            <S.SocialIcon to={'https://instagram.com'} target={'_blank'}>
+                            <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'}>
                                 <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
                             </S.SocialIcon>
-                            <S.SocialIcon to={'https://facebook.com'} target={'_blank'}>
+                            <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'}>
                                 <img src={'/svg/icons/facebook.svg'} alt={'insta'}/>
                             </S.SocialIcon>
                         </S.SocialIconWrapper>
@@ -29,7 +35,7 @@ const Footer: FC = () => {
                                 <a href={'tel:+37258365820'}>+37258365820</a>
                             </S.Phone>
                             <S.Mail>
-                                <a href={'mailto:unclevebarbershop@gmail.com'}>unclevebarbershop@gmail.com</a>
+                                <a href={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>unclevebarbershop@gmail.com</a>
                             </S.Mail>
                         </S.ContactsDetails>
                     </S.ContactsWrapper>
