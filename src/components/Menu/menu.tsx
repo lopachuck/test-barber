@@ -1,4 +1,4 @@
-import {FC, ReactElement} from 'react';
+import React, {FC, ReactElement, useState} from 'react';
 import * as S from './menu.styles'
 import {useLocation} from "react-router-dom";
 export interface IMenuItem {
@@ -83,20 +83,39 @@ function getMenuItems(
     }
     items.push(item)
   })
-  console.log('menu item:', items)
   return items
 }
 
 const Menu: FC = () => {
   const location = useLocation()
   const closeMenuEvent = () => {}
-  
+  // const { isMenuOpen } = useSelector((state: any) => state.menu)
+  const [isMenuVisible, setIsMenuVisible] = useState(false)
+  const handleClick = () => {
+    // dispatch(openMenu(!isMenuOpen))
+    setIsMenuVisible(!isMenuVisible)
+  }
   return (
       <>
-        {getMenuItems(
+        <S.MobileMenuWrapper>
+          <S.BurgerBtn onClick={handleClick}>
+            <S.Cross className={isMenuVisible ? 'cross' : ''}>
+              <S.BtnLine />
+            </S.Cross>
+          </S.BurgerBtn>
+        </S.MobileMenuWrapper>
+        <S.DesktopMenuWrapper className={'openMenu'}>
+          {getMenuItems(
             menuItems,
             location,
             closeMenuEvent)}
+          <S.MobileLangWrapper>
+            <div className={'selected'}>ENG</div>
+            <div>EST</div>
+            <div>UKR</div>
+            <div>RU</div>
+          </S.MobileLangWrapper>
+        </S.DesktopMenuWrapper>
       </>
   );
 };

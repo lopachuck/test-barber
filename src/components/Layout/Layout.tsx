@@ -8,12 +8,13 @@ import Container from '../../layouts/container/container'
 // import { Main } from '../../layouts/ui-kit/ui-kit.styles'
 import Header from "../../layouts/Header/header";
 import Contacts from "../../pages/Contacts/Contacts";
+import {IAppProps} from "../../App";
 
 
-const Layout: React.FC = (props, context) => {
+const Layout: React.FC = () => {
     return (
         <>
-            <Header {...props} />
+            <Header />
             <div>
                 <Container>
                     <Outlet />
