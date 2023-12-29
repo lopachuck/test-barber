@@ -76,7 +76,6 @@ const nightModeStyles = [
 const apiKey: string = MAP_API_KEY
 
 const CustomGoogleMap: React.FC =() => {
-
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: apiKey,
     });
