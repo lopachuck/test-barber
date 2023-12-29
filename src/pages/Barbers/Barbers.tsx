@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {PageTitle, PageWrapper} from "../Contacts/contacts.styles";
+import { PageWrapper } from "../Contacts/contacts.styles";
 import {t} from "../../utils/translate/t";
 import * as S from "./barbers.styles"
 

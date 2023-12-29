@@ -15,18 +15,6 @@ export default createGlobalStyle`
       flex-direction: column;
       min-height: 100%;
       height: max-content;
-
-      // margin: 0 140px;
-      // @media ${devices.xl} {
-      //     margin: 0 100px;
-      // }
-      // @media ${devices.md} {
-      //     margin: 0 60px;
-      // }
-      // @media ${devices.xs} {
-      //     margin: 0 16px;
-      // }
-
   }
   
   html, body {

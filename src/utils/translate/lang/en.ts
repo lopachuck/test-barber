@@ -11,7 +11,7 @@ export const en: ITranslations = {
     
     "LANG_BTN_ENG": "ENG",
     "LANG_BTN_EST": "EST",
-    "LANG_BTN_UKR": "UKR",
+    "LANG_BTN_UA": "UKR",
     "LANG_BTN_RU": "RU",
     
     "title_page_contacts": "Contacts",
@@ -31,7 +31,7 @@ export const en: ITranslations = {
     "home_recomend": "Recommend us to their friends",
     "home_gallery": "Gallery",
     "home_gallery_subtitle": "Take a visual journey through our",
-    "home_localization": "Localizqtion",
+    "home_localization": "Localization",
     
     "gallery_subtitle": "Welcome to the gallery of our barbershop, where every photo is a moment of style and professionalism.",
     
@@ -48,13 +48,13 @@ export const en: ITranslations = {
     "services_father_son": "Father and Son",
     "services_father_son_description": "Haircut for Father and Son (child from 8 to 14 years old).",
     
-    
     "barbers_subtitle": "Our team is a close-knit family of skilled professionals dedicated to elevating your grooming experience.",
     "barbers_info_title": "Do you want to join us?",
     "barbers_barber_name_valeria": "Valeria",
-    "barbers_barber_name_viktoria": "Vikroriia",
+    "barbers_barber_name_viktoria": "Viktoria",
     "barbers_barber_name_vitalii": "Vitalii",
-    "barbers_barber_name": "Do you want to join us?",
+    "barbers_barber_name_alina": "Alina",
+    "barbers_barber_join_us": "Do you want to join us?",
     "barbers_barber_position": "Barber",
     "barbers_info_text": "Send us your CV",
     "btn_services_book": "Book",
