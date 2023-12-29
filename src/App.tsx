@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, {useState} from 'react';
 import GlobalStyle from './styles/global'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
@@ -6,14 +7,20 @@ import Layout from "./components/Layout/Layout";
 import { ThemeContext } from 'styled-components'
 import {darkTheme} from "./theme";
 import Barbers from "./pages/Barbers/Barbers";
+import {t} from "./utils/translate/t";
+import Home from "./pages/Home/Home";
 
 export interface IAppProps {
     setTitle: any
 }
 
-
-
 const App: React.FC = () => {
+    const home = t('home')
+    const [title, setTitle] = useState(home)
+    const appProps = {
+        title,
+        setTitle,
+    }
   return (
       <ThemeContext.Provider value={darkTheme}>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,8 +33,9 @@ const App: React.FC = () => {
           <GlobalStyle/>
           <BrowserRouter>
               <Routes>
-                  <Route path="/" element={<Layout/>}>
-                      <Route path="contacts" element={<Contacts/>}/>
+                  <Route path="/" element={<Layout />}>
+                      <Route index element={<Home {...appProps}/>}/>
+                      <Route path="contacts" element={<Contacts {...appProps}/>}/>
                       <Route path="barbers" element={<Barbers/>}/>
                   </Route>
               

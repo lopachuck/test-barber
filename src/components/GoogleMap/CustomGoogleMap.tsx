@@ -1,19 +1,27 @@
 import React from 'react';
 import {GoogleMap, InfoWindowF, MarkerF, useLoadScript} from "@react-google-maps/api";
 import {MarkerInfoWrapper} from "./customGoogleMap.styles";
+import {BARBERSHOP_LNG, BARBERSHOP_LAT, MAP_API_KEY, BARBERSHOP_NAME} from "../../config/config";
 
+interface IMapMarker {
+    name: string,
+    position: {
+        lat: number,
+        lng: number
+    },
+    width: 50,
+    height: 50
+}
 
-const customMarker = {
-    name: 'Barbershop "Uncle VE"' ,
-    position: { lat: 59.436553, lng: 24.769528 },
+const customMarker: IMapMarker = {
+    name: BARBERSHOP_NAME ,
+    position: { lat: BARBERSHOP_LAT, lng: BARBERSHOP_LNG },
     width: 50,
     height: 50
 }
 
 let icon = {
     url: "/svg/icons/marker.svg",
-    // scaledSize: new this.props.google.maps.Size(100, 100) //@TODO fix size of marker
-    // scaledSize: {hetigh: 100, width: 100}
 };
 
 const nightModeStyles = [
@@ -64,13 +72,15 @@ const nightModeStyles = [
         elementType: 'labels.text.fill',
         stylers: [{ color: '#757575' }]
     }
-    // Add more styles as needed
 ];
+const apiKey: string = MAP_API_KEY
 
 const CustomGoogleMap: React.FC =() => {
+
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyB5PzIu2_AoRZfqHjkNC3Fmz6B5BrrDWT0', //@TODO remove to env file
+        googleMapsApiKey: apiKey,
     });
+    
     return (
         <>
             <div style={{height: "526px", width: "100%"}}>
@@ -79,7 +89,6 @@ const CustomGoogleMap: React.FC =() => {
                         center={customMarker.position}
                         zoom={18}
                         options={{ styles: nightModeStyles }}
-                        // onClick={() => setActiveMarker(null)}
                         mapContainerStyle={{height: "526px", width: "100%"}}
                     >
                         
