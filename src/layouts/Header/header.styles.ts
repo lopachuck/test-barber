@@ -145,12 +145,6 @@ export const BookingBtn = styled(NavLink)`
         }
     }
     &:hover{
-        //padding-left: 38px;
-        //&:before{
-        //    left: 18px;
-        //    transform: translateX(-4px);
-        //    transition: transform 0.3s ease-in-out;
-        //}
         &>p,span{
             transform: translateY(-40px);
         }

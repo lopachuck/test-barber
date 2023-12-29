@@ -44,12 +44,8 @@ export const BarbersInfo = styled.div`
         gap: 12px;
     }
 `
-export const BarberPhoto = styled.img`
-    display: flex;
-    width: 100%;
-    height: 100%;
-`
-export const BarberPhotoWrapper = styled.div`
+
+export const BarberPhoto = styled.picture`
     display: flex;
     width: 360px;
     height: 360px;

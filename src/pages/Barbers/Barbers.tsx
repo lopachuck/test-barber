@@ -13,30 +13,38 @@ const Barbers: FC = () => {
                 </S.PageTitleWrapper>
                 <S.BarbersInfo>
                     <S.BarberInfo>
-                        <S.BarberPhotoWrapper>
-                            <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
-                        </S.BarberPhotoWrapper>
+                        <S.BarberPhoto>
+                            <source srcSet={'/img/barbers/Valeria.webp'} type="image/webp"/>
+                            <source srcSet={'/img/barbers/Valeria.jpg'} type="image/jpg"/>
+                            <img src={'/img/barbers/Valeria.webp'} alt=""/>
+                        </S.BarberPhoto>
                         <S.BarberName>Valeria</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhotoWrapper>
-                            <S.BarberPhoto src={'/img/barbers/Valerii.png'}/>
-                        </S.BarberPhotoWrapper>
+                        <S.BarberPhoto>
+                            <source srcSet={'/img/barbers/Valerii.webp'} type="image/webp"/>
+                            <source srcSet={'/img/barbers/Valerii.jpg'} type="image/jpg"/>
+                            <img src={'/img/barbers/Valerii.webp'} alt=""/>
+                        </S.BarberPhoto>
                         <S.BarberName>Valerii</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhotoWrapper>
-                            <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
-                        </S.BarberPhotoWrapper>
+                        <S.BarberPhoto>
+                            <source srcSet={'/img/barbers/Viktoria.webp'} type="image/webp"/>
+                            <source srcSet={'/img/barbers/Viktoria.jpg'} type="image/jpg"/>
+                            <img src={'/img/barbers/Viktoria.webp'} alt=""/>
+                        </S.BarberPhoto>
                         <S.BarberName>Viktoria</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhotoWrapper>
-                            <S.BarberPhoto src={'/img/barbers/Valeria.png'}/>
-                        </S.BarberPhotoWrapper>
+                        <S.BarberPhoto>
+                            <source srcSet={'/img/barbers/Alina.webp'} type="image/webp"/>
+                            <source srcSet={'/img/barbers/Alina.jpg'} type="image/jpg"/>
+                            <img src={'/img/barbers/Valeria.webp'} alt=""/>
+                        </S.BarberPhoto>
                         <S.BarberName>Alina</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
