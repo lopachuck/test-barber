@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import {Link} from "react-router-dom";
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
     display: flex;
     flex-direction: column;
     max-width: 1440px;

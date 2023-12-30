@@ -5,8 +5,8 @@ export const StyledContainer = styled.section`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
-    
+    //@todo WIDTH Margin Padding position container against header and footer
+    margin: 0 auto;
 
     @media ${devices.md} {
     

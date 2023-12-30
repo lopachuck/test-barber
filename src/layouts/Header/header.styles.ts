@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import {NavLink} from "react-router-dom";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
     display: flex;
     position: fixed;
     background: ${({ theme }) => theme.colors.background};
