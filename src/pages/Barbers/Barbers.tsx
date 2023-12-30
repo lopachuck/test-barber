@@ -15,36 +15,32 @@ const Barbers: FC = () => {
                 <S.BarbersInfo>
                     <S.BarberInfo>
                         <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/Valeria.webp'} type={"image/webp"}/>
-                            <source srcSet={'/img/barbers/Valeria.jpg'} type={"image/jpg"}/>
-                            <img src={'/img/barbers/Valeria.jpg'} loading={'lazy'} alt=""/>
+                            <source srcSet={'/img/barbers/barb1.webp, /img/barbers/barb1.jpg 2x'} type={"image/webp"}/>
+                            <img src={'/img/barbers/barb1.jpg'} loading={'lazy'} alt=""/>
                         </S.BarberPhoto>
                         <S.BarberName>Valeria</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
                         <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/Valerii.webp'} type="image/webp"/>
-                            <source srcSet={'/img/barbers/Valerii.jpg'} type="image/jpg"/>
-                            <img src={'/img/barbers/Valerii.jpg'} loading={'lazy'} alt=""/>
+                            <source srcSet={'/img/barbers/barb2.webp, /img/barbers/barb2.jpg 2x'} type="image/webp"/>
+                            <img src={'/img/barbers/barb2.jpg'} loading={'lazy'} alt=""/>
                         </S.BarberPhoto>
                         <S.BarberName>Valerii</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
                         <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/Viktoria.webp'} type="image/webp"/>
-                            <source srcSet={'/img/barbers/Viktoria.jpg'} type="image/jpg"/>
-                            <img src={'/img/barbers/Viktoria.jpg'} loading={'lazy'} alt=""/>
+                            <source srcSet={'/img/barbers/barb3.webp, /img/barbers/barb3.jpg 2x'} type="image/webp"/>
+                            <img src={'/img/barbers/barb3.jpg'} loading={'lazy'} alt=""/>
                         </S.BarberPhoto>
-                        <S.BarberName>Viktoria</S.BarberName>
+                        <S.BarberName>Viktoriia</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
                         <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/Alina.webp'} type="image/webp"/>
-                            <source srcSet={'/img/barbers/Alina.jpg'} type="image/jpg"/>
-                            <img src={'/img/barbers/Valeria.jpg'} loading={'lazy'} alt=""/>
+                            <source srcSet={'/img/barbers/barb4.webp, /img/barbers/barb4.jpg 2x'} type="image/webp"/>
+                            <img src={'/img/barbers/barb4.jpg'} loading={'lazy'} alt=""/>
                         </S.BarberPhoto>
                         <S.BarberName>Alina</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
