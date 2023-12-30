@@ -46,7 +46,7 @@ const contacts: IMenuItem = {
 }
 
 let menuItems = new Map<string, IMenuItem>([
-  ['home', home],
+  ['', home],
   ['services', services],
   ['gallery', gallery],
   ['barbers', barbers],
