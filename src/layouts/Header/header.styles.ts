@@ -6,23 +6,24 @@ export const HeaderContainer = styled.div`
     display: flex;
     position: fixed;
     background: ${({ theme }) => theme.colors.background};
-    max-width: 1160px;
-    width: calc(100% - 200px);
+    max-width: 1440px;
+    padding: 0 140px;
+    width: 100%;
     top: 0;
     flex-direction: row;
     height: 80px;
     z-index: 10;
     @media ${devices.lg} {
-        width: calc(100% - 200px);
+        padding: 0 100px;
     }
     @media ${devices.md} {
         flex-wrap: wrap;
         margin: 0 auto;
-        width: calc(100% - 120px);
         height: fit-content;
+        padding: 0 60px;
     }
     @media ${devices.xs} {
-        width: calc(100% - 32px);
+        padding: 0 16px;
     }
 `
 export const LogoWrapper = styled.div`
@@ -101,41 +102,59 @@ export const BookingBtnWrapper = styled.div`
     }
 `
 export const BookingBtn = styled(NavLink)`
-    text-decoration: none;
     display: flex;
+    flex-direction: column;
     height: 40px;
     width: 136px;
     box-sizing: border-box;
-    padding-left: 28px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 24px;
-    border: 1px solid  #6B6B6B;
-    background:  #FFC32A;
-    color:  #252429;
+    border-radius: 12px;
+    border: 1px solid  ${({ theme }) => theme.colors.elementsGrey};
     text-align: center;
+    text-decoration: none;
     /* Button */
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 20px; /* 142.857% */
     text-transform: uppercase;
-    position: relative;
     overflow: hidden;
-    &:before{
-        position: absolute;
-        content: url("/svg/icons/shape.svg");
-        transform: translateX(-45px);
+    &>span{
+        display: flex;
+        flex: 0 0 auto;
+        width: 136px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background:  ${({theme}) => theme.colors.accentColor};
+        color:  ${({theme}) => theme.colors.background};
+        transition: transform 0.3s ease-in-out;
     }
-    &:hover{
+    &>p{
+        display: flex;
+        flex: 0 0 auto;
+        width: 136px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
         background: ${({theme}) => theme.colors.white};
-        padding-left: 38px;
+        color:  ${({theme}) => theme.colors.background};
+        transition: transform 0.3s ease-in-out;
         &:before{
-            left: 18px;
-            transform: translateX(-4px);
-            transition: transform 0.3s ease-in-out;
+            padding-right: 8px;
+            content: url("/svg/icons/shape.svg");
         }
     }
+    &:hover{
+        &>p,span{
+            transform: translateY(-40px);
+        }
+        @media ${devices.md} {
+            &>p,span{
+                transform: unset;
+            }
+        }
+    }
+    
     
 `
 

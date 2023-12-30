@@ -1,49 +1,52 @@
 import React, {FC, ReactElement, useState} from 'react';
 import * as S from './menu.styles'
 import {useLocation} from "react-router-dom";
+import {t} from "../../utils/translate/t";
+import {useDispatch, useSelector} from "react-redux";
+import {openMenu} from "../../store/menu/menu.slice";
 export interface IMenuItem {
   active: boolean
-  text: string // @TODO add translate
+  text: string 
   type: string
   url?: string
 }
 
 const home: IMenuItem = {
   active: false,
-  text: 'home',
+  text: t('header_menu_home'),
   type: 'home',
 }
 
 const services: IMenuItem = {
   active: false,
-  text: 'services',
+  text: t('header_menu_services'),
   type: 'services',
 }
 const gallery: IMenuItem = {
   active: false,
-  text: 'gallery',
+  text: t('header_menu_gallery'),
   type: 'gallery',
 }
 const barbers: IMenuItem = {
   active: false,
-  text: 'barbers',
+  text: t('header_menu_barbers'),
   type: 'barbers',
 }
 
 const shop: IMenuItem = {
   active: false,
-  text: 'shop',
+  text: t('header_menu_shop'),
   type: 'shop',
 }
 
 const contacts: IMenuItem = {
   active: true,
-  text: 'contacts',
+  text: t('header_menu_contacts'),
   type: 'contacts',
 }
 
 let menuItems = new Map<string, IMenuItem>([
-  ['home', home],
+  ['', home],
   ['services', services],
   ['gallery', gallery],
   ['barbers', barbers],
@@ -87,12 +90,17 @@ function getMenuItems(
 }
 
 const Menu: FC = () => {
-  const location = useLocation()
-  const closeMenuEvent = () => {}
-  // const { isMenuOpen } = useSelector((state: any) => state.menu)
+  const dispatch = useDispatch()
+  const { isMenuOpen } = useSelector((state: any) => state.menu)
   const [isMenuVisible, setIsMenuVisible] = useState(false)
   const handleClick = () => {
-    // dispatch(openMenu(!isMenuOpen))
+    dispatch(openMenu(!isMenuOpen))
+    setIsMenuVisible(!isMenuOpen)
+  }
+  
+  const location = useLocation()
+  const closeMenuEvent = () => {
+    dispatch(openMenu(!isMenuOpen))
     setIsMenuVisible(!isMenuVisible)
   }
   return (
@@ -104,7 +112,7 @@ const Menu: FC = () => {
             </S.Cross>
           </S.BurgerBtn>
         </S.MobileMenuWrapper>
-        <S.DesktopMenuWrapper className={'openMenu'}>
+        <S.DesktopMenuWrapper isMenuOpen={ isMenuOpen }>
           {getMenuItems(
             menuItems,
             location,

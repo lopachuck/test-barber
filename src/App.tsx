@@ -6,6 +6,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Layout from "./components/Layout/Layout";
 import { ThemeContext } from 'styled-components'
 import {darkTheme} from "./theme";
+import Barbers from "./pages/Barbers/Barbers";
 import {t} from "./utils/translate/t";
 import Home from "./pages/Home/Home";
 
@@ -22,6 +23,7 @@ const App: React.FC = () => {
     }
   return (
       <ThemeContext.Provider value={darkTheme}>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={'anonymous'}/>
           <link
@@ -32,8 +34,12 @@ const App: React.FC = () => {
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<Layout />}>
-                      <Route index element={<Home {...appProps}/>}/>
+                      <Route path="/" index element={<Home {...appProps}/>}/>
+                      <Route path="gallery" element={<Home {...appProps}/>}/>
+                      <Route path="services"  element={<Home {...appProps}/>}/>
+                      <Route path="shop"  element={<Home {...appProps}/>}/>
                       <Route path="contacts" element={<Contacts {...appProps}/>}/>
+                      <Route path="barbers" element={<Barbers/>}/>
                   </Route>
               
               </Routes>

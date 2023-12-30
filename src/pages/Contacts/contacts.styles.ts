@@ -1,10 +1,27 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {devices} from "../../devices";
 
 export const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 60px;
+    max-width: 1440px;
+    padding: 0 140px;
     width: 100%;
+    @media ${devices.lg} {
+        padding: 0 100px;
+    }
+    @media ${devices.md} {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 120px;
+        height: fit-content;
+        padding: 0 60px;
+    }
+    @media ${devices.xs} {
+        padding: 0 16px;
+    }
 `
 export const PageTitle = styled.div`
     text-transform: uppercase;
@@ -17,14 +34,21 @@ export const PageTitle = styled.div`
     letter-spacing: -0.8px;
     color: ${({ theme }) => theme.colors.white};
     margin: 0 auto;
+    @media ${devices.md} {
+        padding-top: 40px;
+    }
 `
 export const PageInfoWrapper = styled.div`
     display: flex;
     justify-content: space-between;
+    @media ${devices.xs} {
+        flex-direction: column;
+    }
 `
 export const ContactInfo = styled.div`
     display: flex;
     flex-direction: column;
+    font-weight: 700;
     & > a {
         text-decoration: none;
         color: ${({ theme }) => theme.colors.white};
@@ -34,6 +58,9 @@ export const ContactInfo = styled.div`
         & > img {
             padding-right: 8px;
         }
+    }
+    @media ${devices.xs} {
+        order: 2;
     }
 `
 export const WorkTime = styled.div`
@@ -58,12 +85,26 @@ export const SocialWrapper = styled.div`
     letter-spacing: -0.252px;
     display: flex;
     flex-direction: column;
+    @media ${devices.xs} {
+        order: 1;
+        align-items: center;
+    }
 `
 export const SocialIconWrapper = styled.div`
     margin-top: 24px;
+    display: flex;
+    @media ${devices.xs} {
+        margin: unset;
+        gap: 16px;
+        padding-top: 16px;
+    }
 `
 export const SocialIcon = styled(Link)`
-    margin-left: 16px
+    margin-left: 16px;
+    @media ${devices.md} {
+    margin: unset;
+    width: 32px;
+}
 `
 export const MapWrapper = styled.div`
     padding-bottom: 60px;

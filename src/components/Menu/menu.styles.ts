@@ -2,22 +2,22 @@ import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import { devices } from '../../devices'
 
-export const DesktopMenuWrapper = styled.div`
+export interface IOpenMenuProps {
+    isMenuOpen: boolean
+}
+export const DesktopMenuWrapper = styled.div<IOpenMenuProps>`
     display: flex;
     @media ${devices.md} {
-        display: none;
-        &.openMenu{
-            display: flex;
-            position: fixed;
-            flex-direction: column;
-            height: calc(100% - 60px);
-            width: calc(100% - 120px);
-            z-index: 100;
-            padding-top: 215px;
-            align-items: center;
-            justify-content: center;
-            background: ${({theme}) => theme.colors.background};
-        }
+        display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
+        position: fixed;
+        flex-direction: column;
+        height: calc(100% - 60px);
+        width: calc(100% - 120px);
+        z-index: 100;
+        padding-top: 215px;
+        align-items: center;
+        justify-content: center;
+        background: ${({theme}) => theme.colors.background};
     }
     @media ${devices.xs} {
         width: calc(100% - 32px);
