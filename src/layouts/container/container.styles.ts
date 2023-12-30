@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
 
-export const StyledContainer = styled.section`
+export const StyledContainer = styled.main`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

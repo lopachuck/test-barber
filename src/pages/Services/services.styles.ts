@@ -1,12 +1,25 @@
 import styled from 'styled-components'
-export const Services = styled.div`
+export const PageTitle = styled.h1`
+    display: block;
+    margin-top: 60px;
+    text-align: center;
+    color: #fff;
+
+    /* Headline1 */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 120% */
+    letter-spacing: -0.8px;
+`
+export const Services = styled.article`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 90px; 
+    margin-top: 40px; 
 `
 
-export const Service = styled.div`
+export const Service = styled.section`
     display: flex;
     width: 72.5rem;
     padding: 1.25rem;
@@ -33,12 +46,12 @@ export const DescriptionBlock = styled.div`
     display: flex;
     flex-direction: column;
     color: #fff;
+    width: 585px;
 `
 export const Title = styled.div`
     color: #FFF;
 
     /* Headline2 */
-    font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -49,7 +62,6 @@ export const Description = styled.div`
     color: #ABABAB;
 
     /* Caption */
-    font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -63,7 +75,6 @@ export const Price = styled.div`
     color: #FFF;
 
     /* Headline2 */
-    font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -75,7 +86,6 @@ export const Duration = styled.div`
     color: #ABABAB;
 
     /* Caption */
-    font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
