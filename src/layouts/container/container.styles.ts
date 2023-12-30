@@ -9,7 +9,7 @@ export const StyledContainer = styled.section`
     
 
     @media ${devices.md} {
-        padding: 0 20px;
+    
     }
 
     @media (max-width: 428px) {
