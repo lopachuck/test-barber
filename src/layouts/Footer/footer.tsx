@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import * as S from './footer.styles'
 import {
     BARBERSHOP_DIRECTION_LINK,

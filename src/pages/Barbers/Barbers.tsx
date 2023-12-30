@@ -26,7 +26,7 @@ const Barbers: FC = () => {
                             <source srcSet={'/img/barbers/barb2.webp, /img/barbers/barb2.jpg 2x'} type="image/webp"/>
                             <img src={'/img/barbers/barb2.jpg'} loading={'lazy'} alt=""/>
                         </S.BarberPhoto>
-                        <S.BarberName>Valerii</S.BarberName>
+                        <S.BarberName>Vitalii</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
@@ -34,7 +34,7 @@ const Barbers: FC = () => {
                             <source srcSet={'/img/barbers/barb3.webp, /img/barbers/barb3.jpg 2x'} type="image/webp"/>
                             <img src={'/img/barbers/barb3.jpg'} loading={'lazy'} alt=""/>
                         </S.BarberPhoto>
-                        <S.BarberName>Viktoriia</S.BarberName>
+                        <S.BarberName>Victoriia</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>

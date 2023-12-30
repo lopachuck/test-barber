@@ -46,10 +46,10 @@ const Contacts: FC<IAppProps> = (props) => {
                 <S.SocialWrapper>
                     <span>{t('contacts_subscribe')}</span>
                     <S.SocialIconWrapper>
-                        <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'}>
+                        <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'} rel="noopener noreferrer">
                             <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
                         </S.SocialIcon>
-                        <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'}>
+                        <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'} rel="noopener noreferrer">
                             <img src={'/svg/icons/facebook.svg'} alt={'fb'}/>
                         </S.SocialIcon>
                     </S.SocialIconWrapper>

@@ -34,7 +34,10 @@ const App: React.FC = () => {
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<Layout />}>
-                      <Route index element={<Home {...appProps}/>}/>
+                      <Route path="/" index element={<Home {...appProps}/>}/>
+                      <Route path="gallery" element={<Home {...appProps}/>}/>
+                      <Route path="services"  element={<Home {...appProps}/>}/>
+                      <Route path="shop"  element={<Home {...appProps}/>}/>
                       <Route path="contacts" element={<Contacts {...appProps}/>}/>
                       <Route path="barbers" element={<Barbers/>}/>
                   </Route>

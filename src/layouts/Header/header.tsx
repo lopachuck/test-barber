@@ -1,25 +1,28 @@
 import * as S from './header.styles'
 import React, { FC } from 'react'
-import Menu from "../../components/Menu/menu";
+import Menu from '../../components/Menu/menu'
 import { t } from '../../utils/translate/t'
+import { NavLink } from 'react-router-dom'
 
 const Header: FC = () => {
     return (
         <>
             <S.HeaderContainer>
                 <S.LogoWrapper>
-                    <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'}/>
+                    <NavLink to={''}>
+                        <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'} />
+                    </NavLink>
                 </S.LogoWrapper>
                 <S.MenuWrapper>
-                    <Menu/>
+                    <Menu />
                 </S.MenuWrapper>
                 <S.BookingBtnWrapper>
                     <S.LangMenuWrapper>
                         <S.LangMenuBtn>
                             {t('LANG_BTN_ENG')}
                         </S.LangMenuBtn>
-                        <S.LangMenuOptions >
-                            <S.LangMenuOption ></S.LangMenuOption>
+                        <S.LangMenuOptions>
+                            <S.LangMenuOption></S.LangMenuOption>
                         </S.LangMenuOptions>
                     </S.LangMenuWrapper>
                     <S.BookingBtn to={'#'}>
