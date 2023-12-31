@@ -3,6 +3,7 @@ import React, { FC } from 'react'
 import Menu from '../../components/Menu/menu'
 import { t } from '../../utils/translate/t'
 import { NavLink } from 'react-router-dom'
+import {BookingBtn} from "../../ui-kit/btn/bookBtn.styles";
 
 const Header: FC = () => {
     return (
@@ -25,10 +26,10 @@ const Header: FC = () => {
                             <S.LangMenuOption></S.LangMenuOption>
                         </S.LangMenuOptions>
                     </S.LangMenuWrapper>
-                    <S.BookingBtn to={'#'}>
+                    <BookingBtn to={'#'}>
                         <span>{t('btn_header_bookNow')}</span>
                         <p>{t('btn_header_bookNow')}</p>
-                    </S.BookingBtn>
+                    </BookingBtn>
                 </S.BookingBtnWrapper>
             </S.HeaderContainer>
         </>
