@@ -4,7 +4,7 @@ import * as S from './bookBtn.styles'
 const BookBtnExample: FC = (to) => {
     return (
         <>
-            <S.BookBtn to={to}></S.BookBtn>
+            {/*<S.BookBtn to={to}></S.BookBtn>*/}
         </>
     )
 }

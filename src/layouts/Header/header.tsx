@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react'
 import Menu from '../../components/Menu/menu'
 import { t } from '../../utils/translate/t'
 import { NavLink } from 'react-router-dom'
+import {BookingBtn} from "../../ui-kit/btn/bookBtn.styles";
 import SimpleModal from '../../ui-kit/SimpleModal/SimpleModal'
 
 const Header: FC = () => {
@@ -41,10 +42,10 @@ const Header: FC = () => {
                             {/*{t('LANG_BTN_ENG')}*/}
                         </S.LangMenuBtn>
                     </S.LangMenuWrapper>
-                    <S.BookingBtn to={'#'}>
+                    <BookingBtn to={'#'}>
                         <span>{t('btn_header_bookNow')}</span>
                         <p>{t('btn_header_bookNow')}</p>
-                    </S.BookingBtn>
+                    </BookingBtn>
                 </S.BookingBtnWrapper>
             </S.HeaderContainer>
         </>

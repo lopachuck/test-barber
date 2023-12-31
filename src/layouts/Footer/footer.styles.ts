@@ -9,6 +9,7 @@ export const FooterWrapper = styled.footer`
     padding: 0 140px;
     width: 100%;
     height: 314px;
+    margin-top: 60px;
     @media ${devices.lg} {
         padding: 0 100px;
     }
@@ -17,6 +18,7 @@ export const FooterWrapper = styled.footer`
         margin: 0 auto;
         height: fit-content;
         padding: 0 60px;
+        margin-top: 60px;
     }
     @media ${devices.xs} {
         padding: 0 16px;

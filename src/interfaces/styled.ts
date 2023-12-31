@@ -9,4 +9,5 @@ export interface ITheme {
         background: string,
         textSecondary: string,
         elementsGrey: string,
+        backgroundElemetsBlack: string,
 }}

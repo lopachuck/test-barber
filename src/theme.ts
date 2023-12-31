@@ -7,7 +7,8 @@ export const baseTheme: ITheme = {
         accentColor: '#FFC32A',
         background: '#252429',
         textSecondary: '#ABABAB',
-        elementsGrey: '#6B6B6B'
+        elementsGrey: '#6B6B6B',
+        backgroundElemetsBlack: '#1D1D22'
     },
 
     
