@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
 import {NavLink} from "react-router-dom";
+import checkmark from '../../assets/icon/checkmark.svg'
+import { ReactComponent } from '*.svg'
+// import checkmark from '../../../public/svg/icons/checkmark.svg'
 
 export const HeaderContainer = styled.header`
     display: flex;
@@ -74,22 +77,67 @@ export const LangMenuBtn = styled.span`
     }
 `
 export const LangMenuOptions = styled.div `
-    display: none;
-    &.menuOpen{
-        display: flex;
-        flex-direction: column;
-        width: 162px;
-        min-height: 48px;
-        background: ${({ theme }) => theme.colors.background};
-        border-radius: 12px;
-        border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
-        position: absolute;
-        top: 60px;
-        left: -2px;
-    }
+    display: flex;
+    width: 102px;
+    //width: 162px;
+    max-width: 162px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 0;
+    //gap: 10px;
+    flex-direction: column;
+    border: 1px solid #6B6B6B;
+    background: #252429;
+    border-radius: 12px;
+    //&.menuOpen{
+    //    display: flex;
+    //    flex-direction: column;
+    //    width: 162px;
+    //    min-height: 48px;
+    //     background: ${({ theme }) => theme.colors.background};
+    //    border-radius: 12px;
+    //     border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+    //    position: absolute;
+    //    top: 60px;
+    //    left: -2px;
+    //}
 `
-export const LangMenuOption =styled.span `
+export const LangMenuOption =styled.div `
+    display: flex;
+    position: relative;
+    width: 102px;
+    max-width: 162px;
+    padding: 12px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    border-right: 1px solid #6B6B6B;
+    border-left: 1px solid #6B6B6B;
+    background: #252429;
 
+    &:hover,
+    &.active,
+    &:active {
+        //color: red;
+        //border-radius: 12px 12px 0px 0px;
+        border-top: 1px solid #6B6B6B;
+        border-right: 1px solid #6B6B6B;
+        border-left: 1px solid  #6B6B6B;
+        background: #6B6B6B;
+    }
+    &:hover,
+    &.active,
+    &:active
+    {
+        &:after{
+            content: " ";
+            width: 24px;
+            height: 24px;
+            right: 16px;
+            position: absolute;
+            background-image: url(${checkmark});
+        }
+    }
 `
 export const BookingBtnWrapper = styled.div`
     display: flex;
