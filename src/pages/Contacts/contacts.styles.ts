@@ -15,7 +15,6 @@ export const PageWrapper = styled.div`
     @media ${devices.md} {
         flex-wrap: wrap;
         margin: 0 auto;
-        margin-top: 120px;
         height: fit-content;
         padding: 0 60px;
     }

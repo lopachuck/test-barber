@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import {Link} from "react-router-dom";
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
     display: flex;
     flex-direction: column;
     max-width: 1440px;
     padding: 0 140px;
     width: 100%;
     height: 314px;
+    margin-top: 60px;
     @media ${devices.lg} {
         padding: 0 100px;
     }
@@ -17,6 +18,7 @@ export const FooterWrapper = styled.div`
         margin: 0 auto;
         height: fit-content;
         padding: 0 60px;
+        margin-top: 60px;
     }
     @media ${devices.xs} {
         padding: 0 16px;

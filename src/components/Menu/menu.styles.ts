@@ -5,8 +5,9 @@ import { devices } from '../../devices'
 export interface IOpenMenuProps {
     isMenuOpen: boolean
 }
-export const DesktopMenuWrapper = styled.div<IOpenMenuProps>`
+export const DesktopMenuWrapper = styled.nav<IOpenMenuProps>`
     display: flex;
+    gap: 32px;
     @media ${devices.md} {
         display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
         position: fixed;
@@ -24,7 +25,7 @@ export const DesktopMenuWrapper = styled.div<IOpenMenuProps>`
     }
 `
 export const MenuItem = styled.div`
-    padding-right: 32px;
+    //padding-right: 32px;
     display: flex;
     height: 100%;
     align-items: center;
