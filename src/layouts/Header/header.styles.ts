@@ -26,11 +26,12 @@ export const HeaderContainer = styled.header`
         padding: 0 16px;
     }
 `
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(NavLink)`
     @media ${devices.md} {
         display: flex;
         width: 100%;
         height: 60px;
+        text-decoration: none;
         border-bottom: 1px solid ${({ theme }) => theme.colors.elementsGrey};
         &>img{
             width: 40px;

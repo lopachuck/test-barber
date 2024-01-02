@@ -9,10 +9,8 @@ const Header: FC = () => {
     return (
         <>
             <S.HeaderContainer>
-                <S.LogoWrapper>
-                    <NavLink to={''}>
+                <S.LogoWrapper to={''}>
                         <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'} />
-                    </NavLink>
                 </S.LogoWrapper>
                 <S.MenuWrapper>
                     <Menu />
