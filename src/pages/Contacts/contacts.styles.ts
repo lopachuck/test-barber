@@ -18,7 +18,7 @@ export const PageWrapper = styled.div`
         height: fit-content;
         padding: 0 60px;
     }
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         padding: 0 16px;
     }
 `

@@ -20,28 +20,30 @@ export const DesktopMenuWrapper = styled.nav<IOpenMenuProps>`
         justify-content: center;
         background: ${({theme}) => theme.colors.background};
     }
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         width: calc(100% - 32px);
+        padding-top: 56px;
     }
 `
 export const MenuItem = styled.div`
-    //padding-right: 32px;
     display: flex;
     height: 100%;
     align-items: center;
     @media ${devices.md} {
-        width: 100%;
         justify-content: center;
         align-items: center;
+        width: 100px;
         height: 40px;
         padding-right: unset;
     }
 `
 export const MenuItemLink = styled(NavLink)`
+    width: 100%;
+    text-align: center;
     text-decoration: none;
-    color: #ffffff;
+    color: ${({theme}) => theme.colors.white};
     &.active{
-        color: #FFC32A !important;
+        color: ${({theme}) => theme.colors.accentColor} !important;
     }
 `
 export const MenuItemText = styled.div`
