@@ -20,7 +20,7 @@ export const FooterWrapper = styled.footer`
         padding: 0 60px;
         margin-top: 60px;
     }
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         padding: 0 16px;
         
     }

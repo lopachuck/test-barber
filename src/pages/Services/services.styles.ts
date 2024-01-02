@@ -34,7 +34,7 @@ export const Service = styled.section`
     @media ${devices.md} {
         height: 192px;
     }
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         flex-direction: column;
         height: 180px;
         padding: 16px;
@@ -55,7 +55,7 @@ export const Pictures = styled.picture`
         border-radius: 12px;
         border: 1px solid ${({theme}) => theme.colors.elementsGrey};
     }
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         display: none;
     }
     
@@ -76,7 +76,7 @@ export const Title = styled.div`
     font-weight: 700;
     line-height: 32px; /* 100% */
     letter-spacing: -0.64px;
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -92,7 +92,7 @@ export const Description = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
-    @media ${devices.xs} {
+    @media ${devices.sm} {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -108,7 +108,7 @@ export const BtnBlock = styled.div`
         flex-direction: column;
         gap: 24px;
     }
-    @media ${devices.md} {
+    @media ${devices.sm} {
         flex-direction: unset;
         justify-content: space-between;
         width: 100%;
@@ -117,12 +117,12 @@ export const BtnBlock = styled.div`
 `
 export const PriceBlock = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 86px;
     gap: 16px;
     color: ${({theme}) => theme.colors.white};
     @media ${devices.md} {
-        flex-direction: column;
         order: 2
     }
     @media ${devices.xs} {
