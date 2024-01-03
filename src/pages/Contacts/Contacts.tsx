@@ -13,7 +13,7 @@ import {
 
 const Contacts: FC<IAppProps> = (props) => {
     useEffect(() => {
-        props.setTitle(t('contacts_title'))
+        props.setTitle(t('title_page_contacts'))
     }, [])
     console.log(BARBERSHOP_MAIL_ADDRESS)
     return (
