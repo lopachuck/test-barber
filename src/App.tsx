@@ -6,18 +6,19 @@ import Layout from './components/Layout/Layout'
 import { ThemeContext } from 'styled-components'
 import { darkTheme } from './theme'
 import Barbers from './pages/Barbers/Barbers'
-import { t } from './utils/translate/t'
 import Home from './pages/Home/Home'
 import Services from './pages/Services/Services'
 import Gallery from "./pages/Gallery/Gallery";
+import Shop from './pages/Shop/Shop'
+import { useTranslation } from 'react-i18next'
 
 export interface IAppProps {
     setTitle: any
 }
 
 const App: React.FC = () => {
-    const home = t('home')
-    const [title, setTitle] = useState(home)
+    const { t } = useTranslation()
+    const [title, setTitle] = useState(t('home'))
     const appProps = {
         title,
         setTitle,
@@ -50,7 +51,7 @@ const App: React.FC = () => {
                         <Route path="/" index element={<Home {...appProps} />}/>
                         <Route path="gallery" element={<Gallery {...appProps} />}/>
                         <Route path="services" element={<Services {...appProps} />}/>
-                        <Route path="shop" element={<Home {...appProps} />}/>
+                        <Route path="shop" element={<Shop  />}/>
                         <Route path="contacts" element={<Contacts {...appProps} />}/>
                         <Route path="barbers" element={<Barbers/>}/>
                     </Route>

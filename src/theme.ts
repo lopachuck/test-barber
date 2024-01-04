@@ -8,10 +8,9 @@ export const baseTheme: ITheme = {
         background: '#252429',
         textSecondary: '#ABABAB',
         elementsGrey: '#6B6B6B',
-        backgroundElemetsBlack: '#1D1D22'
+        backgroundElemetsBlack: '#1D1D22',
     },
 
-    
 }
 
 export const darkTheme: DefaultTheme = {

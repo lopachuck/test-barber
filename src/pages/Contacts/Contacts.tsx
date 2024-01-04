@@ -1,17 +1,18 @@
-import {FC, useEffect} from 'react';
-import * as S from "./contacts.styles"
-import {t} from "../../utils/translate/t";
-import CustomGoogleMap from "../../components/GoogleMap/CustomGoogleMap";
-import {IAppProps} from "../../App";
+import { FC, useEffect } from 'react'
+import * as S from './contacts.styles'
+import CustomGoogleMap from '../../components/GoogleMap/CustomGoogleMap'
+import { IAppProps } from '../../App'
 import {
     BARBERSHOP_FACEBOOK_LINK,
     BARBERSHOP_INSTAGRAM_LINK,
     BARBERSHOP_MAIL_ADDRESS,
-    BARBERSHOP_PHONE
-} from "../../config/config";
+    BARBERSHOP_PHONE,
+} from '../../config/config'
+import { useTranslation } from 'react-i18next'
 
 
 const Contacts: FC<IAppProps> = (props) => {
+    const { t, i18n } = useTranslation()
     useEffect(() => {
         props.setTitle(t('title_page_contacts'))
     }, [])

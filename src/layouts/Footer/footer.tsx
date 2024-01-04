@@ -5,11 +5,12 @@ import {
     BARBERSHOP_FACEBOOK_LINK,
     BARBERSHOP_INSTAGRAM_LINK,
     BARBERSHOP_MAIL_ADDRESS,
-    BARBERSHOP_PHONE
-} from "../../config/config";
-import {t} from "../../utils/translate/t";
+    BARBERSHOP_PHONE,
+} from '../../config/config'
+import { useTranslation } from 'react-i18next'
 
 const Footer: FC = () => {
+    const { t, i18n } = useTranslation()
     return (
         <>
             <S.FooterWrapper>

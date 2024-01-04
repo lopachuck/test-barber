@@ -1,10 +1,11 @@
-import {FC} from 'react';
-import { PageWrapper } from "../Contacts/contacts.styles";
-import {t} from "../../utils/translate/t";
-import * as S from "./barbers.styles"
-import {BARBERSHOP_MAIL_ADDRESS} from "../../config/config";
+import { FC } from 'react'
+import { PageWrapper } from '../Contacts/contacts.styles'
+import * as S from './barbers.styles'
+import { BARBERSHOP_MAIL_ADDRESS } from '../../config/config'
+import { useTranslation } from 'react-i18next'
 
 const Barbers: FC = () => {
+    const { t, i18n } = useTranslation()
     return (
         <>
             <PageWrapper>
