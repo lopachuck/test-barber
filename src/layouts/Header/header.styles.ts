@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
-import {NavLink} from "react-router-dom";
+import checkmark from '../../assets/icon/checkmark.svg'
 
 export const HeaderContainer = styled.header`
     display: flex;
-    position: sticky;
+    position: fixed;
     background: ${({ theme }) => theme.colors.background};
     max-width: 1440px;
     padding: 0 140px;
@@ -74,23 +74,65 @@ export const LangMenuBtn = styled.span`
         display: none;
     }
 `
-export const LangMenuOptions = styled.div `
-    display: none;
-    &.menuOpen{
-        display: flex;
-        flex-direction: column;
-        width: 162px;
-        min-height: 48px;
-        background: ${({ theme }) => theme.colors.background};
-        border-radius: 12px;
-        border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
-        position: absolute;
-        top: 60px;
-        left: -2px;
-    }
+export const LangMenu = styled.div `
+    display: flex;
+    width: 100px;
+    max-width: 162px;
+    align-items: center;
+    gap: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: ${({ theme }) => theme.colors.background};
+    border-collapse: collapse;
 `
-export const LangMenuOption =styled.span `
 
+export const LangMenuOption =styled.div `
+    display: flex;
+    position: relative;
+    width: 100px;
+    max-width: 162px;
+    padding: 12px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    color: ${({ theme }) => theme.colors.white};
+
+    &:first-child {
+        border-radius: 12px 12px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 12px 12px;
+    }
+
+    border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+    background: ${({ theme }) => theme.colors.background};
+
+    &:hover {
+        cursor: pointer;
+        &:not(:first-child) {
+            border-top: 1px solid ${({ theme }) => theme.colors.background};
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid ${({ theme }) => theme.colors.background};
+        }
+    }
+
+    &:hover {
+        border-left: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+        background: ${({ theme }) => theme.colors.elementsGrey};
+    }
+
+    &.active {
+        &:after {
+            content: " ";
+            width: 24px;
+            height: 24px;
+            right: 16px;
+            position: absolute;
+            background-image: url(${checkmark});
+        }
+    }
 `
 export const BookingBtnWrapper = styled.div`
     display: flex;
