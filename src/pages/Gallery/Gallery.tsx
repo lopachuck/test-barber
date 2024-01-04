@@ -24,9 +24,10 @@ const Gallery: FC<IAppProps> = (props) => {
                    <S.GallerySubTitle>{t('gallery_subtitle')}</S.GallerySubTitle>
                </S.GalleryTitleWrapper>
                <S.GalleryWrapper>
-                   <CustomSlider/>
+               
                </S.GalleryWrapper>
            </S.GalleryPage>
+           <CustomSlider/>
        </>
    )
 }

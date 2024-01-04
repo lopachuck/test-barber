@@ -13,6 +13,7 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     height: 80px;
     z-index: 10;
+    margin: 0 auto;
     @media ${devices.lg} {
         padding: 0 100px;
     }

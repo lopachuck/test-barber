@@ -5,7 +5,7 @@ import {devices} from "../../devices";
 export const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 60px; //@todo
     max-width: 1440px;
     padding: 0 140px;
     width: 100%;

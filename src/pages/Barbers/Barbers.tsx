@@ -16,7 +16,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb1.webp, /img/barbers/barb1.jpg 2x'} type={"image/webp"}/>
-                            <img src={'/img/barbers/barb1.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb1.jpg'} loading={'lazy'} alt="barber1"/>
                         </S.BarberPhoto>
                         <S.BarberName>Valeria</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
@@ -24,7 +24,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb2.webp, /img/barbers/barb2.jpg 2x'} type="image/webp"/>
-                            <img src={'/img/barbers/barb2.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb2.jpg'} loading={'lazy'} alt="barber2"/>
                         </S.BarberPhoto>
                         <S.BarberName>Vitalii</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
@@ -32,7 +32,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb3.webp, /img/barbers/barb3.jpg 2x'} type="image/webp"/>
-                            <img src={'/img/barbers/barb3.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb3.jpg'} loading={'lazy'} alt="barber3"/>
                         </S.BarberPhoto>
                         <S.BarberName>Victoriia</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
@@ -40,7 +40,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb4.webp, /img/barbers/barb4.jpg 2x'} type="image/webp"/>
-                            <img src={'/img/barbers/barb4.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb4.jpg'} loading={'lazy'} alt="barber4"/>
                         </S.BarberPhoto>
                         <S.BarberName>Alina</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>

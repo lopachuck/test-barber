@@ -9,6 +9,7 @@ export const FooterWrapper = styled.footer`
     padding: 0 140px;
     width: 100%;
     height: 314px;
+    margin: 0 auto;
     margin-top: 60px;
     @media ${devices.lg} {
         padding: 0 100px;
