@@ -14,8 +14,8 @@ const Home: FC<IAppProps> = (props) => {
     return (
     <>
         <S.HomePageWrapper>
-            <PageTitle>{t('home_title')}</PageTitle>
-            <PageSubtitle></PageSubtitle>
+            <PageTitle>{t('title_page_home')}</PageTitle>
+            <PageSubtitle>{t('home_subtitle')}</PageSubtitle>
         </S.HomePageWrapper>
     </>
   );
