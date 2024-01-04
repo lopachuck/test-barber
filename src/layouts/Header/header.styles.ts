@@ -4,7 +4,7 @@ import checkmark from '../../assets/icon/checkmark.svg'
 
 export const HeaderContainer = styled.header`
     display: flex;
-    position: sticky;
+    position: fixed;
     background: ${({ theme }) => theme.colors.background};
     max-width: 1440px;
     padding: 0 140px;
@@ -107,6 +107,7 @@ export const LangMenuOption =styled.div `
     background: ${({ theme }) => theme.colors.background};
 
     &:hover {
+        cursor: pointer;
         &:not(:first-child) {
             border-top: 1px solid ${({ theme }) => theme.colors.background};
         }
@@ -114,16 +115,9 @@ export const LangMenuOption =styled.div `
         &:not(:last-child) {
             border-bottom: 1px solid ${({ theme }) => theme.colors.background};
         }
-
-        //@todo discuss
-        //& ~ div {
-        //    border-top: none;
-        //}
     }
 
-    &:hover,
-    &.active,
-    &:active {
+    &:hover {
         border-left: 1px solid ${({ theme }) => theme.colors.elementsGrey};
         background: ${({ theme }) => theme.colors.elementsGrey};
     }

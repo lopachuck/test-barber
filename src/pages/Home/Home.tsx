@@ -1,10 +1,11 @@
-import {FC, useEffect} from 'react';
-import * as S from "./home.styles"
-import {t} from "../../utils/translate/t";
-import {IAppProps} from "../../App";
+import { FC, useEffect } from 'react'
+import * as S from './home.styles'
+import { IAppProps } from '../../App'
+import { useTranslation } from 'react-i18next'
 
 
 const Home: FC<IAppProps> = (props) => {
+    const { t, i18n } = useTranslation()
     useEffect(() => {
         props.setTitle(t('contacts_title'))
     }, [])

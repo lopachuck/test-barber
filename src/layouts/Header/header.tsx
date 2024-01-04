@@ -1,14 +1,21 @@
 import * as S from './header.styles'
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import Menu from '../../components/Menu/menu'
-import { t } from '../../utils/translate/t'
 import { NavLink } from 'react-router-dom'
-import {BookingBtn} from "../../ui-kit/btn/bookBtn.styles";
+import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import SimpleModal from '../../ui-kit/SimpleModal/SimpleModal'
+import { useTranslation } from 'react-i18next'
+import i18n from '../../i18n'
 
 const Header: FC = () => {
     const [langOptionOpen, setLangOptionOpen] = useState(false)
-    const [currentLang, setCurrentLang] = useState('ENG')
+    const [currentLang, setCurrentLang] = useState(i18n.language.toUpperCase())
+
+    useEffect(() => {
+        i18n.changeLanguage(currentLang.toLowerCase())
+    }, [currentLang])
+    const { t } = useTranslation()
+
     return (
         <>
             <S.HeaderContainer>
@@ -30,11 +37,11 @@ const Header: FC = () => {
                                 <S.LangMenuOption className={currentLang === 'ENG' ? 'active' : ''}
                                                   onClick={() => setCurrentLang('ENG')}>ENG</S.LangMenuOption>
                                 <S.LangMenuOption className={currentLang === 'EST' ? 'active' : ''}
-                                    onClick={() => setCurrentLang('EST')}>EST</S.LangMenuOption>
+                                                  onClick={() => setCurrentLang('EST')}>EST</S.LangMenuOption>
                                 <S.LangMenuOption className={currentLang === 'RU' ? 'active' : ''}
-                                    onClick={() => setCurrentLang('RU')}>RU</S.LangMenuOption>
+                                                  onClick={() => setCurrentLang('RU')}>RU</S.LangMenuOption>
                                 <S.LangMenuOption className={currentLang === 'UKR' ? 'active' : ''}
-                                    onClick={() => setCurrentLang('UKR')}>UKR</S.LangMenuOption>
+                                                  onClick={() => setCurrentLang('UKR')}>UKR</S.LangMenuOption>
                             </S.LangMenu>
                         </SimpleModal>
                         <S.LangMenuBtn onClick={() => setLangOptionOpen(true)}>
