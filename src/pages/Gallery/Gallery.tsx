@@ -6,13 +6,6 @@ import {useTranslation} from "react-i18next";
 
 const Gallery: FC<IAppProps> = (props) => {
     const { t } = useTranslation()
-    let settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    }
     useEffect(() => {
         props.setTitle(t('title_page_gallery'))
     }, []);

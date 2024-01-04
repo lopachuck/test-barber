@@ -1,7 +1,6 @@
 import * as S from './header.styles'
 import React, { FC, useEffect, useState } from 'react'
 import Menu from '../../components/Menu/menu'
-import { NavLink } from 'react-router-dom'
 import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import SimpleModal from '../../ui-kit/SimpleModal/SimpleModal'
 import { useTranslation } from 'react-i18next'
