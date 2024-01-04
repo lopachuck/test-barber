@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
-import {NavLink} from "react-router-dom";
 import checkmark from '../../assets/icon/checkmark.svg'
-import { ReactComponent } from '*.svg'
-// import checkmark from '../../../public/svg/icons/checkmark.svg'
 
 export const HeaderContainer = styled.header`
     display: flex;
@@ -76,60 +73,63 @@ export const LangMenuBtn = styled.span`
         display: none;
     }
 `
-export const LangMenuOptions = styled.div `
+export const LangMenu = styled.div `
     display: flex;
-    width: 102px;
-    //width: 162px;
+    width: 100px;
     max-width: 162px;
-    padding: 8px 16px;
     align-items: center;
     gap: 0;
-    //gap: 10px;
     flex-direction: column;
-    border: 1px solid #6B6B6B;
-    background: #252429;
-    border-radius: 12px;
-    //&.menuOpen{
-    //    display: flex;
-    //    flex-direction: column;
-    //    width: 162px;
-    //    min-height: 48px;
-    //     background: ${({ theme }) => theme.colors.background};
-    //    border-radius: 12px;
-    //     border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
-    //    position: absolute;
-    //    top: 60px;
-    //    left: -2px;
-    //}
+    flex-wrap: wrap;
+    background: ${({ theme }) => theme.colors.background};
+    border-collapse: collapse;
 `
+
 export const LangMenuOption =styled.div `
     display: flex;
     position: relative;
-    width: 102px;
+    width: 100px;
     max-width: 162px;
     padding: 12px 16px;
     align-items: flex-start;
     gap: 10px;
-    color: #fff;
-    border-right: 1px solid #6B6B6B;
-    border-left: 1px solid #6B6B6B;
-    background: #252429;
+    color: ${({ theme }) => theme.colors.white};
+
+    &:first-child {
+        border-radius: 12px 12px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 12px 12px;
+    }
+
+    border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+    background: ${({ theme }) => theme.colors.background};
+
+    &:hover {
+        &:not(:first-child) {
+            border-top: 1px solid ${({ theme }) => theme.colors.background};
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid ${({ theme }) => theme.colors.background};
+        }
+
+        //@todo discuss
+        //& ~ div {
+        //    border-top: none;
+        //}
+    }
 
     &:hover,
     &.active,
     &:active {
-        //color: red;
-        //border-radius: 12px 12px 0px 0px;
-        border-top: 1px solid #6B6B6B;
-        border-right: 1px solid #6B6B6B;
-        border-left: 1px solid  #6B6B6B;
-        background: #6B6B6B;
+        border-left: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+        background: ${({ theme }) => theme.colors.elementsGrey};
     }
-    &:hover,
-    &.active,
-    &:active
-    {
-        &:after{
+
+    &.active {
+        &:after {
             content: " ";
             width: 24px;
             height: 24px;

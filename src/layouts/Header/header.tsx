@@ -26,7 +26,7 @@ const Header: FC = () => {
                             isOpen={langOptionOpen}
                             onClose={() => setLangOptionOpen(false)}
                         >
-                            <S.LangMenuOptions>
+                            <S.LangMenu>
                                 <S.LangMenuOption className={currentLang === 'ENG' ? 'active' : ''}
                                                   onClick={() => setCurrentLang('ENG')}>ENG</S.LangMenuOption>
                                 <S.LangMenuOption className={currentLang === 'EST' ? 'active' : ''}
@@ -35,7 +35,7 @@ const Header: FC = () => {
                                     onClick={() => setCurrentLang('RU')}>RU</S.LangMenuOption>
                                 <S.LangMenuOption className={currentLang === 'UKR' ? 'active' : ''}
                                     onClick={() => setCurrentLang('UKR')}>UKR</S.LangMenuOption>
-                            </S.LangMenuOptions>
+                            </S.LangMenu>
                         </SimpleModal>
                         <S.LangMenuBtn onClick={() => setLangOptionOpen(true)}>
                             {currentLang}
