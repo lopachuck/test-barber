@@ -1,11 +1,11 @@
 import {FC, useEffect} from "react";
 import {IAppProps} from "../../App";
-import {t} from "../../utils/translate/t";
 import * as S from "./gallery.styles";
 import CustomSlider from "../../ui-kit/Slider/Slider";
+import {useTranslation} from "react-i18next";
 
 const Gallery: FC<IAppProps> = (props) => {
-    
+    const { t } = useTranslation()
     let settings = {
         dots: true,
         infinite: true,

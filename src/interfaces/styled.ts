@@ -7,6 +7,7 @@ export interface ITheme {
         white: string,
         accentColor: string,
         background: string,
+        backgroundHeader: string,
         textSecondary: string,
         elementsGrey: string,
         backgroundElemetsBlack: string,

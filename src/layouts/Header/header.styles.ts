@@ -1,18 +1,24 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
 import checkmark from '../../assets/icon/checkmark.svg'
+import {NavLink} from "react-router-dom";
 
 export const HeaderContainer = styled.header`
     display: flex;
     position: fixed;
-    background: ${({ theme }) => theme.colors.background};
+    top: 0;
+    width: 100%;
+    background: ${({ theme }) => theme.colors.backgroundHeader};
+    z-index: 10;
+`
+export const HeaderWrapper = styled.div`
+    display: flex;
     max-width: 1440px;
     padding: 0 140px;
     width: 100%;
     top: 0;
     flex-direction: row;
     height: 80px;
-    z-index: 10;
     margin: 0 auto;
     @media ${devices.lg} {
         padding: 0 100px;
