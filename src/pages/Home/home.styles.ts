@@ -1,9 +1,12 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import BG from '../../assets/home/bg_title.jpeg'
+import {PageWrapper} from "../Shop/shop.styles";
 
-export const PageWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 316px);
+export const HomePageWrapper = styled(PageWrapper)`
+    background-image: url(${BG});
+    background-position: center;
+    max-height: 950px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
 `
+

@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
 import checkmark from '../../assets/icon/checkmark.svg'
+import {NavLink} from "react-router-dom";
 
 export const HeaderContainer = styled.header`
     display: flex;
     position: fixed;
-    background: ${({ theme }) => theme.colors.background};
+    //background: ${({ theme }) => theme.colors.background};
+    background: rgba(37, 36, 41, 0.50);
     max-width: 1440px;
     padding: 0 140px;
     width: 100%;
