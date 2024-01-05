@@ -1,4 +1,4 @@
-import {FC, useEffect, useState} from "react";
+import {FC} from "react";
 import * as S from './slider.styles'
 import Slider from "react-slick";
 import {GalleryPhoto} from "./slider.styles";

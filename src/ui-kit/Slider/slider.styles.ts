@@ -4,9 +4,6 @@ import ArrowLeft from '../../assets/icon/arrow_left.svg'
 import ArrowRight from '../../assets/icon/arrow_right.svg'
 
 export const SliderWrapper = styled.div`
-    & .slick-slider{
-        //max-width: 1160px;
-    }
     & .slick-dots li button:before{
         color: ${({theme}) => theme.colors.elementsGrey}
     }
@@ -24,16 +21,11 @@ export const SliderWrapper = styled.div`
         top: -120px;
         right: 163px;
     }
-    & .slick-list {
-        //overflow: visible;
-    }
     & .slick-initialized .slick-slide{
         width: 348px;
     }
     & .slick-track{
         display: flex;
-        //gap: 16px;
-        //overflow-y: hidden;
     }
     & .slick-prev:before{
         content: url(${ArrowLeft});
@@ -55,25 +47,19 @@ export const SliderWrapper = styled.div`
         }
     }
     @media ${devices.lg} {
-        & .slick-arrow, slick-arrow:before{
+        & .slick-arrow, .slick-arrow:before{
             display: none!important;
         }
     }
 `
 export const GalleryPhoto = styled.picture`
     display: flex;
-    //width: 23vw;
     margin: 0 8px;
-    //padding: 0 8px;
     & > img {
         width: 100%;
     }
-    @media ${devices.md} {
-        //width: 49vw;
-    }
     @media ${devices.sm} {
         margin: 0 auto;
-        //width: 100vw;
     }
 `
 
