@@ -11,15 +11,19 @@ export const PageWrapper = styled.div`
     width: 100%;
     @media ${devices.lg} {
         padding: 0 100px;
+        margin-top: 120px;
     }
     @media ${devices.md} {
         flex-wrap: wrap;
         margin: 0 auto;
         height: fit-content;
         padding: 0 60px;
+        margin-top: 120px;
+        
     }
     @media ${devices.sm} {
         padding: 0 16px;
+        margin-top: 120px;
     }
 `
 export const PageTitle = styled.div`

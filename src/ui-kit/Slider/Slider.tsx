@@ -7,13 +7,16 @@ const CustomSlider: FC = () => {
     let settings = {
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         initialSlide: 0,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 3000,
+        cssEase: "linear",
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -22,7 +25,7 @@ const CustomSlider: FC = () => {
                 }
             },
             {
-                breakpoint: 650,
+                breakpoint: 770,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
