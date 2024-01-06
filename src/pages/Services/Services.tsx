@@ -3,22 +3,23 @@ import * as S from './services.styles'
 import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import { IAppProps } from '../../App'
 import { CenteredTitle, PageWrapper } from '../Page/page.styles'
+import { useTranslation } from 'react-i18next'
 
 const Services: FC<IAppProps> = (props) => {
+    const { t } = useTranslation()
     return (
         <>
             <PageWrapper>
-                <CenteredTitle>OUR SERVICES</CenteredTitle>
+                <CenteredTitle>{t('title_page_services')}</CenteredTitle>
                 <S.Services>
                     <S.Service>
                         <S.ServiceInfo>
                             <S.Pictures>
-                                <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
+                                <img src="/img/services/hair-cut.jpg" alt="{t('services_mens_haircut')}" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
-                                <S.Description>Includes haircut with scissors/clippers, hair washing and professional
-                                    styling.</S.Description>
+                                <S.ServiceTitle>{t('services_mens_haircut')}</S.ServiceTitle>
+                                <S.Description>{t('services_mens_haircut_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
@@ -27,8 +28,8 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Duration>60 min</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>
