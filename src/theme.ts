@@ -6,6 +6,8 @@ export const baseTheme: ITheme = {
         white: '#FFF',
         accentColor: '#FFC32A',
         background: '#252429',
+        backgroundHeader: 'rgba(37, 36, 41)',
+        backgroundHeaderOpacity: 'rgba(37, 36, 41, 0.50)',
         textSecondary: '#ABABAB',
         elementsGrey: '#6B6B6B',
         backgroundElemetsBlack: '#1D1D22',

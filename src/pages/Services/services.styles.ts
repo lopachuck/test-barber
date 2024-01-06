@@ -1,23 +1,11 @@
 import styled from 'styled-components'
-import {devices} from "../../devices";
-export const PageTitle = styled.h1`
-    display: block;
-    margin-top: 60px;
-    text-align: center;
-    color: ${({theme}) => theme.colors.white};
+import { devices } from '../../devices'
 
-    /* Headline1 */
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 48px; /* 120% */
-    letter-spacing: -0.8px;
-`
 export const Services = styled.article`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 40px; 
+    margin-top: 8px;
 `
 
 export const Service = styled.section`
@@ -26,10 +14,10 @@ export const Service = styled.section`
     padding: 1.25rem;
     justify-content: space-between;
     align-items: center;
-    
+
     border-radius: 2rem;
-    border: 1px solid ${({theme}) => theme.colors.elementsGrey};
-    background: ${({theme}) => theme.colors.backgroundElemetsBlack};
+    border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+    background: ${({ theme }) => theme.colors.backgroundElemetsBlack};
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     @media ${devices.md} {
         height: 192px;
@@ -51,24 +39,25 @@ export const Pictures = styled.picture`
     height: 6rem;
     flex-shrink: 0;
 
-    &>img{
+    & > img {
         border-radius: 12px;
-        border: 1px solid ${({theme}) => theme.colors.elementsGrey};
+        border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
     }
+
     @media ${devices.sm} {
         display: none;
     }
-    
+
 `
 export const DescriptionBlock = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     max-width: 585px;
 `
-export const Title = styled.div`
-    color: ${({theme}) => theme.colors.white};;
+export const ServiceTitle = styled.div`
+    color: ${({ theme }) => theme.colors.white};;
 
     /* Headline2 */
     font-size: 32px;
@@ -85,7 +74,7 @@ export const Title = styled.div`
     }
 `
 export const Description = styled.div`
-    color: ${({theme}) => theme.colors.textSecondary};
+    color: ${({ theme }) => theme.colors.textSecondary};
 
     /* Caption */
     font-size: 16px;
@@ -113,7 +102,7 @@ export const BtnBlock = styled.div`
         justify-content: space-between;
         width: 100%;
     }
-    
+
 `
 export const PriceBlock = styled.div`
     display: flex;
@@ -121,7 +110,7 @@ export const PriceBlock = styled.div`
     align-items: center;
     width: 86px;
     gap: 16px;
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     @media ${devices.md} {
         order: 2
     }
@@ -130,10 +119,10 @@ export const PriceBlock = styled.div`
         align-items: flex-start;
         gap: 4px;
     }
-    
+
 `
 export const Price = styled.div`
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
 
     /* Headline2 */
     font-size: 32px;
@@ -151,7 +140,7 @@ export const Price = styled.div`
 `
 
 export const Duration = styled.div`
-    color: ${({theme}) => theme.colors.textSecondary};
+    color: ${({ theme }) => theme.colors.textSecondary};
 
     /* Caption */
     font-size: 16px;

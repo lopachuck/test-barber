@@ -1,23 +1,23 @@
 import { FC } from 'react'
-import { PageWrapper } from '../Contacts/contacts.styles'
 import * as S from './barbers.styles'
 import { BARBERSHOP_MAIL_ADDRESS } from '../../config/config'
 import { useTranslation } from 'react-i18next'
+import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 
 const Barbers: FC = () => {
     const { t, i18n } = useTranslation()
     return (
         <>
             <PageWrapper>
-                <S.PageTitleWrapper>
-                    <S.PageTitle>{t('title_page_barbers')}</S.PageTitle>
-                    <S.PageSubtitle>{t('barbers_subtitle')}</S.PageSubtitle>
-                </S.PageTitleWrapper>
+                <TitleWrapper>
+                    <Title>{t('title_page_barbers')}</Title>
+                    <Subtitle>{t('barbers_subtitle')}</Subtitle>
+                </TitleWrapper>
                 <S.BarbersInfo>
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb1.webp, /img/barbers/barb1.jpg 2x'} type={"image/webp"}/>
-                            <img src={'/img/barbers/barb1.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb1.jpg'} loading={'lazy'} alt="barber1"/>
                         </S.BarberPhoto>
                         <S.BarberName>Valeria</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
@@ -25,7 +25,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb2.webp, /img/barbers/barb2.jpg 2x'} type="image/webp"/>
-                            <img src={'/img/barbers/barb2.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb2.jpg'} loading={'lazy'} alt="barber2"/>
                         </S.BarberPhoto>
                         <S.BarberName>Vitalii</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
@@ -33,7 +33,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb3.webp, /img/barbers/barb3.jpg 2x'} type="image/webp"/>
-                            <img src={'/img/barbers/barb3.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb3.jpg'} loading={'lazy'} alt="barber3"/>
                         </S.BarberPhoto>
                         <S.BarberName>Victoriia</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
@@ -41,7 +41,7 @@ const Barbers: FC = () => {
                     <S.BarberInfo>
                         <S.BarberPhoto>
                             <source srcSet={'/img/barbers/barb4.webp, /img/barbers/barb4.jpg 2x'} type="image/webp"/>
-                            <img src={'/img/barbers/barb4.jpg'} loading={'lazy'} alt=""/>
+                            <img src={'/img/barbers/barb4.jpg'} loading={'lazy'} alt="barber4"/>
                         </S.BarberPhoto>
                         <S.BarberName>Alina</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>

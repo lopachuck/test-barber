@@ -13,8 +13,10 @@ export default createGlobalStyle`
   #root {
       display: flex;
       flex-direction: column;
+      width: 100%;
       min-height: 100%;
       height: max-content;
+      overflow: hidden;
   }
   
   html, body {
@@ -23,7 +25,6 @@ export default createGlobalStyle`
       margin: 0 auto;
       background-color: ${({theme}) =>theme.colors.background};
       font-family: 'Inter', sans-serif;
-      max-width: 1440px;
   }
 
 `

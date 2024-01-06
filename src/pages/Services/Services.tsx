@@ -2,13 +2,13 @@ import React, { FC } from 'react'
 import * as S from './services.styles'
 import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import { IAppProps } from '../../App'
-import {PageWrapper} from "../Contacts/contacts.styles";
+import { CenteredTitle, PageWrapper } from '../Page/page.styles'
 
 const Services: FC<IAppProps> = (props) => {
     return (
         <>
             <PageWrapper>
-                <S.PageTitle>OUR SERVICES</S.PageTitle>
+                <CenteredTitle>OUR SERVICES</CenteredTitle>
                 <S.Services>
                     <S.Service>
                         <S.ServiceInfo>
@@ -16,7 +16,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Men's haircut</S.Title>
+                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
                                 <S.Description>Includes haircut with scissors/clippers, hair washing and professional
                                     styling.</S.Description>
                             </S.DescriptionBlock>
@@ -38,7 +38,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Men's haircut</S.Title>
+                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
                                 <S.Description>Includes haircut with scissors/clippers, hair washing and professional
                                     styling.</S.Description>
                             </S.DescriptionBlock>
@@ -60,7 +60,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Men's haircut</S.Title>
+                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
                                 <S.Description>Includes haircut with scissors/clippers, hair washing and professional
                                     styling.</S.Description>
                             </S.DescriptionBlock>
@@ -82,7 +82,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Men's haircut</S.Title>
+                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
                                 <S.Description>Includes haircut with scissors/clippers, hair washing and professional
                                     styling.</S.Description>
                             </S.DescriptionBlock>
@@ -104,7 +104,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Men's haircut</S.Title>
+                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
                                 <S.Description>Includes haircut with scissors/clippers, hair washing and professional
                                     styling.</S.Description>
                             </S.DescriptionBlock>
@@ -126,7 +126,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Men's haircut</S.Title>
+                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
                                 <S.Description>Includes haircut with scissors/clippers, hair washing and professional
                                     styling.</S.Description>
                             </S.DescriptionBlock>
@@ -148,7 +148,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.Title>Father and Son</S.Title>
+                                <S.ServiceTitle>Father and Son</S.ServiceTitle>
                                 <S.Description>Haircut for Father and Son (child from 8 to 14 years old).</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>

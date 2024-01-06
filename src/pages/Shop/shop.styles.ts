@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import BG from '../../assets/shop/bg_shop.jpeg'
 
-export const PageWrapper = styled.div`
+export const ShopPageWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
