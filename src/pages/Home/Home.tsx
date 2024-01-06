@@ -1,19 +1,19 @@
 import { FC, useEffect } from 'react'
-import * as S from './home.styles'
 import { IAppProps } from '../../App'
 import { useTranslation } from 'react-i18next'
+import { PageWrapper, Title } from '../Page/page.styles'
 
 
 const Home: FC<IAppProps> = (props) => {
     const { t, i18n } = useTranslation()
     useEffect(() => {
-        props.setTitle(t('contacts_title'))
+        props.setTitle(t('home'))
     }, [])
     return (
     <>
-        <S.PageWrapper>
-            <h1>HOME</h1>
-        </S.PageWrapper>
+        <PageWrapper>
+            <Title>{t('home')}</Title>
+        </PageWrapper>
     </>
   );
 };

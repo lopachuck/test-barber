@@ -9,6 +9,7 @@ import {
     BARBERSHOP_PHONE,
 } from '../../config/config'
 import { useTranslation } from 'react-i18next'
+import { CenteredTitle, PageWrapper } from '../Page/page.styles'
 
 
 const Contacts: FC<IAppProps> = (props) => {
@@ -19,9 +20,9 @@ const Contacts: FC<IAppProps> = (props) => {
     console.log(BARBERSHOP_MAIL_ADDRESS)
     return (
     <>
-        <S.PageWrapper>
-            <S.PageTitle>{t('title_page_contacts')}</S.PageTitle>
-            <S.PageInfoWrapper>
+        <PageWrapper>
+            <CenteredTitle>{t('title_page_contacts')}</CenteredTitle>
+            <S.ContactInfoWrapper>
                 <S.ContactInfo>
                     <a href={'#'} >
                         <img src={"/svg/icons/location.svg"} alt="loc"/>
@@ -55,11 +56,11 @@ const Contacts: FC<IAppProps> = (props) => {
                         </S.SocialIcon>
                     </S.SocialIconWrapper>
                 </S.SocialWrapper>
-            </S.PageInfoWrapper>
+            </S.ContactInfoWrapper>
             <S.MapWrapper>
                 <CustomGoogleMap/>
             </S.MapWrapper>
-        </S.PageWrapper>
+        </PageWrapper>
     </>
   );
 };

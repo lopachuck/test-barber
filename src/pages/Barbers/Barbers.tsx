@@ -1,18 +1,18 @@
 import { FC } from 'react'
-import { PageWrapper } from '../Contacts/contacts.styles'
 import * as S from './barbers.styles'
 import { BARBERSHOP_MAIL_ADDRESS } from '../../config/config'
 import { useTranslation } from 'react-i18next'
+import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 
 const Barbers: FC = () => {
     const { t, i18n } = useTranslation()
     return (
         <>
             <PageWrapper>
-                <S.PageTitleWrapper>
-                    <S.PageTitle>{t('title_page_barbers')}</S.PageTitle>
-                    <S.PageSubtitle>{t('barbers_subtitle')}</S.PageSubtitle>
-                </S.PageTitleWrapper>
+                <TitleWrapper>
+                    <Title>{t('title_page_barbers')}</Title>
+                    <Subtitle>{t('barbers_subtitle')}</Subtitle>
+                </TitleWrapper>
                 <S.BarbersInfo>
                     <S.BarberInfo>
                         <S.BarberPhoto>
