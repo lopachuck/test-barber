@@ -25,7 +25,7 @@ const Services: FC<IAppProps> = (props) => {
                         <S.BtnBlock>
                             <S.PriceBlock>
                                 <S.Price>30 €</S.Price>
-                                <S.Duration>60 min</S.Duration>
+                                <S.Duration>60 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
                                 <span>{t('btn_services_book')}</span>
@@ -39,19 +39,18 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
-                                <S.Description>Includes haircut with scissors/clippers, hair washing and professional
-                                    styling.</S.Description>
+                                <S.ServiceTitle>{t('services_mens_haircut')} + {t('services_beard_correction')}</S.ServiceTitle>
+                                <S.Description>{t('services_mens_haircut_beard_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
                             <S.PriceBlock>
-                                <S.Price>30 €</S.Price>
-                                <S.Duration>60 min</S.Duration>
+                                <S.Price>45 €</S.Price>
+                                <S.Duration>1 {t('hour')} 30 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>
@@ -61,19 +60,18 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
-                                <S.Description>Includes haircut with scissors/clippers, hair washing and professional
-                                    styling.</S.Description>
+                                <S.ServiceTitle>{t('services_beard_correction')}</S.ServiceTitle>
+                                <S.Description>{t('services_beard_correction_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
                             <S.PriceBlock>
-                                <S.Price>30 €</S.Price>
-                                <S.Duration>60 min</S.Duration>
+                                <S.Price>20 €</S.Price>
+                                <S.Duration>45 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>
@@ -83,19 +81,18 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
-                                <S.Description>Includes haircut with scissors/clippers, hair washing and professional
-                                    styling.</S.Description>
+                                <S.ServiceTitle>{t('services_beard_tinting')}</S.ServiceTitle>
+                                <S.Description>{t('services_beard_tinting_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
                             <S.PriceBlock>
-                                <S.Price>30 €</S.Price>
-                                <S.Duration>60 min</S.Duration>
+                                <S.Price>10 €</S.Price>
+                                <S.Duration>20 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>
@@ -105,19 +102,18 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
-                                <S.Description>Includes haircut with scissors/clippers, hair washing and professional
-                                    styling.</S.Description>
+                                <S.ServiceTitle>{t('services_clipper_cut')}</S.ServiceTitle>
+                                <S.Description>{t('services_clipper_cut_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
                             <S.PriceBlock>
-                                <S.Price>30 €</S.Price>
-                                <S.Duration>60 min</S.Duration>
+                                <S.Price>22 €</S.Price>
+                                <S.Duration>45 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>
@@ -127,19 +123,18 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Men's haircut</S.ServiceTitle>
-                                <S.Description>Includes haircut with scissors/clippers, hair washing and professional
-                                    styling.</S.Description>
+                                <S.ServiceTitle>{t('services_clipper_cut')} + {t('services_beard_correction')}</S.ServiceTitle>
+                                <S.Description>{t('services_clipper_cut_beard_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
                             <S.PriceBlock>
-                                <S.Price>30 €</S.Price>
-                                <S.Duration>60 min</S.Duration>
+                                <S.Price>35 €</S.Price>
+                                <S.Duration>60 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>
@@ -149,18 +144,18 @@ const Services: FC<IAppProps> = (props) => {
                                 <img src="/img/services/hair-cut.jpg" alt="Men's haircut" />
                             </S.Pictures>
                             <S.DescriptionBlock>
-                                <S.ServiceTitle>Father and Son</S.ServiceTitle>
-                                <S.Description>Haircut for Father and Son (child from 8 to 14 years old).</S.Description>
+                                <S.ServiceTitle>{t('services_father_son')}</S.ServiceTitle>
+                                <S.Description>{t('services_father_son_description')}</S.Description>
                             </S.DescriptionBlock>
                         </S.ServiceInfo>
                         <S.BtnBlock>
                             <S.PriceBlock>
                                 <S.Price>40 €</S.Price>
-                                <S.Duration>1 h 15 min</S.Duration>
+                                <S.Duration>1 {t('hour')} 15 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
                             <BookingBtn to={'#'}>
-                                <span>BOOK</span>
-                                <p>BOOK</p>
+                                <span>{t('btn_services_book')}</span>
+                                <p>{t('btn_services_book')}</p>
                             </BookingBtn>
                         </S.BtnBlock>
                     </S.Service>

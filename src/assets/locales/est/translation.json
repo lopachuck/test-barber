@@ -56,5 +56,8 @@
   "contacts_brand_name": "Onu Ve",
   "contacts_mon_fri": "E-R",
   "contacts_sat": "L.",
-  "contacts_sun": "P."
+  "contacts_sun": "P.",
+  "minutes": "min",
+  "hour": "t"
+
 }
