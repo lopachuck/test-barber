@@ -1,43 +1,8 @@
-import styled from "styled-components";
-import {Link} from "react-router-dom";
-import {devices} from "../../devices";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { devices } from '../../devices'
 
-export const PageWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    max-width: 1440px;
-    padding: 0 140px;
-    width: 100%;
-    @media ${devices.lg} {
-        padding: 0 100px;
-    }
-    @media ${devices.md} {
-        flex-wrap: wrap;
-        margin: 0 auto;
-        height: fit-content;
-        padding: 0 60px;
-    }
-    @media ${devices.sm} {
-        padding: 0 16px;
-    }
-`
-export const PageTitle = styled.div`
-    text-transform: uppercase;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 48px; /* 120% */
-    letter-spacing: -0.8px;
-    color: ${({ theme }) => theme.colors.white};
-    margin: 0 auto;
-    @media ${devices.md} {
-        padding-top: 40px;
-    }
-`
-export const PageInfoWrapper = styled.div`
+export const ContactInfoWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     @media ${devices.xs} {

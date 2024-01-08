@@ -6,8 +6,14 @@ import {NavLink} from "react-router-dom";
 export const HeaderContainer = styled.header`
     display: flex;
     position: fixed;
-    //background: ${({ theme }) => theme.colors.background};
-    background: rgba(37, 36, 41, 0.50);
+    top: 0;
+    width: 100%;
+    background: ${({ theme }) => theme.colors.backgroundHeader};
+    //background: rgba(37, 36, 41, 0.50);
+    z-index: 10;
+`
+export const HeaderWrapper = styled.div`
+    display: flex;
     max-width: 1440px;
     padding: 0 140px;
     width: 100%;
@@ -15,6 +21,7 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     height: 80px;
     z-index: 10;
+    margin: 0 auto;
     @media ${devices.lg} {
         padding: 0 100px;
     }

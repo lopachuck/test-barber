@@ -1,13 +1,13 @@
 import { FC } from 'react'
-import { PageWrapper } from './shop.styles'
+import * as S from './shop.styles'
 
 
 const Shop: FC = () => {
     return (
         <>
-            <PageWrapper>
+            <S.ShopPageWrapper>
                 <h1>Shop</h1>
-            </PageWrapper>
+            </S.ShopPageWrapper>
         </>
     )
 }
