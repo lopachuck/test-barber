@@ -56,5 +56,7 @@
   "contacts_brand_name": "Uncle Ve",
   "contacts_mon_fri": "Mon-Fri",
   "contacts_sat": "Sat",
-  "contacts_sun": "Sun"
+  "contacts_sun": "Sun",
+  "minutes": "хв",
+  "hour": "год"
 }
