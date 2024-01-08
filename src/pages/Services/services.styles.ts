@@ -35,13 +35,19 @@ export const ServiceInfo = styled.div`
     align-items: center;
 `
 export const Pictures = styled.picture`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 6rem;
     height: 6rem;
     flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid ${({theme}) => theme.colors.elementsGrey};
+    overflow: hidden;
 
     & > img {
-        border-radius: 12px;
-        border: 1px solid ${({ theme }) => theme.colors.elementsGrey};
+        max-width: 100%;
+        object-fit: contain;
     }
 
     @media ${devices.sm} {
@@ -58,7 +64,9 @@ export const DescriptionBlock = styled.div`
 `
 export const ServiceTitle = styled.div`
     color: ${({ theme }) => theme.colors.white};;
-
+    &:first-letter{
+        text-transform: capitalize;
+    }
     /* Headline2 */
     font-size: 32px;
     font-style: normal;

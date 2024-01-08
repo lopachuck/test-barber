@@ -57,5 +57,7 @@
   "contacts_mon_fri": "Mon-Fri",
   "contacts_sat": "Sat",
   "contacts_sun": "Sun",
-  "coming_soon": "незабаром"
+  "coming_soon": "незабаром",
+  "minutes": "хв",
+  "hour": "год"
 }
