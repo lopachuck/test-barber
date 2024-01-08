@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
 import checkmark from '../../assets/icon/checkmark.svg'
-import {NavLink} from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
-    background: ${({ theme }) => theme.colors.backgroundHeader};
+    background: ${
+    props => props.fg ? 'rgba(37, 36, 41, 0.50)' : ''
+        || '${({ theme }) => theme.colors.backgroundHeader}'
+};
+    background-size: auto 100%;
     //background: rgba(37, 36, 41, 0.50);
     z-index: 10;
 `
@@ -42,7 +46,7 @@ export const LogoWrapper = styled(NavLink)`
         height: 60px;
         text-decoration: none;
         border-bottom: 1px solid ${({ theme }) => theme.colors.elementsGrey};
-        &>img{
+        & > img {
             width: 40px;
             margin: auto;
         }
@@ -83,7 +87,7 @@ export const LangMenuBtn = styled.span`
         display: none;
     }
 `
-export const LangMenu = styled.div `
+export const LangMenu = styled.div`
     display: flex;
     width: 100px;
     max-width: 162px;
@@ -95,7 +99,7 @@ export const LangMenu = styled.div `
     border-collapse: collapse;
 `
 
-export const LangMenuOption =styled.div `
+export const LangMenuOption = styled.div`
     display: flex;
     position: relative;
     width: 100px;
@@ -118,6 +122,7 @@ export const LangMenuOption =styled.div `
 
     &:hover {
         cursor: pointer;
+
         &:not(:first-child) {
             border-top: 1px solid ${({ theme }) => theme.colors.background};
         }

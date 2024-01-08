@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
+import BG from '../../assets/home/bg_title.jpeg'
 
 export const PageWrapper = styled.div.attrs({
     className: 'container-wrapper',
@@ -59,4 +60,15 @@ export const TitleWrapper = styled.div`
     & > div {
         margin: 0;
     }
+`
+
+export const BgImage = styled.div.attrs(props => ({
+    bgi: props.img || BG,
+}))`
+    background-image: url(${props => props.bgi});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: 100% 1124px;
+    background-position-y: -80px;
 `

@@ -1,12 +1,10 @@
 import styled from 'styled-components'
-import BG from '../../assets/shop/bg_shop.jpeg'
+import { PageWrapper, Title } from '../Page/page.styles'
 
-export const ShopPageWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 1200px;
-    background-image: url(${BG});
-    background-repeat: no-repeat;
-    background-size: cover;
+export const ShopTitle = styled(Title)`
+    padding-top: 470px;
+    font-size: 80px;
+`
+export const ShopPageWrapper = styled(PageWrapper)`
+    min-height: 949px;
 `

@@ -17,7 +17,7 @@ const Header: FC = () => {
 
     return (
         <>
-            <S.HeaderContainer>
+            <S.HeaderContainer fg={'rgba(37, 36, 41, 0.50)'}>
                 <S.HeaderWrapper>
                     <S.LogoWrapper to={''}>
                         <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'} />

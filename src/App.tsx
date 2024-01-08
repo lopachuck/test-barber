@@ -13,6 +13,9 @@ import Shop from './pages/Shop/Shop'
 import { useTranslation } from 'react-i18next'
 import NotFound from './pages/NotFound/NotFound'
 
+import HOME_PAGE_BG from './assets/home/bg_title.jpeg'
+import SHOP_PAGE_BG from './assets/shop/bg_shop.jpeg'
+
 export interface IAppProps {
     setTitle: any
 }
@@ -29,11 +32,15 @@ const App: React.FC = () => {
             <GlobalStyle/>
             <BrowserRouter>
                 <Routes>
+                    <Route path="/" element={<Layout hideBg={false} img={HOME_PAGE_BG} />}>
+                        <Route path="/" index element={<Home {...appProps} />} />
+                    </Route>
+                    <Route path="/" element={<Layout hideBg={false} img={SHOP_PAGE_BG} />}>
+                        <Route path="shop" element={<Shop {...appProps} />} />
+                    </Route>
                     <Route path="/" element={<Layout/>}>
-                        <Route path="/" index element={<Home {...appProps} />}/>
                         <Route path="gallery" element={<Gallery {...appProps} />}/>
                         <Route path="services" element={<Services {...appProps} />}/>
-                        <Route path="shop" element={<Shop  />}/>
                         <Route path="contacts" element={<Contacts {...appProps} />}/>
                         <Route path="barbers" element={<Barbers/>}/>
                         <Route path="*" element={<NotFound />} />
