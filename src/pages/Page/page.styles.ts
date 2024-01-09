@@ -8,6 +8,7 @@ export const PageWrapper = styled.div.attrs({
     display: flex;
     flex-direction: column;
     max-width: 1440px;
+    margin: 0 auto ;
     padding: 0 140px;
     width: 100%;
     @media ${devices.lg} {
@@ -71,4 +72,6 @@ export const BgImage = styled.div.attrs(props => ({
     background-origin: border-box;
     background-size: 100% 1024px;
     background-position-y: -80px;
+    //position: relative;
+    //overflow: hidden;
 `
