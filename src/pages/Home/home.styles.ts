@@ -1,16 +1,24 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from 'styled-components'
 import { Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 import arrowDown from '../../assets/icon/icon/arrow/down.svg'
 
+import logo from '../../assets/svg/banner/Animation.svg'
+
 
 const marqueeAnimation = keyframes`
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-`;
+    0% {
+        transform: translate(0);
+        //transform: translate(100%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+`
 
 export const HomeTitleWrapper = styled(TitleWrapper)`
     margin-top: 595px;
@@ -37,23 +45,33 @@ export const HomeTitle = styled(Title)`
 export const LogoLine = styled.div`
     position: absolute;
     z-index: 9999;
-    width: 100%;
+    //width: 1000px;
+    width: 10000px;
+    //width: 44240px;
+    //width: 40000px;
     left: 0;
     bottom: 0;
     height: 73px;
-    background: #fff;
+    //opacity: 0.4;
+    background-image: url(${logo});
+    background-size: 1180px 71px;
+    background-repeat: repeat-x;
+    //transform: translateX(0%);
+
+
+    overflow: hidden;
+    //width: 100%;
+    transform: translate(100%, 0);
+
+
+    animation: ${marqueeAnimation} linear infinite forwards;
+    animation-direction: normal;
+    animation-duration: 200s;
 `
-
-
+export const LogoLine2 = styled(LogoLine)`
+    animation: 200s ${marqueeAnimation} 100s linear infinite forwards;
+    overflow: hidden;
+`
 export const AboutUs = styled.div`
     display: flex;
-    flex-wrap: nowrap;
-    overflow: visible;
-    width: 100vw;
-`
-
-export const BrendAnimation = styled.object`
-    display: flex;
-    width: 100%;
-    animation: ${marqueeAnimation} 10s linear infinite;
 `
