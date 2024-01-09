@@ -24,7 +24,7 @@ export const PageWrapper = styled.div.attrs({
         padding: 0 16px;
     }
 `
-export const Title = styled.div`
+export const Title = styled.h1`
     text-transform: uppercase;
     padding-top: 70px; // 150-height of header
     padding-bottom: 40px;
@@ -58,7 +58,7 @@ export const TitleWrapper = styled.div`
     // @todo why?
 
     & > div {
-        margin: 0;
+        margin-left: 0;
     }
 `
 
@@ -69,6 +69,6 @@ export const BgImage = styled.div.attrs(props => ({
     background-position: center;
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-size: 100% 1124px;
+    background-size: 100% 1024px;
     background-position-y: -80px;
 `
