@@ -116,7 +116,7 @@ export const AboutUsWrapper = styled.div`
 export const HiringBlock = styled.p`
     margin-top: 60px;
     text-align: right;
-    text-wrap: nowrap;
+    white-space: nowrap;
     width: auto;
 
     color: ${({ theme }) => theme.colors.white};
