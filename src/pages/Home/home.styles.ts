@@ -17,7 +17,6 @@ interface GalleryImageGridProps {
 const marqueeAnimation = keyframes`
     0% {
         transform: translate(0);
-        //transform: translate(100%, 0);
     }
 
     50% {
@@ -84,23 +83,15 @@ export const LogoLineWrap = styled.div`
 export const LogoLine = styled.div`
     position: absolute;
     z-index: 9999;
-    //width: 1000px;
     width: 10000px;
-    //width: 44240px;
-    //width: 40000px;
     left: 0;
-    //bottom: 42px;
     bottom: 0;
     height: 73px;
-    //opacity: 0.4;
     background-image: url(${logo});
     background-size: 1180px 71px;
     background-repeat: repeat-x;
-    //transform: translateX(0%);
-
 
     overflow: hidden;
-    //width: 100%;
     transform: translate(100%, 0);
 
 
@@ -124,8 +115,6 @@ export const AboutUsWrapper = styled.div`
 
 export const HiringBlock = styled.p`
     margin-top: 60px;
-    //display: flex;
-    //flex-direction: row-reverse;
     text-align: right;
     text-wrap: nowrap;
     width: auto;
@@ -141,19 +130,12 @@ export const HiringBlock = styled.p`
 export const AboutUs = styled.section`
     display: flex;
     flex-direction: column;
-    //min-height: 784px;
     margin-top: 96px;
     margin-bottom: 100px;
-    //margin-left: auto;
-    //margin-right: auto;
-    //padding: 100px 0 0 0;
-    //padding: 100px 140px 0;
 
     & h2 {
         margin-bottom: 28px;
         color: ${({ theme }) => theme.colors.white};
-        /* Headline1 */
-        //font-family: Inter, serif; @todo discuss
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
