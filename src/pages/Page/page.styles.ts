@@ -56,8 +56,6 @@ export const TitleWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 
-    // @todo why?
-
     & > div {
         margin-left: 0;
     }
@@ -66,12 +64,9 @@ export const TitleWrapper = styled.div`
 export const BgImage = styled.div.attrs(props => ({
     bgi: props.img || BG,
 }))`
-    background-image: url(${props => props.bgi});
-    background-position: center;
+    background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${props => props.bgi}), #252429 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: 100% 1024px;
     background-position-y: -80px;
-    //position: relative;
-    //overflow: hidden;
 `

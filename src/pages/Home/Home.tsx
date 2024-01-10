@@ -3,10 +3,13 @@ import { IAppProps } from '../../App'
 import { useTranslation } from 'react-i18next'
 import { PageWrapper } from '../Page/page.styles'
 import * as S from './home.styles'
-import {BARBERSHOP_DIRECTION_LINK, BARBERSHOP_MAIL_ADDRESS} from '../../config/config'
-import {Gallery, LocalizationWorkTime} from "./home.styles";
-import CustomGoogleMap from "../../components/GoogleMap/CustomGoogleMap";
-import {MapWrapper} from "../Contacts/contacts.styles";
+import {
+    BARBERSHOP_DIRECTION_LINK,
+    BARBERSHOP_FACEBOOK_LINK,
+    BARBERSHOP_INSTAGRAM_LINK,
+    BARBERSHOP_MAIL_ADDRESS,
+} from '../../config/config'
+import CustomGoogleMap from '../../components/GoogleMap/CustomGoogleMap'
 
 const Home: FC<IAppProps> = (props) => {
     const { t, i18n } = useTranslation()
@@ -16,6 +19,10 @@ const Home: FC<IAppProps> = (props) => {
     return (
         <>
             <PageWrapper>
+                <S.SocialWrapper>
+                    <S.SocialLinkInstagram to={BARBERSHOP_INSTAGRAM_LINK} />
+                    <S.SocialLinkFacebook to={BARBERSHOP_FACEBOOK_LINK} />
+                </S.SocialWrapper>
                 <S.HomeTitleWrapper>
                     <S.HomeTitle>{t('title_page_home')}</S.HomeTitle>
                     <S.HomeSubtitle>{t('home_subtitle')}</S.HomeSubtitle>
@@ -87,56 +94,53 @@ const Home: FC<IAppProps> = (props) => {
                 <S.ImagesContainer>
                     <S.ImagesColumn>
                         <S.GalleryImageBig>
-                            <source
-                                srcSet={'/img/home/main-gallery_1.webp, /img/home/main-gallery_1.jpeg 2x'}
-                                type={'image/webp'}/>
-                            <S.Image src="/img/home/main-gallery_1.jpeg"
-                                     loading={'lazy'}
-                                     alt={t('services_mens_haircut')}/>
+                            <img src="/img/home/main-gallery_1.jpeg"
+                                 loading={'lazy'}
+                                 alt={t('services_mens_haircut')} />
                         </S.GalleryImageBig>
                         <S.GalleryImageSmall>
                             <source
                                 srcSet={'/img/home/main-gallery_2.webp, /img/home/main-gallery_2.jpeg 2x'}
-                                type={'image/webp'}/>
-                            <S.Image src="/img/home/main-gallery_2.jpeg"
-                                     loading={'lazy'}
-                                     alt={t('services_mens_haircut')}/>
+                                type={'image/webp'} />
+                            <img src="/img/home/main-gallery_2.jpeg"
+                                 loading={'lazy'}
+                                 alt={t('services_mens_haircut')} />
                         </S.GalleryImageSmall>
                     </S.ImagesColumn>
                     <S.ImagesColumn>
                         <S.GalleryImageSmall>
                             <source
                                 srcSet={'/img/home/main-gallery_3.webp, /img/home/main-gallery_3.jpeg 2x'}
-                                type={'image/webp'}/>
-                            <S.Image src="/img/home/main-gallery_3.jpeg"
-                                     loading={'lazy'}
-                                     alt={t('services_mens_haircut')}/>
+                                type={'image/webp'} />
+                            <img src="/img/home/main-gallery_3.jpeg"
+                                 loading={'lazy'}
+                                 alt={t('services_mens_haircut')} />
                         </S.GalleryImageSmall>
                         <S.GalleryImageBig>
                             <source
                                 srcSet={'/img/home/main-gallery_4.webp, /img/home/main-gallery_4.jpeg 2x'}
-                                type={'image/webp'}/>
-                            <S.Image src="/img/home/main-gallery_4.jpeg"
-                                     loading={'lazy'}
-                                     alt={t('services_mens_haircut')}/>
+                                type={'image/webp'} />
+                            <img src="/img/home/main-gallery_4.jpeg"
+                                 loading={'lazy'}
+                                 alt={t('services_mens_haircut')} />
                         </S.GalleryImageBig>
                     </S.ImagesColumn>
                     <S.ImagesColumn>
                         <S.GalleryImageBig>
                             <source
                                 srcSet={'/img/home/main-gallery_5.webp, /img/home/main-gallery_5.jpeg 2x'}
-                                type={'image/webp'}/>
-                            <S.Image src="/img/home/main-gallery_5.jpeg"
-                                     loading={'lazy'}
-                                     alt={t('services_mens_haircut')}/>
+                                type={'image/webp'} />
+                            <img src="/img/home/main-gallery_5.jpeg"
+                                 loading={'lazy'}
+                                 alt={t('services_mens_haircut')} />
                         </S.GalleryImageBig>
                         <S.GalleryImageSmall>
                             <source
                                 srcSet={'/img/home/main-gallery_6.webp, /img/home/main-gallery_6.jpeg 2x'}
-                                type={'image/webp'}/>
-                            <S.Image src="/img/home/main-gallery_6.jpeg"
-                                     loading={'lazy'}
-                                     alt={t('services_mens_haircut')}/>
+                                type={'image/webp'} />
+                            <img src="/img/home/main-gallery_6.jpeg"
+                                 loading={'lazy'}
+                                 alt={t('services_mens_haircut')} />
                         </S.GalleryImageSmall>
                     </S.ImagesColumn>
                 </S.ImagesContainer>
@@ -146,12 +150,12 @@ const Home: FC<IAppProps> = (props) => {
                     <div>
                         <S.LocalizationTitle>{t('home_localization')}</S.LocalizationTitle>
                         <S.Address to={BARBERSHOP_DIRECTION_LINK} target={'_blank'}>
-                            <img src={"/svg/icons/location.svg"} alt="loc"/>
+                            <img src={'/svg/icons/location.svg'} alt="loc" />
                             <span>{t('contacts_address')}</span>
                         </S.Address>
                     </div>
                     <S.LocalizationWorkTime>
-                        <img src={"/svg/icons/time.svg"} alt="loc"/>
+                        <img src={'/svg/icons/time.svg'} alt="loc" />
                         <div>
                             <span>{t('contacts_mon_fri')} 10:00 - 20:00 </span>
                             <p>{t('contacts_sat')} 10:00 - 19:00, </p>
@@ -159,7 +163,7 @@ const Home: FC<IAppProps> = (props) => {
                         </div>
                     </S.LocalizationWorkTime>
                 </div>
-                <CustomGoogleMap/>
+                <CustomGoogleMap />
             </S.Localization>
         </>
     )

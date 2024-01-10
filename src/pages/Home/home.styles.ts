@@ -1,11 +1,14 @@
 import styled, { keyframes } from 'styled-components'
-import {PageWrapper, Subtitle, Title, TitleWrapper} from '../Page/page.styles'
-import arrowDown from '../../assets/icon/arrow_down.svg'
-
-import logo from '../../assets/svg/banner/Animation.svg'
+import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 import { devices } from '../../devices'
-import { NavLink, Link } from 'react-router-dom'
-import {WorkTime} from "../Contacts/contacts.styles";
+import { Link, NavLink } from 'react-router-dom'
+import { WorkTime } from '../Contacts/contacts.styles'
+
+import arrowDown from '../../assets/icon/arrow_down.svg'
+import logo from '../../assets/svg/banner/Animation.svg'
+import instagramIcon from '../../assets/svg/social/instagram.svg'
+import fbIcon from '../../assets/svg/social/facebook.svg'
+
 interface GalleryImageGridProps {
     images: string[];
 }
@@ -25,14 +28,33 @@ const marqueeAnimation = keyframes`
         transform: translate(-100%, 0);
     }
 `
-
-export const HomeTitleWrapper = styled(TitleWrapper)`
-    margin-top: 515px;
-    //margin-top: 595px;
-    margin-bottom: 60px;
+export const SocialWrapper = styled.div`
+    margin-top: 392px; // @see 472px - 80px h socialWrapper with 2 soc Icons, change mt after add 3rd (and next) soc icons
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
     @media ${devices.md} {
-        margin-top: 355px; /// 355 height tab - 80 h Header desktop ; TAB header 137px
+        margin-top: 232px; /// 232 height tab - 80 h Header desktop ; TAB header 137px @todo fix 137px
     }
+`
+const SocialLink = styled(Link).attrs({
+    target: '_blank',
+})`
+    display: flex;
+    width: 32px;
+    height: 32px;
+`
+export const SocialLinkFacebook = styled(SocialLink)`
+    background-image: url(${fbIcon});
+`
+export const SocialLinkInstagram = styled(SocialLink)`
+    background-image: url(${instagramIcon});
+`
+export const HomeTitleWrapper = styled(TitleWrapper)`
+    margin-top: 43px;
+    margin-left: 104px;
+    margin-bottom: 60px;
 `
 
 export const HomeSubtitle = styled(Subtitle)`
@@ -176,6 +198,7 @@ export const Metrics = styled.div`
         width: 360px;
         height: 80px;
     }
+
     padding-top: 39px;
     padding-bottom: 39px;
     border-top: 1px solid #6B6B6B;
@@ -190,7 +213,8 @@ export const Column = styled.div`
     flex-direction: column;
     width: 360px;
     height: 80px;
-    & :first-child{
+
+    & :first-child {
         color: #FFC32A;
         font-size: 40px;
         font-style: normal;
@@ -198,8 +222,8 @@ export const Column = styled.div`
         line-height: 48px; /* 120% */
         letter-spacing: -0.8px;
     }
-    
-    & :last-child{
+
+    & :last-child {
         color: #FFF;
 
         font-size: 18px;
@@ -210,11 +234,12 @@ export const Column = styled.div`
     }
 `
 export const Gallery = styled(PageWrapper)`
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     display: flex;
     justify-content: center;
     width: 100%;
     padding-top: 100px;
+
     & > * {
         text-align: center;
     }
@@ -226,7 +251,7 @@ export const GalleryTitle = styled.h2`
     font-weight: 700;
     line-height: 48px; /* 120% */
     letter-spacing: -0.8px;
-    padding-bottom:28px;
+    padding-bottom: 28px;
 `
 export const GallerySubtitle = styled.h4`
     font-size: 16px;
@@ -239,12 +264,12 @@ export const GallerySubtitle = styled.h4`
 export const GalleryLink = styled(NavLink)`
     text-decoration: none;
     text-transform: uppercase;
-    color: ${({theme}) => theme.colors.accentColor};
+    color: ${({ theme }) => theme.colors.accentColor};
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     margin-left: 4px;
-    border-bottom: 2px solid ${({theme}) => theme.colors.accentColor};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
 `
 
 export const ImagesContainer = styled.div`
@@ -252,7 +277,7 @@ export const ImagesContainer = styled.div`
     max-width: 1160px; //@todo rm after merge
     gap: 40px;
     padding-bottom: 100px;
-    border-bottom: 1px solid ${({theme}) => theme.colors.elementsGrey};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.elementsGrey};
 `
 
 export const ImagesColumn = styled.div`
@@ -268,25 +293,26 @@ export const GalleryImageBig = styled.picture`
     height: 516px;
     width: 360px;
     overflow: hidden;
-    & > img{
+
+    & > img {
         height: 100%;
+        object-fit: cover;
     }
-    
+
 `
 export const GalleryImageSmall = styled(GalleryImageBig)`
     max-height: 296px;
-    & > img{
+
+    & > img {
         height: unset;
         width: 100%;
     }
-`
-export const Image = styled.img`
-    object-fit: cover;
 `
 
 export const Localization = styled(PageWrapper)`
     padding-top: 100px;
     padding-bottom: 100px;
+
     & > div {
         display: flex;
         justify-content: space-between;
@@ -294,7 +320,7 @@ export const Localization = styled(PageWrapper)`
     }
 `
 export const Address = styled(Link)`
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -306,7 +332,7 @@ export const Address = styled(Link)`
 `
 
 export const LocalizationTitle = styled(GalleryTitle)`
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
 `
 export const LocalizationWorkTime = styled(WorkTime)`
     display: flex;
