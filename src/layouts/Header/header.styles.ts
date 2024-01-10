@@ -9,9 +9,10 @@ export const HeaderContainer = styled.header`
     top: 0;
     width: 100%;
     background: ${
-    props => props.fg ? 'rgba(37, 36, 41, 0.50)' : ''
-        || '${({ theme }) => theme.colors.backgroundHeader}'
-};
+            props => props.hideBG ?
+                    ({ theme }) => theme.colors.backgroundHeader :
+                    ({ theme }) => theme.colors.backgroundHeaderOpacity
+    };
     background-size: auto 100%;
     //background: rgba(37, 36, 41, 0.50);
     z-index: 10;

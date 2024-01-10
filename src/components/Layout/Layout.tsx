@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ img = null, hideBg = true }) => {
         <>
             {hideBg ? (
                 <>
-                    <Header />
+                    <Header hideBG={hideBg} />
                     <Container>
                         <Outlet />
                     </Container>

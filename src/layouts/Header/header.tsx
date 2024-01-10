@@ -6,7 +6,11 @@ import SimpleModal from '../../ui-kit/SimpleModal/SimpleModal'
 import { useTranslation } from 'react-i18next'
 import i18n from '../../i18n'
 
-const Header: FC = () => {
+type HeaderProps = {
+    hideBG?: boolean
+}
+
+const Header: FC<HeaderProps> = ({ hideBG = false }) => {
     const [langOptionOpen, setLangOptionOpen] = useState(false)
     const [currentLang, setCurrentLang] = useState(i18n.language.toUpperCase())
 
@@ -17,7 +21,7 @@ const Header: FC = () => {
 
     return (
         <>
-            <S.HeaderContainer fg={'rgba(37, 36, 41, 0.50)'}>
+            <S.HeaderContainer hideBG={hideBG}>
                 <S.HeaderWrapper>
                     <S.LogoWrapper to={''}>
                         <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'} />
