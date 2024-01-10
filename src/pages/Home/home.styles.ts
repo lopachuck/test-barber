@@ -114,6 +114,21 @@ export const AboutUsWrapper = styled.div`
             text-transform: uppercase;
         }
     }
+    @media ${devices.md} {
+        flex-direction: column;
+        gap: unset;
+        & > picture {
+            order: 1;
+            & > img{
+                width: 100%;
+            }
+        }
+        & > div{
+            order: 2;
+            padding-top: 28px;
+            padding-bottom: 56px;
+        }
+    }
 `
 
 export const HiringBlock = styled.p`
@@ -128,6 +143,11 @@ export const HiringBlock = styled.p`
     font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 144.444% */
+    @media ${devices.md} {
+        margin-top: unset;
+        text-align: left;
+        white-space: unset;
+    }
 `
 
 export const AboutUs = styled.section`
@@ -150,15 +170,18 @@ export const AboutUs = styled.section`
         margin-bottom: 28px;
         color: ${({ theme }) => theme.colors.white};
 
-        width: 460px;
+        max-width: 460px;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 26px; /* 144.444% */
+        
     }
 
     & a {
-        color: #FFC32A;
+        color: ${({ theme }) => theme.colors.accentColor};
+        border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+        
         text-align: center;
 
         /* Actions-Navigation */
@@ -168,10 +191,16 @@ export const AboutUs = styled.section`
         line-height: 24px; /* 150% */
         text-transform: uppercase;
     }
+    
+    @media ${devices.md} {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
 `
 
 export const AboutLink = styled(Link)`
-
+    border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
 `
 
 export const Metrics = styled.div`
@@ -179,15 +208,18 @@ export const Metrics = styled.div`
     flex-direction: row;
     gap: 40px;
 
-    & div {
-        width: 360px;
-        height: 80px;
-    }
-
     padding-top: 39px;
     padding-bottom: 39px;
-    border-top: 1px solid #6B6B6B;
-    border-bottom: 1px solid #6B6B6B;
+    border-top: 1px solid ${({theme}) => theme.colors.elementsGrey};
+    border-bottom: 1px solid ${({theme}) => theme.colors.elementsGrey};
+    @media ${devices.md} {
+        padding-top: 28px;
+        padding-bottom: 28px;
+        justify-content: space-between;
+    }
+    @media ${devices.xs} {
+        max-height: 140px;
+    }
 `
 export const Row = styled.div`
     display: flex;
@@ -200,22 +232,43 @@ export const Column = styled.div`
     height: 80px;
 
     & :first-child {
-        color: #FFC32A;
+        color: ${({theme}) => theme.colors.accentColor};
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
         line-height: 48px; /* 120% */
         letter-spacing: -0.8px;
+        @media ${devices.xs} {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 133.333% */
+            letter-spacing: -0.252px;
+        }
     }
 
     & :last-child {
-        color: #FFF;
+        color: ${({theme}) => theme.colors.white};
 
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
         line-height: 24px; /* 133.333% */
         letter-spacing: -0.252px;
+        @media ${devices.xs} {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+    @media ${devices.md} {
+        width: 200px;
+        height: 112px;
+    }
+    @media ${devices.xs} {
+        width: 100px;
+        height: unset;
     }
 `
 export const Gallery = styled(PageWrapper)`
