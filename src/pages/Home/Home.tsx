@@ -36,14 +36,10 @@ const Home: FC<IAppProps> = (props) => {
                 <S.AboutUs>
                     <S.AboutUsWrapper>
                         <div>
-                            <h2>ABOUT US</h2>
-                            <p>
-                                At Uncle Ve, we believe that a barbershop isn't just about cutting hair and shaving
-                                beards. We provide professional service, the best specialists, stylish salon decor, and
-                                a unique atmosphere! Just trust us once to stay forever.
-                            </p>
+                            <h2>{t('home_aboutUs_title')}</h2>
+                            <p>{t('home_aboutUs_text')}</p>
                             <S.AboutLink to=""></S.AboutLink>
-                            <a href="/barbers">MEET OUR TEAM</a>
+                            <a href="/barbers">{t('home_aboutUs_meet_link')}</a>
                         </div>
                         <picture>
                             {/*<source*/}
@@ -53,7 +49,7 @@ const Home: FC<IAppProps> = (props) => {
                         </picture>
                     </S.AboutUsWrapper>
                     <S.HiringBlock>
-                        We always looking for new talents! Send us your CV - <S.AboutLink
+                        {t('home_aboutUs_CV')} - <S.AboutLink
                         to={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>{BARBERSHOP_MAIL_ADDRESS}</S.AboutLink>
                     </S.HiringBlock>
                 </S.AboutUs>
@@ -63,7 +59,7 @@ const Home: FC<IAppProps> = (props) => {
                             10 +
                         </S.Row>
                         <S.Row>
-                            Year of professional experience
+                            {t('home_exp_year')}
                         </S.Row>
                     </S.Column>
                     <S.Column>
@@ -71,7 +67,7 @@ const Home: FC<IAppProps> = (props) => {
                             500
                         </S.Row>
                         <S.Row>
-                            Clients trust us monthly
+                            {t('home_client_mountly')}
                         </S.Row>
                     </S.Column>
                     <S.Column>
@@ -79,7 +75,7 @@ const Home: FC<IAppProps> = (props) => {
                             89%
                         </S.Row>
                         <S.Row>
-                            Recommend us to their friends
+                            {t('home_recomend')}
                         </S.Row>
                     </S.Column>
                 </S.Metrics>

@@ -110,6 +110,9 @@ export const AboutUsWrapper = styled.div`
 
     & > div {
         padding: 120px 0 120px 0;
+        & > h2{
+            text-transform: uppercase;
+        }
     }
 `
 
