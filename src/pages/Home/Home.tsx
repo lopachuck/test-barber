@@ -146,20 +146,18 @@ const Home: FC<IAppProps> = (props) => {
                     <div>
                         <S.LocalizationTitle>{t('home_localization')}</S.LocalizationTitle>
                         <S.Address to={BARBERSHOP_DIRECTION_LINK} target={'_blank'}>
-                            <img src={'/svg/icons/location.svg'} alt="loc" />
-                            <span>{t('contacts_address')}</span>
+                            {t('contacts_address')}
                         </S.Address>
                     </div>
                     <S.LocalizationWorkTime>
-                        <img src={'/svg/icons/time.svg'} alt="loc" />
                         <div>
                             <span>{t('contacts_mon_fri')} 10:00 - 20:00 </span>
                             <p>{t('contacts_sat')} 10:00 - 19:00, </p>
-                            <p>{t('contacts_sun')} 10:00 - 16:00</p>
+                            <span>{t('contacts_sun')} 10:00 - 16:00</span>
                         </div>
                     </S.LocalizationWorkTime>
                 </div>
-                <CustomGoogleMap />
+                <CustomGoogleMap/>
             </S.Localization>
         </>
     )

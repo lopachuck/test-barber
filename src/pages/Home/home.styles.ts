@@ -314,6 +314,9 @@ export const Address = styled(Link)`
     font-weight: 700;
     line-height: 24px; /* 133.333% */
     letter-spacing: -0.252px;
+    &:before{
+        content: url("/svg/icons/location.svg");
+    }
 `
 
 export const LocalizationTitle = styled(GalleryTitle)`
@@ -327,4 +330,10 @@ export const LocalizationWorkTime = styled(WorkTime)`
     font-weight: 700;
     line-height: 24px; /* 133.333% */
     letter-spacing: -0.252px;
+    padding-bottom: 0;
+    &:before{
+        content: url("/svg/icons/time.svg");
+        width: 32px;
+        height: 32px;
+    }
 `
