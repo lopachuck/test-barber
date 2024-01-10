@@ -49,7 +49,9 @@ const Home: FC<IAppProps> = (props) => {
                         </picture>
                     </S.AboutUsWrapper>
                     <S.HiringBlock>
-                        {t('home_aboutUs_CV')} - <S.AboutLink
+                        {t('home_aboutUs_CV')}&nbsp;
+                        <span></span>
+                        <S.AboutLink
                         to={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>{BARBERSHOP_MAIL_ADDRESS}</S.AboutLink>
                     </S.HiringBlock>
                 </S.AboutUs>

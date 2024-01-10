@@ -144,9 +144,33 @@ export const HiringBlock = styled.p`
     font-weight: 400;
     line-height: 26px; /* 144.444% */
     @media ${devices.md} {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
         margin-top: unset;
         text-align: left;
         white-space: unset;
+        max-width: 30ch;
+        //white-space: pre;
+        & span {
+            display: none;
+        }
+
+        & a {
+            text-align: left;
+            //display: inline-block;
+            //text-align: left;
+        }
+
+    }
+
+    & span:before {
+        content: "- ";
+        display: inline;
+        width: 10px;
+        height: 10px;
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.white};
     }
 `
 
@@ -180,9 +204,11 @@ export const AboutUs = styled.section`
 
     & a {
         color: ${({ theme }) => theme.colors.accentColor};
-        border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
-        
-        text-align: center;
+            //border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+
+        text-decoration-line: underline;
+        text-underline-offset: 2px;
+        //text-align: center;
 
         /* Actions-Navigation */
         font-size: 16px;
@@ -200,7 +226,7 @@ export const AboutUs = styled.section`
 `
 
 export const AboutLink = styled(Link)`
-    border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+        // border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
 `
 
 export const Metrics = styled.div`
