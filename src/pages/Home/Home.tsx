@@ -3,13 +3,11 @@ import { IAppProps } from '../../App'
 import { useTranslation } from 'react-i18next'
 import { PageWrapper } from '../Page/page.styles'
 import * as S from './home.styles'
-import {
-    BARBERSHOP_DIRECTION_LINK,
-    BARBERSHOP_FACEBOOK_LINK,
-    BARBERSHOP_INSTAGRAM_LINK,
-    BARBERSHOP_MAIL_ADDRESS,
-} from '../../config/config'
-import CustomGoogleMap from '../../components/GoogleMap/CustomGoogleMap'
+import { BARBERSHOP_FACEBOOK_LINK, BARBERSHOP_INSTAGRAM_LINK } from '../../config/config'
+import Metrics from '../../components/Metrics/Metrics'
+import AboutUs from '../../components/AboutUs/AboutUs'
+import Localization from '../../components/Localization/Localization'
+import GalleryHome from '../../components/GalleryHome/GalleryHome'
 
 const Home: FC<IAppProps> = (props) => {
     const { t, i18n } = useTranslation()
@@ -33,143 +31,11 @@ const Home: FC<IAppProps> = (props) => {
             </S.LogoLineWrap>
             {/*<S.LogoLine2 />*/}
             <PageWrapper>
-                <S.AboutUs>
-                    <S.AboutUsWrapper>
-                        <div>
-                            <h2>{t('home_aboutUs_title')}</h2>
-                            <p>{t('home_aboutUs_text')}</p>
-                            <S.AboutLink to=""></S.AboutLink>
-                            <a href="/barbers">{t('home_aboutUs_meet_link')}</a>
-                        </div>
-                        <picture>
-                            <source media="(max-width: 480px)"
-                                    srcSet={"/img/home/about_us/team_70_360_320.webp 340w"}
-                                    type={'image/webp'}/>
-                            <source media="(max-width: 640px)"
-                                    srcSet={"/img/home/about_us/team_70_560_0.webp 680w"}
-                                    type={'image/webp'}/>
-                            <source media="(max-width: 960px)"
-                                    srcSet={"/img/home/about_us/team_70_680_0.webp 960w"}
-                                    type={'image/webp'}/>
-                            <source
-                                    srcSet={"/img/home/about_us/team_70_1120_0.webp 1280w"}
-                                    type={'image/webp'}/>
-                            <img src="/img/home/about_us/Team.jpeg" alt="about us"/>
-                        </picture>
-                    </S.AboutUsWrapper>
-                    <S.HiringBlock>
-                        {t('home_aboutUs_CV')}&nbsp;
-                        <span></span>
-                        <S.AboutLink
-                        to={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>{BARBERSHOP_MAIL_ADDRESS}</S.AboutLink>
-                    </S.HiringBlock>
-                </S.AboutUs>
-                <S.Metrics>
-                    <S.Column>
-                        <S.Row>
-                            10 +
-                        </S.Row>
-                        <S.Row>
-                            {t('home_exp_year')}
-                        </S.Row>
-                    </S.Column>
-                    <S.Column>
-                        <S.Row>
-                            500
-                        </S.Row>
-                        <S.Row>
-                            {t('home_client_mountly')}
-                        </S.Row>
-                    </S.Column>
-                    <S.Column>
-                        <S.Row>
-                            89%
-                        </S.Row>
-                        <S.Row>
-                            {t('home_recomend')}
-                        </S.Row>
-                    </S.Column>
-                </S.Metrics>
-
+                <AboutUs />
+                <Metrics />
             </PageWrapper>
-            <S.Gallery>
-                <S.GalleryTitle>{t('header_menu_gallery')}</S.GalleryTitle>
-                <S.GallerySubtitle>
-                    {t('home_gallery_subtitle')}
-                    <S.GalleryLink to={'gallery'}>{t('header_menu_gallery')}</S.GalleryLink>
-                </S.GallerySubtitle>
-                <S.ImagesContainer>
-                    <S.ImagesColumn>
-                        <S.GalleryImageBig>
-                            <img src="/img/home/main-gallery_1.jpeg"
-                                 loading={'lazy'}
-                                 alt={t('services_mens_haircut')} />
-                        </S.GalleryImageBig>
-                        <S.GalleryImageSmall>
-                            <source
-                                srcSet={'/img/home/main-gallery_2.webp, /img/home/main-gallery_2.jpeg 2x'}
-                                type={'image/webp'} />
-                            <img src="/img/home/main-gallery_2.jpeg"
-                                 loading={'lazy'}
-                                 alt={t('services_mens_haircut')} />
-                        </S.GalleryImageSmall>
-                    </S.ImagesColumn>
-                    <S.ImagesColumn>
-                        <S.GalleryImageSmall>
-                            <source
-                                srcSet={'/img/home/main-gallery_3.webp, /img/home/main-gallery_3.jpeg 2x'}
-                                type={'image/webp'} />
-                            <img src="/img/home/main-gallery_3.jpeg"
-                                 loading={'lazy'}
-                                 alt={t('services_mens_haircut')} />
-                        </S.GalleryImageSmall>
-                        <S.GalleryImageBig>
-                            <source
-                                srcSet={'/img/home/main-gallery_4.webp, /img/home/main-gallery_4.jpeg 2x'}
-                                type={'image/webp'} />
-                            <img src="/img/home/main-gallery_4.jpeg"
-                                 loading={'lazy'}
-                                 alt={t('services_mens_haircut')} />
-                        </S.GalleryImageBig>
-                    </S.ImagesColumn>
-                    <S.ImagesColumn>
-                        <S.GalleryImageBig>
-                            <source
-                                srcSet={'/img/home/main-gallery_5.webp, /img/home/main-gallery_5.jpeg 2x'}
-                                type={'image/webp'} />
-                            <img src="/img/home/main-gallery_5.jpeg"
-                                 loading={'lazy'}
-                                 alt={t('services_mens_haircut')} />
-                        </S.GalleryImageBig>
-                        <S.GalleryImageSmall>
-                            <source
-                                srcSet={'/img/home/main-gallery_6.webp, /img/home/main-gallery_6.jpeg 2x'}
-                                type={'image/webp'} />
-                            <img src="/img/home/main-gallery_6.jpeg"
-                                 loading={'lazy'}
-                                 alt={t('services_mens_haircut')} />
-                        </S.GalleryImageSmall>
-                    </S.ImagesColumn>
-                </S.ImagesContainer>
-            </S.Gallery>
-            <S.Localization>
-                <div>
-                    <div>
-                        <S.LocalizationTitle>{t('home_localization')}</S.LocalizationTitle>
-                        <S.Address to={BARBERSHOP_DIRECTION_LINK} target={'_blank'}>
-                            {t('contacts_address')}
-                        </S.Address>
-                    </div>
-                    <S.LocalizationWorkTime>
-                        <div>
-                            <span>{t('contacts_mon_fri')} 10:00 - 20:00 </span>
-                            <p>{t('contacts_sat')} 10:00 - 19:00, </p>
-                            <span>{t('contacts_sun')} 10:00 - 16:00</span>
-                        </div>
-                    </S.LocalizationWorkTime>
-                </div>
-                <CustomGoogleMap/>
-            </S.Localization>
+            <GalleryHome />
+            <Localization />
         </>
     )
 }
