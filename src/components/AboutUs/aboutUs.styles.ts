@@ -22,7 +22,8 @@ export const AboutUs = styled.section`
         margin-bottom: 28px;
         color: ${({ theme }) => theme.colors.white};
 
-        max-width: 460px;
+        max-width: 75%;
+        //max-width: 460px; // @todo rm after discuss (only for melanj)
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -66,6 +67,11 @@ export const AboutUsWrapper = styled.div`
         }
     }
 
+    & picture img {
+        max-width: 560px;
+        max-height: 500px;
+    }
+
     @media ${devices.md} {
         flex-direction: column;
         gap: unset;
@@ -73,6 +79,7 @@ export const AboutUsWrapper = styled.div`
             order: 1;
 
             & > img {
+                //max-width: 500px;
                 width: 100%;
             }
         }
@@ -81,6 +88,18 @@ export const AboutUsWrapper = styled.div`
             order: 2;
             padding-top: 28px;
             padding-bottom: 56px;
+        }
+
+        & picture img {
+            max-width: none;
+            max-height: none;
+        }
+    }
+
+    @media ${devices.sm} {
+        & picture img {
+            //max-width: 360px;
+            //max-height: 320px;
         }
     }
 `
