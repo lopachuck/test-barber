@@ -93,11 +93,17 @@ export const AboutUsWrapper = styled.div`
         & picture img {
             max-width: none;
             max-height: none;
+            //width: 100dvw;
+            //overflow: visible;
+            //margin-left: -57px; // @todo rm only for image full screen width scale (Tablet)
         }
     }
 
     @media ${devices.sm} {
         & picture img {
+            width: 100dvw;
+            overflow: visible;
+            margin-left: -17px;
             //max-width: 360px;
             //max-height: 320px;
         }
