@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 import * as S from './contacts.styles'
 import CustomGoogleMap from '../../components/GoogleMap/CustomGoogleMap'
 import { IAppProps } from '../../App'
@@ -31,16 +31,20 @@ const Contacts: FC<IAppProps> = (props) => {
                     <S.WorkTime>
                         <img src={"/svg/icons/time.svg"} alt="loc"/>
                         <div>
-                            <span>{t('contacts_mon_fri')} 10:00 - 20:00 </span>
-                            <p>{t('contacts_sat')} 10:00 - 19:00, </p>
-                            <p>{t('contacts_sun')} 10:00 - 16:00</p>
+                            <span>{t('contacts_mon_fri')}&nbsp;
+                                <time>10:00</time> - <time>20:00</time> </span>
+                            <p>{t('contacts_sat')}&nbsp;
+                                <time>10:00</time>
+                                - <time>19:00</time>, {t('contacts_sun')}&nbsp;
+                                <time>10:00</time>
+                                - <time>16:00</time></p>
                         </div>
                     </S.WorkTime>
-                    <a href={`tel:${BARBERSHOP_PHONE}`} >
-                        <img src={"/svg/icons/phone.svg"} alt="loc"/>
+                    <a href={`tel:${BARBERSHOP_PHONE}`}>
+                        <img src={'/svg/icons/phone.svg'} alt="loc" />
                         <span>{BARBERSHOP_PHONE}</span>
                     </a>
-                    <a href={`mailto:${BARBERSHOP_MAIL_ADDRESS}`} >
+                    <a href={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>
                         <img src={"/svg/icons/letter.svg"} alt="loc"/>
                         <span>{BARBERSHOP_MAIL_ADDRESS}</span>
                     </a>
