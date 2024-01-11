@@ -42,10 +42,19 @@ const Home: FC<IAppProps> = (props) => {
                             <a href="/barbers">{t('home_aboutUs_meet_link')}</a>
                         </div>
                         <picture>
-                            {/*<source*/}
-                            {/*    srcSet={'/img/services/hair-cut.webp, /img/services/hair-cut.jpeg 2x'}*/}
-                            {/*    type={'image/webp'} />*/}
-                            <img src="/img/home/about_us.jpg" alt="about us" />
+                            <source media="(max-width: 480px)"
+                                    srcSet={"/img/home/about_us/team_70_360_320.webp 340w"}
+                                    type={'image/webp'}/>
+                            <source media="(max-width: 640px)"
+                                    srcSet={"/img/home/about_us/team_70_560_0.webp 680w"}
+                                    type={'image/webp'}/>
+                            <source media="(max-width: 960px)"
+                                    srcSet={"/img/home/about_us/team_70_680_0.webp 960w"}
+                                    type={'image/webp'}/>
+                            <source
+                                    srcSet={"/img/home/about_us/team_70_1120_0.webp 1280w"}
+                                    type={'image/webp'}/>
+                            <img src="/img/home/about_us/Team.jpeg" alt="about us"/>
                         </picture>
                     </S.AboutUsWrapper>
                     <S.HiringBlock>
