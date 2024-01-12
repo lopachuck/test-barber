@@ -36,6 +36,7 @@ const Home: FC<IAppProps> = (props) => {
             </PageWrapper>
             <GalleryHome />
             <Localization />
+            
         </>
     )
 }
