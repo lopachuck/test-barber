@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { PageWrapper } from '../../pages/Page/page.styles'
 import { NavLink } from 'react-router-dom'
+import {devices} from "../../devices";
 
 
 export const Gallery = styled(PageWrapper)`
@@ -15,6 +16,7 @@ export const Gallery = styled(PageWrapper)`
     }
 `
 export const GalleryTitle = styled.h2`
+    width: 100%;
     text-transform: uppercase;
     font-size: 40px;
     font-style: normal;
@@ -24,6 +26,7 @@ export const GalleryTitle = styled.h2`
     padding-bottom: 28px;
 `
 export const GallerySubtitle = styled.h4`
+    width: 100%;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -41,34 +44,54 @@ export const GalleryLink = styled(NavLink)`
     border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
 `
 export const ImagesContainer = styled.div`
+    width: 100%;
     display: flex;
-    max-width: 1160px; //@todo rm after merge
-    gap: 40px;
+    max-width: 1160px;
+    gap: 3.5%;
     padding-bottom: 100px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.elementsGrey};
 `
 export const ImagesColumn = styled.div`
     display: flex;
     flex-direction: column;
+    width: 31%;
     gap: 40px;
+    @media ${devices.md} {
+        gap: 24px;
+    }
+    @media ${devices.xs} {
+        gap: 16px;
+    }
 `
 export const GalleryImageBig = styled.picture`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 516px;
-    width: 360px;
+    max-height: 516px;
+    width: 100%;
     overflow: hidden;
-
+    @media ${devices.md} {
+        max-height: none;
+        width: auto;
+    }
+    @media ${devices.xs} {
+        max-height: 144px;
+    }
     & > img {
         height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 
 `
 export const GalleryImageSmall = styled(GalleryImageBig)`
     max-height: 296px;
-
+    @media ${devices.md} {
+        max-height: 184px;
+    }
+    @media ${devices.xs} {
+        max-height: 82px;
+    }
     & > img {
         height: unset;
         width: 100%;
