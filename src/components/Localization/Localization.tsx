@@ -18,9 +18,16 @@ const Localization: FC = () => {
                     </div>
                     <S.LocalizationWorkTime>
                         <div>
-                            <span>{t('contacts_mon_fri')} 10:00 - 20:00 </span>
-                            <p>{t('contacts_sat')} 10:00 - 19:00, </p>
-                            <span>{t('contacts_sun')} 10:00 - 16:00</span>
+                            <p>
+                                <span>{t('contacts_mon_fri')}&nbsp;
+                                    <time>10:00</time> - <time>20:00</time> </span>
+                            </p>
+                            <p>
+                                <span>{t('contacts_sat')}&nbsp;
+                                    <time>10:00</time> - <time>19:00</time>, </span>
+                                <span>{t('contacts_sun')}&nbsp;
+                                    <time>10:00</time> - <time>16:00</time></span>
+                            </p>
                         </div>
                     </S.LocalizationWorkTime>
                 </div>
