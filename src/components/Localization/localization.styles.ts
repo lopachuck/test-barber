@@ -33,6 +33,7 @@ export const Address = styled(Link)`
 
 export const LocalizationTitle = styled(GalleryTitle)`
     color: ${({ theme }) => theme.colors.white};
+    padding-bottom: 16px;
 `
 export const LocalizationWorkTime = styled(WorkTime)`
     display: flex;
