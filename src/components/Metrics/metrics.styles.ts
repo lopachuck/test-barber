@@ -16,6 +16,7 @@ export const Metrics = styled.div`
     }
     @media ${devices.xs} {
         max-height: 140px;
+        width: 100%;
     }
 `
 export const Row = styled.div`
