@@ -55,7 +55,7 @@ export const LinkDirectionGoogle = styled(Link)`
         width: 20px;
         height: 20px;
         content: url(${iconWaze});
-        background-color: #61dafb;
+        background-color: ${({theme}) => theme.colors.white};
         border-radius: 3px;
         margin-right: 4px;
     }

@@ -14,7 +14,6 @@ export const HeaderContainer = styled.header`
                     ({ theme }) => theme.colors.backgroundHeaderOpacity
     };
     background-size: auto 100%;
-    //background: rgba(37, 36, 41, 0.50);
     z-index: 10;
 `
 export const HeaderWrapper = styled.div`

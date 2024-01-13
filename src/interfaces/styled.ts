@@ -12,4 +12,5 @@ export interface ITheme {
         textSecondary: string,
         elementsGrey: string,
         backgroundElemetsBlack: string,
+        backgroundWaze: string,
 }}

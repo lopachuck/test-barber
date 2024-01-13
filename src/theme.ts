@@ -11,6 +11,7 @@ export const baseTheme: ITheme = {
         textSecondary: '#ABABAB',
         elementsGrey: '#6B6B6B',
         backgroundElemetsBlack: '#1D1D22',
+        backgroundWaze: '#61dafb',
     },
 
 }

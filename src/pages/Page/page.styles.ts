@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
 import BG from '../../assets/home/bg_title.jpeg'
+import BG_tab from '../../assets/home/Main-Bg_768_828.jpeg'
+import BG_mob from '../../assets/home/Main-Bg_360_448.jpeg'
 
 export const PageWrapper = styled.div.attrs({
     className: 'container-wrapper',
@@ -65,9 +67,24 @@ export const TitleWrapper = styled.div`
 export const BgImage = styled.div.attrs(props => ({
     bgi: props.img || BG,
 }))`
-    background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${props => props.bgi}), #252429 50%;
+    background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG}), #252429 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: 100% 1024px;
     background-position-y: -80px;
+    @media ${devices.md} {
+        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_tab}), #252429 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: 100% 828px;
+        background-position-y: -80px;
+    }
+    @media ${devices.xs} {
+        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_mob}), #252429 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: 100% 448px;
+        background-position-y: -80px;
+    }
+    
 `

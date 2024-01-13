@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import * as S from './footer.styles'
 import {
-    BARBERSHOP_DIRECTION_LINK,
+    BARBERSHOP_DIRECTION_LINK_WAZE,
     BARBERSHOP_FACEBOOK_LINK,
     BARBERSHOP_INSTAGRAM_LINK,
     BARBERSHOP_MAIL_ADDRESS,
@@ -32,7 +32,7 @@ const Footer: FC = () => {
                         <S.InfoTitle>{t('header_menu_contacts')}</S.InfoTitle>
                         <S.ContactsDetails>
                             <S.Address>
-                                <a href={BARBERSHOP_DIRECTION_LINK} target={'_blank'}>{t('contacts_address')}</a>
+                                <a href={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}>{t('contacts_address')}</a>
                             </S.Address>
                             <S.Phone>
                                 <a href={`tel:${BARBERSHOP_PHONE}`}>{BARBERSHOP_PHONE}</a>
