@@ -29,14 +29,12 @@ const Home: FC<IAppProps> = (props) => {
             <S.LogoLineWrap>
                 <S.LogoLine />
             </S.LogoLineWrap>
-            {/*<S.LogoLine2 />*/}
             <PageWrapper>
                 <AboutUs />
                 <Metrics />
             </PageWrapper>
             <GalleryHome />
             <Localization />
-            
         </>
     )
 }
