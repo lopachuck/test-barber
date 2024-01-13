@@ -13,7 +13,7 @@ import Shop from './pages/Shop/Shop'
 import { useTranslation } from 'react-i18next'
 import NotFound from './pages/NotFound/NotFound'
 
-import HOME_PAGE_BG from './assets/home/bg_title.jpeg'
+import HOME_PAGE_BG from './assets/home/4k_3840_2160.jpeg'
 import SHOP_PAGE_BG from './assets/shop/bg_shop.jpeg'
 
 export interface IAppProps {

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
-import BG from '../../assets/home/bg_title.jpeg'
-import BG_tab from '../../assets/home/Main-Bg_768_828.jpeg'
-import BG_mob from '../../assets/home/Main-Bg_360_448.jpeg'
+import BG_4k from '../../assets/home/4k_3840_2160.jpeg'
+import BG_fhd from '../../assets/home/fhd_1920_1080.jpg'
+// import BG_tablel_HORIZONTAL from '../../assets/home/fhd_1920_1080.jpg'
+import BG_tablet_VERTICAL from '../../assets/home/tablet_768_829.jpg'
+import BG_mobile_VERTICAL from '../../assets/home/mobile_360_448.jpg'
 
 export const PageWrapper = styled.div.attrs({
     className: 'container-wrapper',
@@ -65,26 +67,34 @@ export const TitleWrapper = styled.div`
 `
 
 export const BgImage = styled.div.attrs(props => ({
-    bgi: props.img || BG,
+    bgi: props.img || BG_4k,
 }))`
-    background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG}), ${({theme}) => theme.colors.backgroundBlack} 50%;
+    background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        //background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: 100% 1024px;
     background-position-y: -80px;
+    @media ${devices.fhd} {
+        background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: 100% 1024px;
+        background-position-y: -80px;
+    }
     @media ${devices.md} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_tab}), ${({theme}) => theme.colors.backgroundBlack} 50%;
+        background: url(${BG_tablet_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: 100% 828px;
         background-position-y: -80px;
     }
     @media ${devices.xs} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_mob}), ${({theme}) => theme.colors.backgroundBlack} 50%;
+        background: url(${BG_mobile_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: 100% 448px;
-        background-position-y: -80px;
+        background-size: 100% 100dvh;
+        background-position-y: 10px;
     }
     
 `
