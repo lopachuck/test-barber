@@ -67,20 +67,20 @@ export const TitleWrapper = styled.div`
 export const BgImage = styled.div.attrs(props => ({
     bgi: props.img || BG,
 }))`
-    background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG}), #252429 50%;
+    background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG}), ${({theme}) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: 100% 1024px;
     background-position-y: -80px;
     @media ${devices.md} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_tab}), #252429 50%;
+        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_tab}), ${({theme}) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: 100% 828px;
         background-position-y: -80px;
     }
     @media ${devices.xs} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_mob}), #252429 50%;
+        background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_mob}), ${({theme}) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: 100% 448px;
