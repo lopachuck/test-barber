@@ -1,9 +1,10 @@
 import styled, { keyframes } from 'styled-components'
-import { Subtitle, Title, TitleWrapper } from '../Page/page.styles'
+import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 import { devices } from '../../devices'
 import { Link } from 'react-router-dom'
 
 import arrowDown from '../../assets/icon/arrow_down.svg'
+import arrowDown32 from '../../assets/icon/arrow_down32.svg'
 import logo from '../../assets/svg/banner/Animation.svg'
 import instagramIcon from '../../assets/svg/social/instagram.svg'
 import fbIcon from '../../assets/svg/social/facebook.svg'
@@ -27,14 +28,19 @@ const marqueeAnimation = keyframes`
     }
 `
 export const SocialWrapper = styled.div`
-    margin-top: 392px; // @see 472px - 80px h socialWrapper with 2 soc Icons, change mt after add 3rd (and next) soc icons
+    //margin-top: 392px; // @see 472px - 80px h socialWrapper with 2 soc Icons, change mt after add 3rd (and next) soc icons
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: flex-end;
     @media ${devices.md} {
-        margin-top: 232px; /// 232 height tab - 80 h Header desktop ; TAB header 137px @todo fix 137px
+        //margin-top: 232px; /// 232 height tab - 80 h Header desktop ; TAB header 137px @todo fix 137px
     }
+`
+export const HomePageWrapper = styled(PageWrapper)`
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100dvh;
 `
 const SocialLink = styled(Link).attrs({
     target: '_blank',
@@ -52,7 +58,23 @@ export const SocialLinkInstagram = styled(SocialLink)`
 export const HomeTitleWrapper = styled(TitleWrapper)`
     margin-top: 43px;
     margin-left: 104px;
-    margin-bottom: 60px;
+    margin-bottom: 133px;
+    @media ${devices.xs} {
+        margin-left: 60px;
+        margin-bottom: 60px;
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 24px;
+            left: -36px;
+            display: flex;
+            content: " ";
+            width: 32px;
+            height: 32px;
+            background-image: url(${arrowDown32});
+        }
+    }
+    //margin-bottom: 60px;
 `
 
 export const HomeSubtitle = styled(Subtitle)`
@@ -68,10 +90,23 @@ export const HomeSubtitle = styled(Subtitle)`
         height: 64px;
         background-image: url(${arrowDown});
     }
+
+    @media ${devices.xs} {
+        display: none;
+    }
 `
 export const HomeTitle = styled(Title)`
     margin-left: 0;
     padding-top: 0;
+    @media ${devices.md} {
+        font-size: 54px;
+        line-height: 60px;
+    }
+    @media ${devices.xs} {
+        font-size: 24px;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: -0.336px;
+    }
 `
 export const LogoLineWrap = styled.div`
     height: 110px;
@@ -85,6 +120,7 @@ export const LogoLine = styled.div`
     width: 10000px;
     left: 0;
     bottom: 0;
+    //bottom: 73px;
     height: 73px;
     background-image: url(${logo});
     background-size: 1180px 71px;

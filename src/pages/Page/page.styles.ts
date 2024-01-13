@@ -69,32 +69,42 @@ export const TitleWrapper = styled.div`
 export const BgImage = styled.div.attrs(props => ({
     bgi: props.img || BG_4k,
 }))`
+    height: 100dvh;
+    position: relative;
     background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         //background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-size: 100% 1024px;
+    background-size: auto calc(100dvh + 80px);
+    //background-size: auto 100dvh;
+    //background-size: 100% 1024px;
     background-position-y: -80px;
+    background-position-x: center;
     @media ${devices.fhd} {
         background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: 100% 1024px;
+        background-size: auto calc(100dvh + 80px);
+        //background-size: 100% 1024px;
         background-position-y: -80px;
+        background-position-x: center;
     }
     @media ${devices.md} {
         background: url(${BG_tablet_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: 100% 828px;
+        background-size: auto calc(100dvh + 80px);
+        //background-size: 100% 828px;
         background-position-y: -80px;
+        background-position-x: center;
     }
     @media ${devices.xs} {
         background: url(${BG_mobile_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: 100% 100dvh;
+        background-size: auto calc(100dvh + 80px);
         background-position-y: 10px;
+        background-position-x: center;
     }
     
 `

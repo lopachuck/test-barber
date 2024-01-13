@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom'
 
 import Container from '../../layouts/container/container'
 import Header from '../../layouts/Header/header'
-import { BgImage } from '../../pages/Page/page.styles'
 
 type LayoutProps = {
     hideBg?: boolean
@@ -24,13 +23,9 @@ const Layout: React.FC<LayoutProps> = ({ img = null, hideBg = true }) => {
                 </>
             ) : (
                 <>
-                    <BgImage img={img}>
-                        <Header />
-                        <Container>
-                            <Outlet />
-                        </Container>
-                        <Footer />
-                    </BgImage>
+                    <Header />
+                    <Outlet />
+                    <Footer />
                 </>
             )}
         </>)
