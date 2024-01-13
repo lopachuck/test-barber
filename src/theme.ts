@@ -12,7 +12,6 @@ export const baseTheme: ITheme = {
         elementsGrey: '#6B6B6B',
         backgroundElemetsBlack: '#1D1D22',
         backgroundWaze: '#61dafb',
-        backgroundBlack: '#252429',
     },
 
 }
