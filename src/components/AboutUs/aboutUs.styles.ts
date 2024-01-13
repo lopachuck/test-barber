@@ -21,23 +21,20 @@ export const AboutUs = styled.section`
     & div p {
         margin-bottom: 28px;
         color: ${({ theme }) => theme.colors.white};
-
-        max-width: 75%;
-        //max-width: 460px; // @todo rm after discuss (only for melanj)
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 26px; /* 144.444% */
-
+        @media ${devices.md} {
+            max-width: 75%;
+        }
     }
 
     & a {
         color: ${({ theme }) => theme.colors.accentColor};
-            //border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
 
         text-decoration-line: underline;
         text-underline-offset: 2px;
-        //text-align: center;
 
         /* Actions-Navigation */
         font-size: 16px;
@@ -71,7 +68,9 @@ export const AboutUsWrapper = styled.div`
         max-width: 560px;
         max-height: 500px;
     }
-
+    @media ${devices.lg} {
+        gap: 100px;
+    }
     @media ${devices.md} {
         flex-direction: column;
         gap: unset;
@@ -79,7 +78,6 @@ export const AboutUsWrapper = styled.div`
             order: 1;
 
             & > img {
-                //max-width: 500px;
                 width: 100%;
             }
         }
@@ -93,9 +91,6 @@ export const AboutUsWrapper = styled.div`
         & picture img {
             max-width: none;
             max-height: none;
-            //width: 100dvw;
-            //overflow: visible;
-            //margin-left: -57px; // @todo rm only for image full screen width scale (Tablet)
         }
     }
 
@@ -104,14 +99,11 @@ export const AboutUsWrapper = styled.div`
             width: 100dvw;
             overflow: visible;
             margin-left: -17px;
-            //max-width: 360px;
-            //max-height: 320px;
         }
     }
 `
 
 export const AboutLink = styled(Link)`
-        // border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
 `
 
 export const HiringBlock = styled.p`
@@ -134,15 +126,12 @@ export const HiringBlock = styled.p`
         text-align: left;
         white-space: unset;
         max-width: 30ch;
-        //white-space: pre;
         & span {
             display: none;
         }
 
         & a {
             text-align: left;
-            //display: inline-block;
-            //text-align: left;
         }
 
     }
