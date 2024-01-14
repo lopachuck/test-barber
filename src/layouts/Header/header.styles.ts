@@ -59,6 +59,12 @@ export const MenuWrapper = styled.div`
     @media ${devices.md} {
         margin-left: unset;
     }
+    @media ${devices.ipad7th} {
+        margin-left: 36px;
+    }
+    @media ${devices.ipad} {
+        margin-left: 36px;
+    }
 
 `
 export const LangMenuWrapper = styled.div`
@@ -97,6 +103,7 @@ export const LangMenu = styled.div`
     flex-wrap: wrap;
     background: ${({ theme }) => theme.colors.background};
     border-collapse: collapse;
+    border-radius: 12px;
 `
 
 export const LangMenuOption = styled.div`
@@ -156,6 +163,13 @@ export const BookingBtnWrapper = styled.div`
     margin-left: auto;
     @media ${devices.md} {
         height: 60px;
+        gap: 16px;
+    }
+    @media ${devices.ipad7th} {
+        gap: 16px;
+    }
+    @media ${devices.ipad} {
+        gap: 16px;
     }
 `
 

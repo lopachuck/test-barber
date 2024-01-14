@@ -74,6 +74,12 @@ export const HomeTitleWrapper = styled(TitleWrapper)`
             background-image: url(${arrowDown32});
         }
     }
+    @media ${devices.ipad7th} {
+        margin-left: 96px;
+    }
+    @media ${devices.ipad} {
+        margin-left: 96px;
+    }
     //margin-bottom: 60px;
 `
 

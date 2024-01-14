@@ -7,10 +7,9 @@ import Header from '../../layouts/Header/header'
 
 type LayoutProps = {
     hideBg?: boolean
-    img?: string
 }
 
-const Layout: React.FC<LayoutProps> = ({ img = null, hideBg = true }) => {
+const Layout: React.FC<LayoutProps> = ({ hideBg = true }) => {
     return (
         <>
             {hideBg ? (

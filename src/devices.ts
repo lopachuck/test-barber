@@ -16,4 +16,6 @@ export const devices = {
     fhd: `(max-width: ${breakpoints.fhd})`,
     lg: `(max-width: ${breakpoints.lg})`,
     xl: `(max-width: ${breakpoints.xl})`,
+    ipad7th: `only screen and (min-device-width: 810px) and (max-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) `,
+    ipad: `only screen and (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2)`,
 }
