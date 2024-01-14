@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {NavLink} from "react-router-dom";
+import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 import { devices } from '../../devices'
 
 export interface IOpenMenuProps {
@@ -10,6 +10,7 @@ export const DesktopMenuWrapper = styled.nav<IOpenMenuProps>`
     gap: 32px;
     @media ${devices.md} {
         display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
+        gap: 16px;
         position: fixed;
         flex-direction: column;
         height: calc(100% - 60px);
@@ -19,6 +20,12 @@ export const DesktopMenuWrapper = styled.nav<IOpenMenuProps>`
         align-items: center;
         justify-content: center;
         background: ${({theme}) => theme.colors.background};
+    }
+    @media ${devices.ipad7th} {
+        gap: 12px;
+    }
+    @media ${devices.ipad} {
+        gap: 12px;
     }
     @media ${devices.sm} {
         width: calc(100% - 32px);

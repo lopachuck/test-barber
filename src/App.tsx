@@ -29,11 +29,13 @@ const App: React.FC = () => {
             <GlobalStyle/>
             <BrowserRouter>
                 <Routes>
+                    <Route path="/" element={<Layout hideBg={false} />}>
+                        <Route path="/" index element={<Home {...appProps} />} />
+                        <Route path="shop" element={<Shop {...appProps} />} />
+                    </Route>
                     <Route path="/" element={<Layout/>}>
-                        <Route path="/" index element={<Home {...appProps} />}/>
                         <Route path="gallery" element={<Gallery {...appProps} />}/>
                         <Route path="services" element={<Services {...appProps} />}/>
-                        <Route path="shop" element={<Shop  />}/>
                         <Route path="contacts" element={<Contacts {...appProps} />}/>
                         <Route path="barbers" element={<Barbers/>}/>
                         <Route path="*" element={<NotFound />} />

@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
+import BG_4k from '../../assets/home/4k_3840_2160.jpeg'
+import BG_fhd from '../../assets/home/fhd_1920_1080.jpg'
+// import BG_tablel_HORIZONTAL from '../../assets/home/fhd_1920_1080.jpg'
+import BG_tablet_VERTICAL from '../../assets/home/tablet_768_829.jpg'
+import BG_mobile_VERTICAL from '../../assets/home/mobile_360_448.jpg'
 
 export const PageWrapper = styled.div.attrs({
     className: 'container-wrapper',
@@ -7,12 +12,14 @@ export const PageWrapper = styled.div.attrs({
     display: flex;
     flex-direction: column;
     max-width: 1440px;
+    margin: 0 auto ;
     padding: 0 140px;
     width: 100%;
     @media ${devices.lg} {
         padding: 0 100px;
     }
     @media ${devices.md} {
+        max-width: 100vw;
         flex-wrap: wrap;
         margin: 0 auto;
         height: fit-content;
@@ -23,7 +30,7 @@ export const PageWrapper = styled.div.attrs({
         padding: 0 16px;
     }
 `
-export const Title = styled.div`
+export const Title = styled.h1`
     text-transform: uppercase;
     padding-top: 70px; // 150-height of header
     padding-bottom: 40px;
@@ -54,9 +61,50 @@ export const TitleWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 
-    // @todo why?
-
     & > div {
-        margin: 0;
+        margin-left: 0;
     }
+`
+
+export const BgImage = styled.div.attrs(props => ({
+    bgi: props.img || BG_4k,
+}))`
+    height: 100dvh;
+    position: relative;
+    background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        //background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: auto calc(100dvh + 80px);
+    //background-size: auto 100dvh;
+    //background-size: 100% 1024px;
+    background-position-y: -80px;
+    background-position-x: center;
+    @media ${devices.fhd} {
+        background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: auto calc(100dvh + 80px);
+        //background-size: 100% 1024px;
+        background-position-y: -80px;
+        background-position-x: center;
+    }
+    @media ${devices.md} {
+        background: url(${BG_tablet_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: auto calc(100dvh + 80px);
+        //background-size: 100% 828px;
+        background-position-y: -80px;
+        background-position-x: center;
+    }
+    @media ${devices.xs} {
+        background: url(${BG_mobile_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: auto calc(100dvh + 80px);
+        background-position-y: 10px;
+        background-position-x: center;
+    }
+    
 `

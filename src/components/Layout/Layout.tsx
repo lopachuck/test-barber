@@ -5,16 +5,28 @@ import { Outlet } from 'react-router-dom'
 import Container from '../../layouts/container/container'
 import Header from '../../layouts/Header/header'
 
+type LayoutProps = {
+    hideBg?: boolean
+}
 
-const Layout: React.FC = () => {
+const Layout: React.FC<LayoutProps> = ({ hideBg = true }) => {
     return (
         <>
-            <Header />
-            <Container>
-                <Outlet />
-            </Container>
-            <Footer />
-        </>
-    )
+            {hideBg ? (
+                <>
+                    <Header hideBG={hideBg} />
+                    <Container>
+                        <Outlet />
+                    </Container>
+                    <Footer />
+                </>
+            ) : (
+                <>
+                    <Header />
+                    <Outlet />
+                    <Footer />
+                </>
+            )}
+        </>)
 }
 export default Layout

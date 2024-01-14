@@ -7,7 +7,7 @@ export const StyledContainer = styled.main`
     flex-direction: column;
     margin: 80px auto 0;
     //margin-top: 80px; // on height of header
-    max-width: 1440px;
+    //max-width: 1440px;
     width: 100%;
     @media ${devices.md} {
     

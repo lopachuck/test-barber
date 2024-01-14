@@ -1,8 +1,9 @@
 import React from 'react'
 import { GoogleMap, InfoWindowF, MarkerF, useLoadScript } from '@react-google-maps/api'
-import { MarkerInfoWrapper } from './customGoogleMap.styles'
+import {MarkerInfoWrapper, LinkWrapper, LinkDirectionWaze, LinkDirectionGoogle} from './customGoogleMap.styles'
 import {
-    BARBERSHOP_DIRECTION_LINK,
+    BARBERSHOP_DIRECTION_LINK_GOOGLE,
+    BARBERSHOP_DIRECTION_LINK_WAZE,
     BARBERSHOP_LAT,
     BARBERSHOP_LNG,
     BARBERSHOP_NAME,
@@ -15,15 +16,15 @@ interface IMapMarker {
         lat: number,
         lng: number
     },
-    width: 50,
-    height: 50
+    width: number,
+    height: number
 }
 
 const customMarker: IMapMarker = {
     name: BARBERSHOP_NAME,
     position: { lat: BARBERSHOP_LAT, lng: BARBERSHOP_LNG },
-    width: 50,
-    height: 50,
+    width: 800,
+    height: 800,
 }
 
 let icon = {
@@ -104,12 +105,18 @@ const CustomGoogleMap: React.FC = () => {
                             <InfoWindowF position={customMarker.position}>
                                 <MarkerInfoWrapper>
                                     <p>{customMarker.name}</p>
-                                    <a href={BARBERSHOP_DIRECTION_LINK} target={'_blank'}
-                                       rel="noopener noreferrer">Direction</a>
+                                    <LinkWrapper>
+                                        <LinkDirectionWaze
+                                            to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
+                                            rel="noopener noreferrer">Google Maps</LinkDirectionWaze>
+                                        <LinkDirectionGoogle
+                                            to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
+                                            rel="noopener noreferrer">Waze</LinkDirectionGoogle>
+                                    </LinkWrapper>
                                 </MarkerInfoWrapper>
                             </InfoWindowF>
                         </MarkerF>
-
+                    
                     </GoogleMap>
                 ) : null}
             </div>

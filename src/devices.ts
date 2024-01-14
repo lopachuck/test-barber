@@ -1,21 +1,21 @@
 export const breakpoints = {
     xs: '460px',
     sm: '650px',
-    md: '1150px',
-    // md: '865px',
+    md: '1024px',
     lg: '1280px',
     xl: '1440px',
-    // xxl: '1536px',
+    fhd: '1930px',
+    k3_5: '3460px', // mas 16 inc
+    k4: '3820px', // 4k windows
 }
 
 export const devices = {
-    // xs: `(max-width: ${breakpoints.xs}) or ((orientation: landscape) and (max-height: ${breakpoints.xs}))`,
     xs: `(max-width: ${breakpoints.xs})`,
     sm: `(max-width: ${breakpoints.sm})`,
-    // sm: `(max-width: ${breakpoints.sm}) or ((orientation: landscape) and (max-height: ${breakpoints.sm}))`,
-    // md: `(max-width: ${breakpoints.md}) or ((orientation: landscape)and (max-height: ${breakpoints.md}))`,
     md: `(max-width: ${breakpoints.md})`,
-    lg: `(max-width: ${breakpoints.lg}) `,
+    fhd: `(max-width: ${breakpoints.fhd})`,
+    lg: `(max-width: ${breakpoints.lg})`,
     xl: `(max-width: ${breakpoints.xl})`,
-    // xxl: `(max-width: ${breakpoints.xxl})`,
+    ipad7th: `only screen and (min-device-width: 810px) and (max-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) `,
+    ipad: `only screen and (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2)`,
 }
