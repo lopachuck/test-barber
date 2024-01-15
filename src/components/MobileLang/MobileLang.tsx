@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import * as S from '../Menu/menu.styles'
+import * as S from './mobileLang.styles'
 import LangMobileOption from '../LangMobileOption/LangMobileOption'
 
 const MobileLang: FC = () => {
