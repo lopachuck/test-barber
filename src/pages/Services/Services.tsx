@@ -25,9 +25,9 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/hair-cut.webp, /img/services/hair-cut.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Mens_haircut_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/hair-cut.jpeg"
+                                <img src="/img/services/jpeg/Mens_haircut_288x288.jpeg"
                                      loading={'lazy'}
                                      alt={t('services_mens_haircut')}/>
                             </S.Pictures>
@@ -51,9 +51,9 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/hair-cut_beard-correction.webp, /img/services/hair-cut_beard-correction.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Mens_haircut+beard_correction_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/hair-cut_beard-correction.jpeg"
+                                <img src="/img/services/jpeg/Mens_haircut+beard_correction_288x288.jpeg"
                                      loading={'lazy'}
                                      alt={`${t('services_mens_haircut')} + ${t('services_beard_correction')}`}/>
                             </S.Pictures>
@@ -77,9 +77,10 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/beard_correction.webp, /img/services/beard_correction.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Beard_correction_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/beard_correction.jpeg" loading={'lazy'}
+                                <img src="/img/services/jpeg/Beard_correction_288x288.jpeg"
+                                     loading={'lazy'}
                                      alt={t('services_beard_correction')}/>
                             </S.Pictures>
                             <S.DescriptionBlock>
@@ -102,9 +103,9 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/beard_tinting.webp, /img/services/beard_tinting.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Beard_tinting_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/beard_tinting.jpeg"
+                                <img src="/img/services/jpeg/Beard_tinting_288x288.jpeg"
                                      loading={'lazy'}
                                      alt={t('services_beard_tinting')}/>
                             </S.Pictures>
@@ -128,9 +129,9 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/clipper-cut.webp, /img/services/clipper-cut.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Clipper_Cut_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/clipper-cut.jpeg"
+                                <img src="/img/services/jpeg/Clipper_Cut_288x288.jpeg"
                                      loading={'lazy'}
                                      alt={t('services_clipper_cut')}/>
                             </S.Pictures>
@@ -154,9 +155,9 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/hair-cut_beard-correction.webp, /img/services/hair-cut_beard-correction.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Clipper_Cut+beard_correction_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/hair-cut_beard-correction.jpeg"
+                                <img src="/img/services/jpeg/Clipper_Cut+beard_correction_288x288.jpeg"
                                      loading={'lazy'}
                                      alt={`${t('services_clipper_cut')} + ${t('services_beard_correction')}`}/>
                             </S.Pictures>
@@ -180,9 +181,9 @@ const Services: FC<IAppProps> = (props) => {
                         <S.ServiceInfo>
                             <S.Pictures>
                                 <source
-                                    srcSet={'/img/services/hair-cut.webp, /img/services/hair-cut.jpeg 2x'}
+                                    srcSet={'/img/services/webp/Father_and_Son_288x288.webp'}
                                     type={'image/webp'}/>
-                                <img src="/img/services/hair-cut_beard-correction.jpeg"
+                                <img src="/img/services/jpeg/Father_and_Son_288x288.jpeg"
                                      loading={'lazy'}
                                      alt={t('services_father_son')}/>
                             </S.Pictures>
