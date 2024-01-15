@@ -153,8 +153,7 @@ export const MapLinks = styled(LinkWrapper)`
 `
 export const GoogleMapsLink = styled(LinkDirectionGoogle)`
     color: ${({theme}) => theme.colors.textSecondary};
-    margin-right: 4px;
-    font-size: 16px !important;
+    font-size: 16px;
 
     &:before {
         width: 24px;
