@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import { devices } from '../../devices'
+import IconTime from '../../assets/icon/contacts/time.svg'
+import IconLocation from '../../assets/icon/contacts/location.svg'
+import IconMail from '../../assets/icon/contacts/letter.svg'
+import IconPhone from '../../assets/icon/contacts/phone.svg'
+import {Link, NavLink} from "react-router-dom";
 
 export const ContactInfoWrapper = styled.div`
     display: flex;
@@ -24,6 +29,14 @@ export const ContactInfo = styled.div`
             padding-right: 8px;
         }
     }
+    & > span:before{
+        content: " ";
+        width: 32px;
+        height: 32px;
+        background-image: url(${IconLocation});
+        padding-right: 8px;
+        background-repeat: no-repeat;
+    }
     @media ${devices.xs} {
         order: 2;
     }
@@ -37,6 +50,14 @@ export const WorkTime = styled.div`
     }
     & > div > span, & > div > p {
         white-space: nowrap;
+    }
+    &:before{
+        content: " ";
+        width: 32px;
+        height: 32px;
+        background-image: url(${IconTime});
+        padding-right: 8px;
+        background-repeat: no-repeat;
     }
 `
 export const ContactsSocialWrapper = styled.div`
@@ -54,11 +75,28 @@ export const ContactsSocialWrapper = styled.div`
     @media ${devices.xs} {
         order: 1;
         align-items: center;
+        margin-bottom: 40px;
     }
 
     & div {
         flex-direction: row;
         justify-content: end;
+    }
+`
+
+export const ContactsPhoneLink = styled(NavLink)`
+    &:before{
+        content: " ";
+        width: 32px;
+        height: 32px;
+        background-image: url(${IconPhone});
+        padding-right: 8px;
+        background-repeat: no-repeat;
+    }
+`
+export const ContactsMailLink = styled(ContactsPhoneLink)`
+    &:before{
+        background-image: url(${IconMail});
     }
 `
 export const MapWrapper = styled.div`
