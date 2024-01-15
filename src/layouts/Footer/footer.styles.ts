@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import {devices} from '../../devices'
-import {Link, NavLink} from "react-router-dom";
-import {LinkDirectionGoogle, LinkDirectionWaze, LinkWrapper} from "../../components/GoogleMap/customGoogleMap.styles";
-import {SocialWrapper} from "../../pages/Home/home.styles";
+import { devices } from '../../devices'
+import { NavLink } from 'react-router-dom'
+import { LinkDirectionGoogle, LinkDirectionWaze, LinkWrapper } from '../../components/GoogleMap/customGoogleMap.styles'
+import { SocialWrapper } from '../../pages/Home/home.styles'
 import IconLogoBig from '../../assets/icon/logo_big.svg'
 
 export const FooterWrapper = styled.footer`
@@ -12,17 +12,15 @@ export const FooterWrapper = styled.footer`
     padding: 0 140px;
     width: 100%;
     height: 314px;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin: 60px auto 0;
     @media ${devices.lg} {
         padding: 0 100px;
     }
     @media ${devices.md} {
         flex-wrap: wrap;
-        margin: 0 auto;
         height: fit-content;
         padding: 0 60px;
-        margin-top: 60px;
+        margin: 60px auto 0;
     }
     @media ${devices.sm} {
         padding: 0 16px;
@@ -74,14 +72,6 @@ export const FooterColumn = styled.div`
         padding: 40px 0;
     }
 `
-export const SocialIconWrapper = styled.div`
-    @media ${devices.xs} {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin: 0 auto;
-    }
-`
 export const InfoTitle = styled.div`
     color: ${({theme}) => theme.colors.white};
     font-size: 18px;
@@ -114,12 +104,16 @@ export const Logo = styled(NavLink)`
     }
 `
 export const ContactsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     min-width: 245px;
-    @media ${devices.xs} {
-        align-items: center;
+    @media ${devices.md} {
         order: 2;
+        align-items: center;
         text-align: center;
-        //padding: 40px 0 16px 0;
+    }
+    @media ${devices.xs} {
     }
 `
 export const ContactsDetails = styled.div`
@@ -149,12 +143,14 @@ export const Mail = styled.div`
     }
 `
 export const MapLinks = styled(LinkWrapper)`
+    padding-top: 0;
 
+    & > a {
+        font-size: 16px;
+    }
 `
 export const GoogleMapsLink = styled(LinkDirectionGoogle)`
     color: ${({theme}) => theme.colors.textSecondary};
-    font-size: 16px;
-
     &:before {
         width: 24px;
         height: 24px;
@@ -166,8 +162,6 @@ export const GoogleMapsLink = styled(LinkDirectionGoogle)`
 `
 export const WazeLink = styled(LinkDirectionWaze)`
     color: ${({theme}) => theme.colors.textSecondary};
-    font-size: 16px !important;
-
     &:before {
         width: 24px;
         height: 24px;

@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import {devices} from "../../devices";
+import { devices } from '../../devices'
 
 
-export const BookingBtn = styled(NavLink)`
+export const BookingBtn = styled(NavLink).attrs({
+    target: '_blank',
+})`
     display: flex;
     flex-direction: column;
     height: 40px;

@@ -24,10 +24,10 @@ const Contacts: FC<IAppProps> = (props) => {
             <CenteredTitle>{t('title_page_contacts')}</CenteredTitle>
             <S.ContactInfoWrapper>
                 <S.ContactInfo>
-                    <a href={'#'} >
+                    <span>
                         <img src={"/svg/icons/location.svg"} alt="loc"/>
                         <span>{t('contacts_address')}</span>
-                    </a>
+                    </span>
                     <S.WorkTime>
                         <img src={"/svg/icons/time.svg"} alt="loc"/>
                         <div>
@@ -52,11 +52,11 @@ const Contacts: FC<IAppProps> = (props) => {
                 <S.SocialWrapper>
                     <span>{t('contacts_subscribe')}</span>
                     <S.SocialIconWrapper>
-                        <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'} rel="noopener noreferrer">
-                            <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
-                        </S.SocialIcon>
                         <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'} rel="noopener noreferrer">
                             <img src={'/svg/icons/facebook.svg'} alt={'fb'}/>
+                        </S.SocialIcon>
+                        <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'} rel="noopener noreferrer">
+                            <img src={'/svg/icons/instagram.svg'} alt={'insta'} />
                         </S.SocialIcon>
                     </S.SocialIconWrapper>
                 </S.SocialWrapper>
