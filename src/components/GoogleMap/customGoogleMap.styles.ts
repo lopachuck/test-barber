@@ -37,23 +37,23 @@ export const LinkWrapper = styled.div`
         }
     }
 `
-export const LinkDirectionWaze = styled(Link)`
+export const  LinkDirectionGoogle = styled(Link)`
     display: flex;
     flex-direction: row;
     &:before{
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         content: url(${iconGoogle});
         align-items: center;
         margin-right: 2px;
     }
 `
-export const LinkDirectionGoogle = styled(Link)`
+export const LinkDirectionWaze = styled(Link)`
     display: flex;
     flex-direction: row;
     &:before{
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         content: url(${iconWaze});
         background-color: ${({theme}) => theme.colors.backgroundWaze};
         border-radius: 3px;

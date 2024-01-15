@@ -1,6 +1,7 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import * as S from './footer.styles'
 import {
+    BARBERSHOP_DIRECTION_LINK_GOOGLE,
     BARBERSHOP_DIRECTION_LINK_WAZE,
     BARBERSHOP_FACEBOOK_LINK,
     BARBERSHOP_INSTAGRAM_LINK,
@@ -8,6 +9,7 @@ import {
     BARBERSHOP_PHONE,
 } from '../../config/config'
 import { useTranslation } from 'react-i18next'
+import {SocialLinkFacebook, SocialLinkInstagram, SocialWrapper} from "../../pages/Home/home.styles";
 
 const Footer: FC = () => {
     const { t, i18n } = useTranslation()
@@ -15,24 +17,21 @@ const Footer: FC = () => {
         <>
             <S.FooterWrapper>
                 <S.InfoWrapper>
-                    <S.SocialWrapper>
+                    <S.FooterColumn>
                         <S.InfoTitle>{t('contacts_stay_up')}</S.InfoTitle>
                         <span>{t('contacts_subscribe')}</span>
-                        <S.SocialIconWrapper>
-                            <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'}>
-                                <img src={'/svg/icons/instagram.svg'} alt={'insta'}/>
-                            </S.SocialIcon>
-                            <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'}>
-                                <img src={'/svg/icons/facebook.svg'} alt={'insta'}/>
-                            </S.SocialIcon>
-                        </S.SocialIconWrapper>
-                    </S.SocialWrapper>
-                    <S.Logo src={'/svg/icons/logo_big.svg'}/>
+                        <S.FooterSocialWrapper>
+                            <SocialLinkInstagram to={BARBERSHOP_INSTAGRAM_LINK} />
+                            <SocialLinkFacebook to={BARBERSHOP_FACEBOOK_LINK} />
+                        </S.FooterSocialWrapper>
+                    </S.FooterColumn>
+                    {/*<S.Logo src={'/svg/icons/logo_big.svg'}/>*/}
+                    <S.Logo to={'/'}/>
                     <S.ContactsWrapper>
                         <S.InfoTitle>{t('header_menu_contacts')}</S.InfoTitle>
                         <S.ContactsDetails>
                             <S.Address>
-                                <a href={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}>{t('contacts_address')}</a>
+                                <p>{t('contacts_address')}</p>
                             </S.Address>
                             <S.Phone>
                                 <a href={`tel:${BARBERSHOP_PHONE}`}>{BARBERSHOP_PHONE}</a>
@@ -40,6 +39,14 @@ const Footer: FC = () => {
                             <S.Mail>
                                 <a href={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>{BARBERSHOP_MAIL_ADDRESS}</a>
                             </S.Mail>
+                            <S.MapLinks>
+                                <S.GoogleMapsLink
+                                    to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
+                                    rel="noopener noreferrer">Google Maps</S.GoogleMapsLink>
+                                <S.WazeLink
+                                    to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
+                                    rel="noopener noreferrer">Waze</S.WazeLink>
+                            </S.MapLinks>
                         </S.ContactsDetails>
                     </S.ContactsWrapper>
                 </S.InfoWrapper>
