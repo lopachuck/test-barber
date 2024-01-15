@@ -72,12 +72,9 @@ export const BgImage = styled.div.attrs(props => ({
     height: 100dvh;
     position: relative;
     background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
-        //background: linear-gradient(0deg, rgba(37, 36, 41, 0.60) 0%, rgba(37, 36, 41, 0.60) 100%), url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: auto calc(100dvh + 80px);
-    //background-size: auto 100dvh;
-    //background-size: 100% 1024px;
     background-position-y: -80px;
     background-position-x: center;
     @media ${devices.fhd} {
@@ -85,7 +82,6 @@ export const BgImage = styled.div.attrs(props => ({
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: auto calc(100dvh + 80px);
-        //background-size: 100% 1024px;
         background-position-y: -80px;
         background-position-x: center;
     }
@@ -94,11 +90,10 @@ export const BgImage = styled.div.attrs(props => ({
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: auto calc(100dvh + 80px);
-        //background-size: 100% 828px;
         background-position-y: -80px;
         background-position-x: center;
     }
-    @media ${devices.xs} {
+    @media ${devices.redmi12proPlus5g} {
         background: url(${BG_mobile_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
@@ -106,5 +101,22 @@ export const BgImage = styled.div.attrs(props => ({
         background-position-y: 10px;
         background-position-x: center;
     }
-    
+    @media ${devices.redmi12proPlus5gLandscape} {
+        background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: 100% calc(100dvh + 80px);
+        background-position-y: -80px;
+        background-position-x: center;
+    }
+    @media ${devices.iphoneSELandscape} {
+        background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: 100% calc(100dvh + 80px);
+        background-position-y: -80px;
+        background-position-x: center;
+    }
+}
+
 `
