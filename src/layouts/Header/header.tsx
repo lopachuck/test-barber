@@ -1,10 +1,12 @@
 import * as S from './header.styles'
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import Menu from '../../components/Menu/menu'
 import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import SimpleModal from '../../ui-kit/SimpleModal/SimpleModal'
 import { useTranslation } from 'react-i18next'
 import i18n from '../../i18n'
+import { useLangSelect } from '../../hooks/LangSelect/LangSelect'
+import { useSelector } from 'react-redux'
 
 type HeaderProps = {
     hideBG?: boolean
@@ -12,16 +14,12 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({ hideBG = false }) => {
     const [langOptionOpen, setLangOptionOpen] = useState(false)
-    const [currentLang, setCurrentLang] = useState(i18n.language.toUpperCase())
-
-    useEffect(() => {
-        i18n.changeLanguage(currentLang.toLowerCase())
-    }, [currentLang])
+    const [currentLang, setCurrentLang] = useLangSelect(i18n.language.toUpperCase())
     const { t } = useTranslation()
-
+    const { isMenuOpen } = useSelector((state: any) => state.menu)
     return (
         <>
-            <S.HeaderContainer hideBG={hideBG}>
+            <S.HeaderContainer className={'header-bg'} hideBG={isMenuOpen || hideBG}>
                 <S.HeaderWrapper>
                     <S.LogoWrapper to={''}>
                         <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'} />
@@ -48,7 +46,6 @@ const Header: FC<HeaderProps> = ({ hideBG = false }) => {
                             </SimpleModal>
                             <S.LangMenuBtn onClick={() => setLangOptionOpen(true)}>
                                 {currentLang}
-                                {/*{t('LANG_BTN_ENG')}*/}
                             </S.LangMenuBtn>
                         </S.LangMenuWrapper>
                         <BookingBtn to={'#'}>
