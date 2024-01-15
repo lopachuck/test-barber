@@ -5,6 +5,7 @@ import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import SimpleModal from '../../ui-kit/SimpleModal/SimpleModal'
 import { useTranslation } from 'react-i18next'
 import i18n from '../../i18n'
+import { BOOK_NOW } from '../../config/config'
 
 type HeaderProps = {
     hideBG?: boolean
@@ -51,7 +52,7 @@ const Header: FC<HeaderProps> = ({ hideBG = false }) => {
                                 {/*{t('LANG_BTN_ENG')}*/}
                             </S.LangMenuBtn>
                         </S.LangMenuWrapper>
-                        <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o='}>
+                        <BookingBtn to={BOOK_NOW}>
                             <span>{t('btn_header_bookNow')}</span>
                             <p>{t('btn_header_bookNow')}</p>
                         </BookingBtn>

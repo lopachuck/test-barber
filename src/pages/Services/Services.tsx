@@ -4,6 +4,15 @@ import { BookingBtn } from '../../ui-kit/btn/bookBtn.styles'
 import { IAppProps } from '../../App'
 import { CenteredTitle, PageWrapper } from '../Page/page.styles'
 import { useTranslation } from 'react-i18next'
+import {
+    SERVICES_BEARD_CORRECTION,
+    SERVICES_BEARD_TINTING,
+    SERVICES_CLIPPER_CUT,
+    SERVICES_CLIPPER_CUT_PLUS_SERVICES_BEARD_CORRECTION,
+    SERVICES_FATHER_SON,
+    SERVICES_MENS_HAIRCUT,
+    SERVICES_MENS_HAIRCUT_PLUS_SERVICES_BEARD_CORRECTION,
+} from '../../config/config'
 
 const Services: FC<IAppProps> = (props) => {
     const { t } = useTranslation()
@@ -32,7 +41,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>30 €</S.Price>
                                 <S.Duration>60 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/select-services?o=m-1s10535469'}>
+                            <BookingBtn to={SERVICES_MENS_HAIRCUT}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
@@ -58,7 +67,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>45 €</S.Price>
                                 <S.Duration>1 {t('hour')} 30 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o=m-1s10535483'}>
+                            <BookingBtn to={SERVICES_MENS_HAIRCUT_PLUS_SERVICES_BEARD_CORRECTION}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
@@ -83,7 +92,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>20 €</S.Price>
                                 <S.Duration>45 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o=m-1s10558778'}>
+                            <BookingBtn to={SERVICES_BEARD_CORRECTION}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
@@ -109,7 +118,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>10 €</S.Price>
                                 <S.Duration>20 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o=m-1s10535494'}>
+                            <BookingBtn to={SERVICES_BEARD_TINTING}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
@@ -135,7 +144,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>22 €</S.Price>
                                 <S.Duration>45 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o=m-1s10658085'}>
+                            <BookingBtn to={SERVICES_CLIPPER_CUT}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
@@ -161,7 +170,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>35 €</S.Price>
                                 <S.Duration>60 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o=m-1s10658092'}>
+                            <BookingBtn to={SERVICES_CLIPPER_CUT_PLUS_SERVICES_BEARD_CORRECTION}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
@@ -187,7 +196,7 @@ const Services: FC<IAppProps> = (props) => {
                                 <S.Price>40 €</S.Price>
                                 <S.Duration>1 {t('hour')} 15 {t('minutes')}</S.Duration>
                             </S.PriceBlock>
-                            <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o=m-1s10667695'}>
+                            <BookingBtn to={SERVICES_FATHER_SON}>
                                 <span>{t('btn_services_book')}</span>
                                 <p>{t('btn_services_book')}</p>
                             </BookingBtn>
