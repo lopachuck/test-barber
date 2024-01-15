@@ -18,6 +18,7 @@ export const HeaderContainer = styled.header`
 `
 export const HeaderWrapper = styled.div`
     display: flex;
+    justify-content: space-between;
     max-width: 1440px;
     padding: 0 140px;
     width: 100%;
@@ -165,7 +166,7 @@ export const BookingBtnWrapper = styled.div`
     height: 100%;
     align-items: center;
     gap: 32px;
-    margin-left: auto;
+    margin-left: 16px;
     @media ${devices.md} {
         height: 60px;
         gap: 16px;
