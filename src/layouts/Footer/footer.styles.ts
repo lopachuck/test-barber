@@ -188,4 +188,8 @@ export const CopyrightText = styled.span`
     line-height: 24px;
     padding-top: 36px;
     padding-bottom: 100px;
+
+    & a {
+        color: ${({ theme }) => theme.colors.textSecondary};
+    }
 `

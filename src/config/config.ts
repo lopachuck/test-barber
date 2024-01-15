@@ -17,3 +17,4 @@ export const SERVICES_BEARD_TINTING: string = process.env.REACT_APP_SERVICES_BEA
 export const SERVICES_CLIPPER_CUT: string = process.env.REACT_APP_SERVICES_CLIPPER_CUT || ''
 export const SERVICES_CLIPPER_CUT_PLUS_SERVICES_BEARD_CORRECTION: string = process.env.REACT_APP_SERVICES_CLIPPER_CUT_PLUS_SERVICES_BEARD_CORRECTION || ''
 export const SERVICES_FATHER_SON: string = process.env.REACT_APP_SERVICES_FATHER_SON || ''
+export const ACHIFY_URL: string = process.env.REACT_APP_ACHIFY_URL || ''

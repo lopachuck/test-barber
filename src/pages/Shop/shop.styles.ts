@@ -18,14 +18,14 @@ export const BgImage = styled.div`
     display: flex;
     height: 100dvh;
     position: relative;
-    background: linear-gradient(0deg, rgba(37, 36, 41, 0.70) 0%, rgba(37, 36, 41, 0.70) 100%), url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+    background: url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: 100% calc(100dvh + 80px);
     background-position-y: -80px;
     background-position-x: center;
     @media ${devices.fhd} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.70) 0%, rgba(37, 36, 41, 0.70) 100%), url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background: url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: 100% calc(100dvh + 80px);
@@ -33,7 +33,7 @@ export const BgImage = styled.div`
         background-position-x: center;
     }
     @media ${devices.md} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.70) 0%, rgba(37, 36, 41, 0.70) 100%), url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background: url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: auto calc(100dvh + 80px);
@@ -41,12 +41,12 @@ export const BgImage = styled.div`
         background-position-x: center;
     }
     @media ${devices.xs} {
-        background: linear-gradient(0deg, rgba(37, 36, 41, 0.70) 0%, rgba(37, 36, 41, 0.70) 100%), url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background: url(${SHOP_PAGE_BG}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: auto calc(100dvh + 80px);
         background-position-y: 10px;
         background-position-x: center;
     }
-    
+
 `
