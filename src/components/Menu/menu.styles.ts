@@ -50,7 +50,7 @@ export const MenuItemLink = styled(NavLink)`
     text-decoration: none;
     color: ${({theme}) => theme.colors.white};
     &.active{
-        color: ${({theme}) => theme.colors.accentColor} !important;
+        color: ${({ theme }) => theme.colors.accentColor};
     }
 `
 export const MenuItemText = styled.div`
@@ -60,15 +60,12 @@ export const MenuItemText = styled.div`
     line-height: 24px; /* 150% */
     text-transform: uppercase;
 `
-
-
 export const MobileMenuWrapper = styled.div`
     display: none;
     @media ${devices.md}{
         display: flex;
     }
 `
-
 export const BurgerBtn = styled.div`
     display: none;
     @media ${devices.md} {

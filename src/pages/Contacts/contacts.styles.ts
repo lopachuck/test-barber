@@ -57,6 +57,8 @@ export const SocialWrapper = styled.div`
 export const SocialIconWrapper = styled.div`
     margin-top: 24px;
     display: flex;
+    gap: 16px;
+    flex-direction: row-reverse;
     @media ${devices.xs} {
         margin: unset;
         gap: 16px;

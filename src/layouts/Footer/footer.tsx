@@ -9,7 +9,7 @@ import {
     BARBERSHOP_PHONE,
 } from '../../config/config'
 import { useTranslation } from 'react-i18next'
-import {SocialLinkFacebook, SocialLinkInstagram, SocialWrapper} from "../../pages/Home/home.styles";
+import { SocialLinkFacebook, SocialLinkInstagram } from '../../pages/Home/home.styles'
 
 const Footer: FC = () => {
     const { t, i18n } = useTranslation()
@@ -39,15 +39,15 @@ const Footer: FC = () => {
                             <S.Mail>
                                 <a href={`mailto:${BARBERSHOP_MAIL_ADDRESS}`}>{BARBERSHOP_MAIL_ADDRESS}</a>
                             </S.Mail>
-                            <S.MapLinks>
-                                <S.GoogleMapsLink
-                                    to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
-                                    rel="noopener noreferrer">Google Maps</S.GoogleMapsLink>
-                                <S.WazeLink
-                                    to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
-                                    rel="noopener noreferrer">Waze</S.WazeLink>
-                            </S.MapLinks>
                         </S.ContactsDetails>
+                        <S.MapLinks>
+                            <S.GoogleMapsLink
+                                to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
+                                rel="noopener noreferrer">Google Maps</S.GoogleMapsLink>
+                            <S.WazeLink
+                                to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
+                                rel="noopener noreferrer">Waze</S.WazeLink>
+                        </S.MapLinks>
                     </S.ContactsWrapper>
                 </S.InfoWrapper>
                 <S.CopyrightWrapper>
