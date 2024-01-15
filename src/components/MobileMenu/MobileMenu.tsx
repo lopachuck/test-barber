@@ -9,16 +9,17 @@ const MobileMenuTrigger: FC = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false)
     const { isMenuOpen } = useSelector((state: any) => state.menu)
     const dispatch = useDispatch()
-    const handleClick = () => {
+    const handleClick = (e: { preventDefault: () => void }) => {
+        e.preventDefault()
         dispatch(openMenu(!isMenuOpen))
         setIsMenuVisible(!isMenuOpen)
     }
 
     useEffect(() => {
         if (isMenuVisible) {
+            dispatch(openMenu(!isMenuOpen))
             setIsMenuVisible(!isMenuVisible)
         }
-        console.log('Location changed')
     }, [location])
     return (
         <>
