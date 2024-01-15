@@ -51,7 +51,7 @@ const Header: FC<HeaderProps> = ({ hideBG = false }) => {
                                 {/*{t('LANG_BTN_ENG')}*/}
                             </S.LangMenuBtn>
                         </S.LangMenuWrapper>
-                        <BookingBtn to={'#'}>
+                        <BookingBtn to={'https://b801236.alteg.io/company/752663/menu?o='}>
                             <span>{t('btn_header_bookNow')}</span>
                             <p>{t('btn_header_bookNow')}</p>
                         </BookingBtn>

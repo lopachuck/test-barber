@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 import { devices } from '../../devices'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import arrowDown from '../../assets/icon/arrow_down.svg'
 import arrowDown32 from '../../assets/icon/arrow_down32.svg'
@@ -42,7 +42,7 @@ export const HomePageWrapper = styled(PageWrapper)`
     justify-content: flex-end;
     height: 100dvh;
 `
-const SocialLink = styled(Link).attrs({
+const SocialLink = styled(NavLink).attrs({
     target: '_blank',
 })`
     display: flex;
