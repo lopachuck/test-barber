@@ -21,4 +21,6 @@ export const devices = {
     redmi12proPlus5g: `only screen and (min-device-width: 360px) and (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3)`,
     redmi12proPlus5gLandscape: `screen and (min-device-width: 360px) and (max-device-width: 873px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2.75)`,
     iphoneSELandscape: `screen and (min-device-width: 375px) and (max-device-width: 1070px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)`,
+    iphone12: `screen and (min-device-width: 390px) and (max-device-width: 844px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3)`,
+    iphone11ProMax: `screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3)`,
 }
