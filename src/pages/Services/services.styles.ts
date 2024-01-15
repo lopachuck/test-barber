@@ -20,11 +20,12 @@ export const Service = styled.section`
     background: ${({ theme }) => theme.colors.backgroundElemetsBlack};
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     @media ${devices.md} {
-        height: 192px;
+        min-height: 192px;
     }
     @media ${devices.sm} {
+        align-items: unset;
         flex-direction: column;
-        height: 180px;
+        min-height: 180px;
         padding: 16px;
         gap: 16px;
     }
