@@ -40,7 +40,7 @@ export const InfoWrapper = styled.div`
     @media ${devices.md} {
         gap: 40px;
     }
-    @media ${devices.sm} {
+    @media ${devices.m} {
         gap: unset;
         flex-direction: column;
         height: fit-content;
@@ -72,10 +72,9 @@ export const FooterColumn = styled.div`
     }
 
     @media ${devices.md} {
-        max-width: 223px;
-        text-align: center;
+        min-width: 184px;
     }
-    @media ${devices.sm} {
+    @media ${devices.m} {
         order: 1;
         align-items: center;
         text-align: center;
@@ -105,7 +104,7 @@ export const Logo = styled(NavLink)`
         width: 100px;
         height: 100px;
     }
-    @media ${devices.sm} {
+    @media ${devices.m} {
         order: 3;
         margin: 24px auto;
     }
@@ -122,8 +121,7 @@ export const ContactsWrapper = styled.div`
         order: 2;
         align-items: center;
         text-align: center;
-    }
-    @media ${devices.xs} {
+        min-width: 184px;
     }
 `
 export const ContactsDetails = styled.div`

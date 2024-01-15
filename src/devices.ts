@@ -1,6 +1,7 @@
 export const breakpoints = {
     xs: '460px',
     sm: '650px',
+    m: '768px',
     md: '1024px',
     lg: '1280px',
     xl: '1440px',
@@ -13,6 +14,7 @@ export const devices = {
     xs: `(max-width: ${breakpoints.xs})`,
     sm: `(max-width: ${breakpoints.sm})`,
     md: `(max-width: ${breakpoints.md})`,
+    m: `(max-width: ${breakpoints.m})`,
     fhd: `(max-width: ${breakpoints.fhd})`,
     lg: `(max-width: ${breakpoints.lg})`,
     xl: `(max-width: ${breakpoints.xl})`,
