@@ -1,17 +1,13 @@
 import styled, { keyframes } from 'styled-components'
 import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 import { devices } from '../../devices'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import arrowDown from '../../assets/icon/arrow_down.svg'
 import arrowDown32 from '../../assets/icon/arrow_down32.svg'
 import logo from '../../assets/svg/banner/Animation.svg'
 import instagramIcon from '../../assets/svg/social/instagram.svg'
 import fbIcon from '../../assets/svg/social/facebook.svg'
-
-interface GalleryImageGridProps {
-    images: string[];
-}
 
 
 const marqueeAnimation = keyframes`
@@ -28,21 +24,17 @@ const marqueeAnimation = keyframes`
     }
 `
 export const SocialWrapper = styled.div`
-    //margin-top: 392px; // @see 472px - 80px h socialWrapper with 2 soc Icons, change mt after add 3rd (and next) soc icons
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: flex-end;
-    @media ${devices.md} {
-        //margin-top: 232px; /// 232 height tab - 80 h Header desktop ; TAB header 137px @todo fix 137px
-    }
 `
 export const HomePageWrapper = styled(PageWrapper)`
     flex-direction: column;
     justify-content: flex-end;
     height: 100dvh;
 `
-const SocialLink = styled(Link).attrs({
+const SocialLink = styled(NavLink).attrs({
     target: '_blank',
 })`
     display: flex;
@@ -56,6 +48,7 @@ export const SocialLinkInstagram = styled(SocialLink)`
     background-image: url(${instagramIcon});
 `
 export const HomeTitleWrapper = styled(TitleWrapper)`
+    position: relative;
     margin-top: 43px;
     margin-left: 104px;
     margin-bottom: 133px;
@@ -80,7 +73,32 @@ export const HomeTitleWrapper = styled(TitleWrapper)`
     @media ${devices.ipad} {
         margin-left: 96px;
     }
-    //margin-bottom: 60px;
+    @media ${devices.redmi12proPlus5gLandscape} , ${devices.iphoneSELandscape} {
+        margin-bottom: 44px;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -36px;
+            display: flex;
+            content: " ";
+            width: 32px;
+            height: 32px;
+            background-image: url(${arrowDown32});
+        }
+    }
+    @media ${devices.redmi12proPlus5g} {
+        margin-bottom: 44px;
+        &:before {
+            position: absolute;
+            top: 24px;
+            left: -36px;
+            display: flex;
+            content: " ";
+            width: 32px;
+            height: 32px;
+            background-image: url(${arrowDown32});
+        }
+    }
 `
 
 export const HomeSubtitle = styled(Subtitle)`
@@ -97,6 +115,13 @@ export const HomeSubtitle = styled(Subtitle)`
         background-image: url(${arrowDown});
     }
 
+
+    @media ${devices.redmi12proPlus5g} {
+        display: none;
+    }
+    @media ${devices.redmi12proPlus5gLandscape} , ${devices.iphoneSELandscape} {
+        display: none;
+    }
     @media ${devices.xs} {
         display: none;
     }
@@ -107,6 +132,17 @@ export const HomeTitle = styled(Title)`
     @media ${devices.md} {
         font-size: 54px;
         line-height: 60px;
+    }
+    @media ${devices.redmi12proPlus5g}{
+        font-size: 24px;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: -0.336px;
+    }
+    @media ${devices.redmi12proPlus5gLandscape} , ${devices.iphoneSELandscape}
+    {
+        font-size: 24px;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: -0.336px;
     }
     @media ${devices.xs} {
         font-size: 24px;
@@ -122,11 +158,10 @@ export const LogoLineWrap = styled.div`
 `
 export const LogoLine = styled.div`
     position: absolute;
-    z-index: 9999;
+    z-index: 9;
     width: 10000px;
     left: 0;
     bottom: 0;
-    //bottom: 73px;
     height: 73px;
     background-image: url(${logo});
     background-size: 1180px 71px;

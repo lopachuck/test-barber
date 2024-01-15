@@ -24,10 +24,10 @@ const Contacts: FC<IAppProps> = (props) => {
             <CenteredTitle>{t('title_page_contacts')}</CenteredTitle>
             <S.ContactInfoWrapper>
                 <S.ContactInfo>
-                    <a href={'#'} >
+                    <span>
                         <img src={"/svg/icons/location.svg"} alt="loc"/>
                         <span>{t('contacts_address')}</span>
-                    </a>
+                    </span>
                     <S.WorkTime>
                         <img src={"/svg/icons/time.svg"} alt="loc"/>
                         <div>

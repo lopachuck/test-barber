@@ -13,6 +13,8 @@ export const ContactInfo = styled.div`
     display: flex;
     flex-direction: column;
     font-weight: 700;
+
+    & > span,
     & > a {
         text-decoration: none;
         color: ${({ theme }) => theme.colors.white};
@@ -58,7 +60,7 @@ export const SocialIconWrapper = styled.div`
     margin-top: 24px;
     display: flex;
     gap: 16px;
-    flex-direction: row-reverse;
+    justify-content: end;
     @media ${devices.xs} {
         margin: unset;
         gap: 16px;
@@ -66,7 +68,6 @@ export const SocialIconWrapper = styled.div`
     }
 `
 export const SocialIcon = styled(Link)`
-    margin-left: 16px;
     @media ${devices.md} {
     margin: unset;
     width: 32px;
