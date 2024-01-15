@@ -10,7 +10,6 @@ export const MenuWrapper = styled.nav<IOpenMenuProps>`
     display: flex;
     gap: 32px;
     touch-action: none;
-    overflow: scroll;
     @media ${devices.md} {
         display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
         flex-direction: column;
@@ -25,6 +24,7 @@ export const MenuWrapper = styled.nav<IOpenMenuProps>`
         padding-top: 215px;
         align-items: center;
         justify-content: center;
+        overflow: scroll;
         background: ${({theme}) => theme.colors.background};
     }
     @media ${devices.ipad7th} {
