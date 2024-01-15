@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import { devices } from '../../devices'
 
 export const ContactInfoWrapper = styled.div`
@@ -40,7 +39,9 @@ export const WorkTime = styled.div`
         white-space: nowrap;
     }
 `
-export const SocialWrapper = styled.div`
+export const ContactsSocialWrapper = styled.div`
+    display: flex;
+    gap: 24px;
     color:  ${({ theme }) => theme.colors.white};
     text-align: right;
     /* Headline4 */
@@ -49,29 +50,16 @@ export const SocialWrapper = styled.div`
     font-weight: 700;
     line-height: 24px; /* 133.333% */
     letter-spacing: -0.252px;
-    display: flex;
     flex-direction: column;
     @media ${devices.xs} {
         order: 1;
         align-items: center;
     }
-`
-export const SocialIconWrapper = styled.div`
-    margin-top: 24px;
-    display: flex;
-    gap: 16px;
-    justify-content: end;
-    @media ${devices.xs} {
-        margin: unset;
-        gap: 16px;
-        padding-top: 16px;
+
+    & div {
+        flex-direction: row;
+        justify-content: end;
     }
-`
-export const SocialIcon = styled(Link)`
-    @media ${devices.md} {
-    margin: unset;
-    width: 32px;
-}
 `
 export const MapWrapper = styled.div`
     padding-bottom: 60px;

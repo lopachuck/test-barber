@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 import { SocialLinkFacebook, SocialLinkInstagram } from '../../pages/Home/home.styles'
 
 const Footer: FC = () => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     return (
         <>
             <S.FooterWrapper>
