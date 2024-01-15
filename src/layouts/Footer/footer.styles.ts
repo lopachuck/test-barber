@@ -56,6 +56,14 @@ export const FooterColumn = styled.div`
     height: 100%;
     min-width: 245px;
 
+    @media ${devices.redminote7} {
+        text-align: center;
+        min-width: 275px;
+    }
+    @media ${devices.redmi12proPlus5g} {
+        text-align: center;
+        min-width: 275px;
+    }
     & > span {
         font-size: 16px;
         font-style: normal;
@@ -65,10 +73,12 @@ export const FooterColumn = styled.div`
 
     @media ${devices.md} {
         max-width: 223px;
+        text-align: center;
     }
     @media ${devices.sm} {
         order: 1;
         align-items: center;
+        text-align: center;
         padding: 40px 0;
     }
 `

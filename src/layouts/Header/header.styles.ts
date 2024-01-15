@@ -59,13 +59,18 @@ export const MenuWrapper = styled.div`
     @media ${devices.md} {
         margin-left: unset;
     }
+    @media ${devices.iphone12landscape} {
+        margin-left: unset;
+    }
+    @media ${devices.iphone12} {
+        margin-left: unset;
+    }
     @media ${devices.ipad7th} {
         margin-left: 36px;
     }
     @media ${devices.ipad} {
         margin-left: 36px;
     }
-
 `
 export const LangMenuWrapper = styled.div`
     display: flex;

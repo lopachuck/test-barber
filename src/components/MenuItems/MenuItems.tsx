@@ -1,80 +1,37 @@
 import React, { FC, ReactElement } from 'react'
-import { openMenu } from '../../store/menu/menu.slice'
-import { IMenuItem } from '../Menu/menu'
 import { useTranslation } from 'react-i18next'
-import { useDispatch } from 'react-redux'
 import * as S from '../Menu/menu.styles'
 
-type IMenuItemsProps = {
-    isMenuOpen: boolean
-}
-const MenuItems: FC<IMenuItemsProps> = ({ isMenuOpen }) => {
+const MenuItems: FC = () => {
     const { t } = useTranslation()
-    const dispatch = useDispatch()
-    const closeMenuEvent = () => {
-        dispatch(openMenu(!isMenuOpen))
-    }
 
-    const home: IMenuItem = {
-        text: t('header_menu_home'),
-        type: 'home',
-    }
-
-    const services: IMenuItem = {
-        text: t('header_menu_services'),
-        type: 'services',
-    }
-    const gallery: IMenuItem = {
-        text: t('header_menu_gallery'),
-        type: 'gallery',
-    }
-    const barbers: IMenuItem = {
-        text: t('header_menu_barbers'),
-        type: 'barbers',
-    }
-
-    const shop: IMenuItem = {
-        text: t('header_menu_shop'),
-        type: 'shop',
-    }
-
-    const contacts: IMenuItem = {
-        text: t('header_menu_contacts'),
-        type: 'contacts',
-    }
-
-    let menuItems = new Map<string, IMenuItem>([
-        ['', home],
-        ['services', services],
-        ['gallery', gallery],
-        ['barbers', barbers],
-        ['shop', shop],
-        ['contacts', contacts],
+    let menuItems = new Map<string, string>([
+        ['', t('header_menu_home')],
+        ['services', t('header_menu_services')],
+        ['gallery', t('header_menu_gallery')],
+        ['barbers', t('header_menu_barbers')],
+        ['shop', t('header_menu_shop')],
+        ['contacts', t('header_menu_contacts')],
     ])
 
     function getMenuItems(
-        map: Map<string, IMenuItem>,
-        closeMenuEvent: () => void,
+        map: Map<string, string>,
     ) {
         let items: ReactElement[] = []
         let item: ReactElement
 
-        map.forEach((menuItem: IMenuItem, key: string) => {
-            if (!menuItem.url) {
-                let to = '/' + key
+        map.forEach((menuItem: string, key: string) => {
+            let to = '/' + key
 
-                item = (
-                    <S.MenuItem
-                        key={key}
-                    >
-                        <S.MenuItemLink to={to} onClick={closeMenuEvent}>
-                            <S.MenuItemText>
-                                {menuItem.text}
-                            </S.MenuItemText>
-                        </S.MenuItemLink>
-                    </S.MenuItem>
-                )
-            }
+            item = (
+                <S.MenuItem key={key}>
+                    <S.MenuItemLink to={to}>
+                        <S.MenuItemText>
+                            {menuItem}
+                        </S.MenuItemText>
+                    </S.MenuItemLink>
+                </S.MenuItem>
+            )
             items.push(item)
         })
         return items
@@ -82,9 +39,7 @@ const MenuItems: FC<IMenuItemsProps> = ({ isMenuOpen }) => {
 
     return (
         <>
-            {getMenuItems(
-                menuItems,
-                closeMenuEvent)}
+            {getMenuItems(menuItems)}
         </>
     )
 }
