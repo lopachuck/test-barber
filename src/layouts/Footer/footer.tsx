@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import * as S from './footer.styles'
 import {
+    ACHIFY_URL,
     BARBERSHOP_DIRECTION_LINK_GOOGLE,
     BARBERSHOP_DIRECTION_LINK_WAZE,
     BARBERSHOP_FACEBOOK_LINK,
@@ -25,7 +26,7 @@ const Footer: FC = () => {
                             <SocialLinkFacebook to={BARBERSHOP_FACEBOOK_LINK} />
                         </S.FooterSocialWrapper>
                     </S.FooterColumn>
-                    <S.Logo to={'/'}/>
+                    <S.Logo to={'/'} />
                     <S.ContactsWrapper>
                         <S.InfoTitle>{t('header_menu_contacts')}</S.InfoTitle>
                         <S.ContactsDetails>
@@ -50,7 +51,9 @@ const Footer: FC = () => {
                     </S.ContactsWrapper>
                 </S.InfoWrapper>
                 <S.CopyrightWrapper>
-                    <S.CopyrightText>2024 © {t('contacts_brand_name')}</S.CopyrightText>
+                    <S.CopyrightText>2024&nbsp;©&nbsp;{t('contacts_brand_name')}&nbsp;powered&nbsp;by&nbsp;
+                        <a href={ACHIFY_URL}
+                           target="_blank">ACHIFY&nbsp;OÜ</a></S.CopyrightText>
                 </S.CopyrightWrapper>
             </S.FooterWrapper>
         </>
