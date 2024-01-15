@@ -6,7 +6,6 @@ type Props = {
 }
 
 const Container: FC<Props> = ({ children }): React.ReactElement => {
-    // const { isMenuOpen } = useSelector((state: any) => state.menu)
     return (
         <>
             <StyledContainer >{children}</StyledContainer>

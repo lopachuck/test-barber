@@ -6,12 +6,6 @@ import BodyScrollLock from '../BodyScrollLock/BodyScrollLock'
 import MenuItems from '../MenuItems/MenuItems'
 import MobileLang from '../MobileLang/MobileLang'
 
-export interface IMenuItem {
-    text: string
-    type: string
-    url?: string
-}
-
 const Menu: FC = () => {
     const { isMenuOpen } = useSelector((state: any) => state.menu)
     return (
@@ -19,7 +13,7 @@ const Menu: FC = () => {
             {isMenuOpen && (<BodyScrollLock />)}
             <MobileMenuTrigger />
             <S.MenuWrapper isMenuOpen={isMenuOpen}>
-                <MenuItems isMenuOpen={isMenuOpen} />
+                <MenuItems />
                 <MobileLang />
             </S.MenuWrapper>
         </>

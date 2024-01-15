@@ -61,7 +61,7 @@ export const MenuItemLink = styled(NavLink)`
     text-decoration: none;
     color: ${({theme}) => theme.colors.white};
     &.active{
-        color: ${({theme}) => theme.colors.accentColor} !important;
+        color: ${({ theme }) => theme.colors.accentColor};
     }
 `
 export const MenuItemText = styled.div`

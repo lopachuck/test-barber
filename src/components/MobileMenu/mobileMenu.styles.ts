@@ -13,7 +13,6 @@ export const BurgerBtn = styled.div`
     @media ${devices.md} {
         display: flex;
         align-items: center;
-        margin-left: 15px;
         position: relative;
         min-width: 30px;
         min-height: 30px;
