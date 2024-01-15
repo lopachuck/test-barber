@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import i18n from '../../i18n'
 import { useLangSelect } from '../../hooks/LangSelect/LangSelect'
 import { useSelector } from 'react-redux'
+import { BOOK_NOW } from '../../config/config'
 
 type HeaderProps = {
     hideBG?: boolean
@@ -48,7 +49,7 @@ const Header: FC<HeaderProps> = ({ hideBG = false }) => {
                                 {currentLang}
                             </S.LangMenuBtn>
                         </S.LangMenuWrapper>
-                        <BookingBtn to={'#'}>
+                        <BookingBtn to={BOOK_NOW}>
                             <span>{t('btn_header_bookNow')}</span>
                             <p>{t('btn_header_bookNow')}</p>
                         </BookingBtn>

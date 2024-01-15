@@ -8,3 +8,12 @@ export const BARBERSHOP_FACEBOOK_LINK: string = process.env.REACT_APP_FACEBOOK_L
 export const BARBERSHOP_INSTAGRAM_LINK: string = process.env.REACT_APP_INSTAGRAM_LINK || ''
 export const BARBERSHOP_MAIL_ADDRESS: string = process.env.REACT_APP_MAIL_ADDRESS || ''
 export const BARBERSHOP_PHONE: string = process.env.REACT_APP_PHONE || ''
+
+export const BOOK_NOW: string = process.env.REACT_APP_BOOK_NOW || ''
+export const SERVICES_MENS_HAIRCUT: string = process.env.REACT_APP_SERVICES_MENS_HAIRCUT || ''
+export const SERVICES_MENS_HAIRCUT_PLUS_SERVICES_BEARD_CORRECTION: string = process.env.REACT_APP_SERVICES_MENS_HAIRCUT_PLUS_SERVICES_BEARD_CORRECTION || ''
+export const SERVICES_BEARD_CORRECTION: string = process.env.REACT_APP_SERVICES_BEARD_CORRECTION || ''
+export const SERVICES_BEARD_TINTING: string = process.env.REACT_APP_SERVICES_BEARD_TINTING || ''
+export const SERVICES_CLIPPER_CUT: string = process.env.REACT_APP_SERVICES_CLIPPER_CUT || ''
+export const SERVICES_CLIPPER_CUT_PLUS_SERVICES_BEARD_CORRECTION: string = process.env.REACT_APP_SERVICES_CLIPPER_CUT_PLUS_SERVICES_BEARD_CORRECTION || ''
+export const SERVICES_FATHER_SON: string = process.env.REACT_APP_SERVICES_FATHER_SON || ''
