@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 import { SocialLinkFacebook, SocialLinkInstagram } from '../../pages/Home/home.styles'
 
 const Footer: FC = () => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     return (
         <>
             <S.FooterWrapper>
@@ -25,7 +25,6 @@ const Footer: FC = () => {
                             <SocialLinkFacebook to={BARBERSHOP_FACEBOOK_LINK} />
                         </S.FooterSocialWrapper>
                     </S.FooterColumn>
-                    {/*<S.Logo src={'/svg/icons/logo_big.svg'}/>*/}
                     <S.Logo to={'/'}/>
                     <S.ContactsWrapper>
                         <S.InfoTitle>{t('header_menu_contacts')}</S.InfoTitle>

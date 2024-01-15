@@ -10,6 +10,7 @@ import {
 } from '../../config/config'
 import { useTranslation } from 'react-i18next'
 import { CenteredTitle, PageWrapper } from '../Page/page.styles'
+import { SocialLinkFacebook, SocialLinkInstagram, SocialWrapper } from '../Home/home.styles'
 
 
 const Contacts: FC<IAppProps> = (props) => {
@@ -49,17 +50,13 @@ const Contacts: FC<IAppProps> = (props) => {
                         <span>{BARBERSHOP_MAIL_ADDRESS}</span>
                     </a>
                 </S.ContactInfo>
-                <S.SocialWrapper>
+                <S.ContactsSocialWrapper>
                     <span>{t('contacts_subscribe')}</span>
-                    <S.SocialIconWrapper>
-                        <S.SocialIcon to={BARBERSHOP_FACEBOOK_LINK} target={'_blank'} rel="noopener noreferrer">
-                            <img src={'/svg/icons/facebook.svg'} alt={'fb'}/>
-                        </S.SocialIcon>
-                        <S.SocialIcon to={BARBERSHOP_INSTAGRAM_LINK} target={'_blank'} rel="noopener noreferrer">
-                            <img src={'/svg/icons/instagram.svg'} alt={'insta'} />
-                        </S.SocialIcon>
-                    </S.SocialIconWrapper>
-                </S.SocialWrapper>
+                    <SocialWrapper>
+                        <SocialLinkInstagram to={BARBERSHOP_INSTAGRAM_LINK} />
+                        <SocialLinkFacebook to={BARBERSHOP_FACEBOOK_LINK} />
+                    </SocialWrapper>
+                </S.ContactsSocialWrapper>
             </S.ContactInfoWrapper>
             <S.MapWrapper>
                 <CustomGoogleMap/>
