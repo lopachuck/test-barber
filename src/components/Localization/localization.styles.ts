@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 import { PageWrapper } from '../../pages/Page/page.styles'
-import { Link } from 'react-router-dom'
 import { WorkTime } from '../../pages/Contacts/contacts.styles'
 import { GalleryTitle } from '../GalleryHome/galleryHome.styles'
-import {devices} from "../../devices";
+import { devices } from '../../devices'
 
 export const Localization = styled(PageWrapper)`
     padding-top: 100px;
@@ -20,9 +19,8 @@ export const Localization = styled(PageWrapper)`
         }
     }
 `
-export const Address = styled(Link)`
+export const Address = styled.span`
     color: ${({ theme }) => theme.colors.white};
-    text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 18px;

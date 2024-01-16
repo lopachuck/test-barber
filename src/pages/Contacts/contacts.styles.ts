@@ -4,7 +4,7 @@ import IconTime from '../../assets/icon/contacts/time.svg'
 import IconLocation from '../../assets/icon/contacts/location.svg'
 import IconMail from '../../assets/icon/contacts/letter.svg'
 import IconPhone from '../../assets/icon/contacts/phone.svg'
-import {Link, NavLink} from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 export const ContactInfoWrapper = styled.div`
     display: flex;
@@ -84,8 +84,8 @@ export const ContactsSocialWrapper = styled.div`
     }
 `
 
-export const ContactsPhoneLink = styled(NavLink)`
-    &:before{
+export const ContactsPhoneLink = styled(Link)`
+    &:before {
         content: " ";
         width: 32px;
         height: 32px;

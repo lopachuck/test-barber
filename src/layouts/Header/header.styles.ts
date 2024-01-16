@@ -98,7 +98,7 @@ export const LangMenuWrapper = styled.div`
     width: 70px;
     align-items: center;
     position: relative;
-    
+
     @media ${devices.xs_Landscape} {
         display: none;
     }

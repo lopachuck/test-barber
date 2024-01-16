@@ -1,20 +1,22 @@
-import styled from "styled-components";
-import {Link} from "react-router-dom";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import iconWaze from '../../assets/svg/map/Waze.svg'
 import iconGoogle from '../../assets/svg/map/google-maps.svg'
-import {devices} from "../../devices";
-export const MarkerInfoWrapper = styled.div `
+import { devices } from '../../devices'
+
+export const MarkerInfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    &>p{
+
+    & > p {
         text-transform: uppercase;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
-        color: ${({theme}) => theme.colors.background};
+        color: ${({ theme }) => theme.colors.background};
         @media ${devices.xs} {
             font-size: 14px;
         }
@@ -26,7 +28,8 @@ export const LinkWrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: 16px;
-    &>a{
+
+    & > a {
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -37,10 +40,14 @@ export const LinkWrapper = styled.div`
         }
     }
 `
-export const  LinkDirectionGoogle = styled(Link)`
+export const LinkDirectionGoogle = styled(Link).attrs({
+    target: '_blank',
+    rel: 'noopener noreferrer',
+})`
     display: flex;
     flex-direction: row;
-    &:before{
+
+    &:before {
         width: 24px;
         height: 24px;
         content: url(${iconGoogle});
@@ -48,14 +55,10 @@ export const  LinkDirectionGoogle = styled(Link)`
         margin-right: 2px;
     }
 `
-export const LinkDirectionWaze = styled(Link)`
-    display: flex;
-    flex-direction: row;
-    &:before{
-        width: 24px;
-        height: 24px;
+export const LinkDirectionWaze = styled(LinkDirectionGoogle)`
+    &:before {
         content: url(${iconWaze});
-        background-color: ${({theme}) => theme.colors.backgroundWaze};
+        background-color: ${({ theme }) => theme.colors.backgroundWaze};
         border-radius: 3px;
         margin-right: 4px;
     }

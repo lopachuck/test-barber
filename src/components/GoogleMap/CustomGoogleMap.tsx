@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleMap, InfoWindowF, MarkerF, useLoadScript } from '@react-google-maps/api'
-import {MarkerInfoWrapper, LinkWrapper, LinkDirectionWaze, LinkDirectionGoogle} from './customGoogleMap.styles'
+import { LinkDirectionGoogle, LinkDirectionWaze, LinkWrapper, MarkerInfoWrapper } from './customGoogleMap.styles'
 import {
     BARBERSHOP_DIRECTION_LINK_GOOGLE,
     BARBERSHOP_DIRECTION_LINK_WAZE,
@@ -107,16 +107,14 @@ const CustomGoogleMap: React.FC = () => {
                                     <p>{customMarker.name}</p>
                                     <LinkWrapper>
                                         <LinkDirectionGoogle
-                                            to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
-                                            rel="noopener noreferrer">Google Maps</LinkDirectionGoogle>
+                                            to={BARBERSHOP_DIRECTION_LINK_GOOGLE}>Google Maps</LinkDirectionGoogle>
                                         <LinkDirectionWaze
-                                            to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
-                                            rel="noopener noreferrer">Waze</LinkDirectionWaze>
+                                            to={BARBERSHOP_DIRECTION_LINK_WAZE}>Waze</LinkDirectionWaze>
                                     </LinkWrapper>
                                 </MarkerInfoWrapper>
                             </InfoWindowF>
                         </MarkerF>
-                    
+
                     </GoogleMap>
                 ) : null}
             </div>
