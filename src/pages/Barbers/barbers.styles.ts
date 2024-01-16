@@ -15,9 +15,7 @@ export const BarbersInfo = styled.div`
         gap: 12px;
     }
 `
-export const BarberPhoto = styled.picture.attrs(
-    props => ({ 'data-hover-src': props.hover }),
-)`
+export const BarberPhoto = styled.picture`
     display: flex;
     cursor: pointer;
     width: 360px;
