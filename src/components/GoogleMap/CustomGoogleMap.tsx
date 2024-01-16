@@ -107,10 +107,10 @@ const CustomGoogleMap: React.FC = () => {
                                     <p>{customMarker.name}</p>
                                     <LinkWrapper>
                                         <LinkDirectionGoogle
-                                            to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
+                                            to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
                                             rel="noopener noreferrer">Google Maps</LinkDirectionGoogle>
                                         <LinkDirectionWaze
-                                            to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
+                                            to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
                                             rel="noopener noreferrer">Waze</LinkDirectionWaze>
                                     </LinkWrapper>
                                 </MarkerInfoWrapper>
