@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import BG_4k from '../../assets/home/4k_3840_2160.jpeg'
 import BG_fhd from '../../assets/home/fhd_1920_1080.jpg'
-// import BG_tablel_HORIZONTAL from '../../assets/home/fhd_1920_1080.jpg'
 import BG_tablet_VERTICAL from '../../assets/home/tablet_768_829.jpg'
 import BG_mobile_VERTICAL from '../../assets/home/mobile_360_448.jpg'
 
@@ -71,7 +70,6 @@ export const BgImage = styled.div.attrs(props => ({
 }))`
     height: 100dvh;
     transition: all 0.5s linear;
-    //transition: all 2s ease-out;
     position: relative;
     background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
