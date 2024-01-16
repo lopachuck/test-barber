@@ -15,8 +15,11 @@ export const BarbersInfo = styled.div`
         gap: 12px;
     }
 `
-export const BarberPhoto = styled.picture`
+export const BarberPhoto = styled.picture.attrs(
+    props => ({ 'data-hover-src': props.hover }),
+)`
     display: flex;
+    cursor: pointer;
     width: 360px;
     height: 360px;
     @media ${devices.md} {
@@ -26,6 +29,17 @@ export const BarberPhoto = styled.picture`
     @media ${devices.xs} {
         width: 158px;
         height: 158px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.40s linear 0s;
+        -o-transition: all 0.40s linear 0s;
+        -ms-transition: all 0.40s linear 0s;
+        -moz-transition: all 0.40s linear 0s;
+        -webkit-transition: all 0.40s linear 0s;
+
+        cursor: pointer;
     }
 `
 export const BarberName = styled.div`
@@ -57,7 +71,7 @@ export const InfoTitle = styled.div`
     line-height: 28px; /* 116.667% */
     letter-spacing: -0.336px;
     color: ${({ theme }) => theme.colors.white};
-
+    margin-bottom: 8px;
 `
 export const InfoText = styled.div`
     font-size: 16px;
