@@ -3,6 +3,7 @@ import * as S from './barbers.styles'
 import { BARBERSHOP_MAIL_ADDRESS } from '../../config/config'
 import { useTranslation } from 'react-i18next'
 import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
+import BarberPhoto from '../../components/BarberPhoto/BarberPhoto'
 
 const Barbers: FC = () => {
     const { t, i18n } = useTranslation()
@@ -15,34 +16,38 @@ const Barbers: FC = () => {
                 </TitleWrapper>
                 <S.BarbersInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/600webp/Valeria_600_600.webp 2x'} type={'image/webp'} />
-                            <img src={'/img/barbers/600jpeg/Valeria.jpeg'} loading={'lazy'} alt="Valeria" />
-                        </S.BarberPhoto>
+                        <BarberPhoto key={1} srcOriginal={'/img/barbers/Valeria.jpeg'}
+                                     srcWebp={'/img/barbers/1440webp/Valeria_1440x1440.webp'}
+                                     srcHoverOriginal={'/img/barbers/colored/Valeria.jpeg'}
+                                     srcHoverWebp={'/img/barbers/colored/1440webp/Valeria_1440x1440.webp'}
+                                     alt={'Valeria'} />
                         <S.BarberName>Valeria</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/600webp/Vitalii_600_600.webp 2x'} type="image/webp" />
-                            <img src={'/img/barbers/600jpeg/Vitalii.jpeg'} loading={'lazy'} alt="Vitalii" />
-                        </S.BarberPhoto>
+                        <BarberPhoto key={2} srcOriginal={'/img/barbers/Vitalii.jpeg'}
+                                     srcWebp={'/img/barbers/1440webp/Vitalii_1440x1440.webp'}
+                                     srcHoverOriginal={'/img/barbers/colored/Vitalii.jpeg'}
+                                     srcHoverWebp={'/img/barbers/colored/1440webp/Vitalii_1440x1440.webp'}
+                                     alt={'Vitalii'} />
                         <S.BarberName>Vitalii</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/600webp/Viktoriia_600_600.webp 2x'} type="image/webp" />
-                            <img src={'/img/barbers/600jpeg/Viktoriia.jpeg'} loading={'lazy'} alt="Victoriia" />
-                        </S.BarberPhoto>
+                        <BarberPhoto key={3} srcOriginal={'/img/barbers/Viktoriia.jpeg'}
+                                     srcWebp={'/img/barbers/1440webp/Viktoriia_1440x1440.webp'}
+                                     srcHoverOriginal={'/img/barbers/colored/Viktoriia.jpeg'}
+                                     srcHoverWebp={'/img/barbers/colored/1440webp/Viktoriia_1440x1440.webp'}
+                                     alt={'Victoriia'} />
                         <S.BarberName>Victoriia</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
                     <S.BarberInfo>
-                        <S.BarberPhoto>
-                            <source srcSet={'/img/barbers/600webp/Alina_600_600.webp 2x'} type="image/webp" />
-                            <img src={'/img/barbers/600jpeg/Alina.jpeg'} loading={'lazy'} alt="Alina" />
-                        </S.BarberPhoto>
+                        <BarberPhoto key={4} srcOriginal={'/img/barbers/Alina.jpeg'}
+                                     srcWebp={'/img/barbers/1440webp/Alina_1440x1440.webp'}
+                                     srcHoverOriginal={'/img/barbers/colored/Alina.jpeg'}
+                                     srcHoverWebp={'/img/barbers/colored/1440webp/Alina_1440x1440.webp'}
+                                     alt={'Alina'} />
                         <S.BarberName>Alina</S.BarberName>
                         <S.BarberPosition>{t('barbers_barber_position')}</S.BarberPosition>
                     </S.BarberInfo>
