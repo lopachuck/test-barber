@@ -12,6 +12,7 @@ export const breakpoints = {
 
 export const devices = {
     xs: `(max-width: ${breakpoints.xs})`,
+    xs_Landscape: `(min-width: ${breakpoints.xs}) and (max-device-width: ${breakpoints.md}) and (orientation: landscape)`,
     sm: `(max-width: ${breakpoints.sm})`,
     md: `(max-width: ${breakpoints.md})`,
     m: `(max-width: ${breakpoints.m})`,

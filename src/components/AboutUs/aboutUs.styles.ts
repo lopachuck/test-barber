@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { devices } from '../../devices'
 
 export const AboutUs = styled.section`
@@ -103,7 +103,7 @@ export const AboutUsWrapper = styled.div`
     }
 `
 
-export const AboutLink = styled(Link)`
+export const AboutLink = styled(NavLink)`
 `
 
 export const HiringBlock = styled.p`

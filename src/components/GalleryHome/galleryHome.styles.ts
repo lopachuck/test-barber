@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { PageWrapper } from '../../pages/Page/page.styles'
 import { NavLink } from 'react-router-dom'
-import {devices} from "../../devices";
+import { devices } from '../../devices'
 
 
 export const Gallery = styled(PageWrapper)`
@@ -77,6 +77,7 @@ export const GalleryImageBig = styled.picture`
     @media ${devices.xs} {
         max-height: 144px;
     }
+
     & > img {
         height: 100%;
         width: 100%;
@@ -92,6 +93,7 @@ export const GalleryImageSmall = styled(GalleryImageBig)`
     @media ${devices.xs} {
         max-height: 82px;
     }
+
     & > img {
         height: unset;
         width: 100%;

@@ -22,8 +22,8 @@ const Header: FC<HeaderProps> = ({ hideBG = false }) => {
         <>
             <S.HeaderContainer className={'header-bg'} hideBG={isMenuOpen || hideBG}>
                 <S.HeaderWrapper>
-                    <S.LogoWrapper to={''}>
-                        <S.Logo src={'/svg/icons/logo.svg'} alt={'logo'} />
+                    <S.LogoWrapper>
+                        <S.Logo to={''} />
                     </S.LogoWrapper>
                     <S.MenuWrapper>
                         <Menu />

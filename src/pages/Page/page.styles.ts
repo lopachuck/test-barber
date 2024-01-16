@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import BG_4k from '../../assets/home/4k_3840_2160.jpeg'
 import BG_fhd from '../../assets/home/fhd_1920_1080.jpg'
-// import BG_tablel_HORIZONTAL from '../../assets/home/fhd_1920_1080.jpg'
 import BG_tablet_VERTICAL from '../../assets/home/tablet_768_829.jpg'
 import BG_mobile_VERTICAL from '../../assets/home/mobile_360_448.jpg'
 
@@ -70,18 +69,19 @@ export const BgImage = styled.div.attrs(props => ({
     bgi: props.img || BG_4k,
 }))`
     height: 100dvh;
+    transition: all 0.5s linear;
     position: relative;
     background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-size: auto calc(100dvh + 80px);
+    background-size: auto calc(100vh + 80px);
     background-position-y: -80px;
     background-position-x: center;
     @media ${devices.fhd} {
         background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: auto calc(100dvh + 80px);
+        background-size: auto calc(100vh + 80px);
         background-position-y: -80px;
         background-position-x: center;
     }
@@ -89,7 +89,7 @@ export const BgImage = styled.div.attrs(props => ({
         background: url(${BG_tablet_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: auto calc(100dvh + 80px);
+        background-size: auto calc(100vh + 80px);
         background-position-y: -80px;
         background-position-x: center;
     }
@@ -97,7 +97,7 @@ export const BgImage = styled.div.attrs(props => ({
         background: url(${BG_mobile_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: auto calc(100dvh + 80px);
+        background-size: auto calc(100vh + 80px);
         background-position-y: 10px;
         background-position-x: center;
     }
@@ -105,7 +105,7 @@ export const BgImage = styled.div.attrs(props => ({
         background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: 100% calc(100dvh + 80px);
+        background-size: 100% calc(100vh + 80px);
         background-position-y: -80px;
         background-position-x: center;
     }
@@ -113,7 +113,7 @@ export const BgImage = styled.div.attrs(props => ({
         background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: 100% calc(100dvh + 80px);
+        background-size: 100% calc(100vh + 80px);
         background-position-y: -80px;
         background-position-x: center;
     }

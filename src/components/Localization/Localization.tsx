@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import * as S from './localization.styles'
-import { BARBERSHOP_DIRECTION_LINK_WAZE } from '../../config/config'
 import CustomGoogleMap from '../GoogleMap/CustomGoogleMap'
 import { useTranslation } from 'react-i18next'
 
@@ -12,7 +11,7 @@ const Localization: FC = () => {
                 <div>
                     <div>
                         <S.LocalizationTitle>{t('home_localization')}</S.LocalizationTitle>
-                        <S.Address to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}>
+                        <S.Address>
                             {t('contacts_address')}
                         </S.Address>
                     </div>

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { PageWrapper, Subtitle, Title, TitleWrapper } from '../Page/page.styles'
 import { devices } from '../../devices'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import arrowDown from '../../assets/icon/arrow_down.svg'
 import arrowDown32 from '../../assets/icon/arrow_down32.svg'
@@ -33,9 +33,11 @@ export const HomePageWrapper = styled(PageWrapper)`
     flex-direction: column;
     justify-content: flex-end;
     height: 100dvh;
+    transition: all 0.5s linear;
 `
-const SocialLink = styled(NavLink).attrs({
+const SocialLink = styled(Link).attrs({
     target: '_blank',
+    rel: 'nofollow noopener',
 })`
     display: flex;
     width: 32px;
@@ -49,7 +51,7 @@ export const SocialLinkInstagram = styled(SocialLink)`
 `
 export const HomeTitleWrapper = styled(TitleWrapper)`
     position: relative;
-    margin-top: 43px;
+    margin-top: 44px;
     margin-left: 104px;
     margin-bottom: 133px;
     @media ${devices.xs} {
@@ -74,6 +76,7 @@ export const HomeTitleWrapper = styled(TitleWrapper)`
         margin-left: 96px;
     }
     @media ${devices.redmi12proPlus5gLandscape} , ${devices.iphoneSELandscape} {
+        margin-top: 24px;
         margin-bottom: 44px;
         &:before {
             position: absolute;
@@ -162,18 +165,31 @@ export const LogoLine = styled.div`
     width: 10000px;
     left: 0;
     bottom: 0;
-    height: 73px;
+    height: 72px;
     background-image: url(${logo});
-    background-size: 1180px 71px;
+    background-size: 1180px 70px;
     background-repeat: repeat-x;
 
-    overflow: hidden;
-    transform: translate(100%, 0);
+    @media ${devices.xs}, ${devices.xs_Landscape} {
+        background-image: url(${logo});
+        background-size: contain;
+        margin-bottom: 4px;
+        //background-size: 1180px 34px;
+        background-repeat: repeat-x;
+        height: 36px;
+        overflow: hidden;
+        //transform: translate(100%, 0);
+            // animation: ${marqueeAnimation} linear infinite forwards;
+        //animation-direction: normal;
+        //animation-duration: 200s;
+    }
+    //overflow: hidden;
+    //transform: translate(100%, 0);
 
 
-    animation: ${marqueeAnimation} linear infinite forwards;
-    animation-direction: normal;
-    animation-duration: 200s;
+        //animation: ${marqueeAnimation} linear infinite forwards;
+    //animation-direction: normal;
+    //animation-duration: 200s;
 `
 export const LogoLine2 = styled(LogoLine)`
     animation: 200s ${marqueeAnimation} 100s linear infinite forwards;

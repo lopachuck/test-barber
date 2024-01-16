@@ -20,6 +20,7 @@ const MobileMenuTrigger: FC = () => {
             dispatch(openMenu(!isMenuOpen))
             setIsMenuVisible(!isMenuVisible)
         }
+        window.scrollTo(0, 0);
     }, [location])
     return (
         <>

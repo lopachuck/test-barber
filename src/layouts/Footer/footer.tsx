@@ -42,11 +42,9 @@ const Footer: FC = () => {
                         </S.ContactsDetails>
                         <S.MapLinks>
                             <S.GoogleMapsLink
-                                to={BARBERSHOP_DIRECTION_LINK_GOOGLE} target={'_blank'}
-                                rel="noopener noreferrer">Google Maps</S.GoogleMapsLink>
+                                to={BARBERSHOP_DIRECTION_LINK_GOOGLE}>Google Maps</S.GoogleMapsLink>
                             <S.WazeLink
-                                to={BARBERSHOP_DIRECTION_LINK_WAZE} target={'_blank'}
-                                rel="noopener noreferrer">Waze</S.WazeLink>
+                                to={BARBERSHOP_DIRECTION_LINK_WAZE}>Waze</S.WazeLink>
                         </S.MapLinks>
                     </S.ContactsWrapper>
                 </S.InfoWrapper>

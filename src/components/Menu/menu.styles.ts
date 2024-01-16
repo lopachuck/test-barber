@@ -9,7 +9,6 @@ export interface IOpenMenuProps {
 export const MenuWrapper = styled.nav<IOpenMenuProps>`
     display: flex;
     gap: 32px;
-    touch-action: none;
     @media ${devices.md} {
         display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
         flex-direction: column;
@@ -36,7 +35,10 @@ export const MenuWrapper = styled.nav<IOpenMenuProps>`
     @media ${devices.redmi12proPlus5g} {
         padding-top: 36px;
     }
-    @media ${devices.redmi12proPlus5gLandscape} , ${devices.iphoneSELandscape} {
+    @media ${devices.redmi12proPlus5gLandscape} , ${devices.iphoneSELandscape}, ${devices.redminote7Landscape} {
+        & > div:first-child {
+            margin-top: 52px;            
+        }
         padding-top: 36px;
     }
     @media ${devices.sm} {

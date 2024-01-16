@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import checkmark from '../../assets/icon/checkmark.svg'
 import { NavLink } from 'react-router-dom'
+import IconLogoHeader from '../../assets/svg/header/logo.svg'
 
 export const HeaderContainer = styled.header`
     display: flex;
@@ -18,15 +19,15 @@ export const HeaderContainer = styled.header`
 `
 export const HeaderWrapper = styled.div`
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 1440px;
-    padding: 0 140px;
     width: 100%;
-    top: 0;
-    flex-direction: row;
     height: 80px;
-    z-index: 10;
     margin: 0 auto;
+    padding: 0 140px;
+    z-index: 10;
+    position: relative;
     @media ${devices.lg} {
         padding: 0 100px;
     }
@@ -40,17 +41,35 @@ export const HeaderWrapper = styled.div`
         padding: 0 16px;
     }
 `
-export const LogoWrapper = styled(NavLink)`
+export const LogoWrapper = styled.div`
+    display: flex;
+    align-items: center;
     @media ${devices.md} {
-        display: flex;
-        width: 100%;
         height: 60px;
-        text-decoration: none;
+        width: 100%;
         border-bottom: 1px solid ${({ theme }) => theme.colors.elementsGrey};
-        & > img {
-            width: 40px;
-            margin: auto;
-        }
+    }
+    @media ${devices.xs_Landscape} {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        border: none;
+        margin: 10px auto;
+    }
+`
+export const Logo = styled(NavLink)`
+    background-image: url(${IconLogoHeader});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+    @media ${devices.md} {
+        height: 40px;
+        width: 40px;
+        margin: 0 auto;
     }
 `
 export const MenuWrapper = styled.div`
@@ -79,6 +98,13 @@ export const LangMenuWrapper = styled.div`
     width: 70px;
     align-items: center;
     position: relative;
+
+    @media ${devices.xs_Landscape} {
+        display: none;
+    }
+    @media ${devices.sm} {
+        display: none;
+    }
 `
 export const LangMenuBtn = styled.span`
     display: flex;
@@ -95,9 +121,6 @@ export const LangMenuBtn = styled.span`
     border-radius: 12px;
     padding: 8px 12px;
     cursor: pointer;
-    @media ${devices.sm} {
-        display: none;
-    }
 `
 export const LangMenu = styled.div`
     display: flex;
@@ -177,9 +200,4 @@ export const BookingBtnWrapper = styled.div`
     @media ${devices.ipad} {
         gap: 16px;
     }
-`
-
-export const Logo = styled.img`
-    width: 60px;
-    padding-top: 7px;
 `
