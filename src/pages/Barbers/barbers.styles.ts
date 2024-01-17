@@ -5,9 +5,13 @@ export const BarbersInfo = styled.div`
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     max-width: 1160px;
     height: auto;
     margin: 40px 0;
+    @media ${devices.xs_Landscape} {
+        justify-content: space-between;
+    }
     @media ${devices.md} {
         gap: 24px;
     }

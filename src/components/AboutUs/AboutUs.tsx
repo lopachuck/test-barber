@@ -16,18 +16,21 @@ const AboutUs: FC = () => {
                     </div>
                     <picture>
                         <source media="(max-width: 480px)"
-                                srcSet={'/img/home/about_us/team_70_360_320.webp 320w'}
+                                srcSet={'/img/home/about_us/about_us_70_1120_1000.webp 320w'}
                                 type={'image/webp'} />
                         <source media="(max-width: 768px)"
-                                srcSet={'/img/home/about_us/team_70_648_500.webp 768w'}
+                                srcSet={'/img/home/about_us/about_us_70_1120_1000.webp 768w'}
                                 type={'image/webp'} />
                         <source media="(max-width: 960px)"
-                                srcSet={'/img/home/about_us/team_70_560_500.webp 960w'}
+                                srcSet={'/img/home/about_us/about_us_70_1120_1000.webp 960w'}
                                 type={'image/webp'} />
                         <source
-                            srcSet={'/img/home/about_us/team_70_560_500.webp 1280w'}
+                            srcSet={'/img/home/about_us/about_us_70_1120_1000.webp 1280w'}
                             type={'image/webp'} />
-                        <img src="/img/home/about_us/team_70_648_500.jpeg" alt="about us" />
+                        <source
+                            srcSet={'/img/home/about_us/about_us_70_2240_2000.webp 1280w'}
+                            type={'image/webp'} />
+                        <img src="/img/home/about_us/about_us.jpg" alt="about us" />
                     </picture>
                 </S.AboutUsWrapper>
                 <S.HiringBlock>

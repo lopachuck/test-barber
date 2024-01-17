@@ -3,8 +3,6 @@ import { devices } from '../../devices'
 
 export const Modal = styled.div`
     background-color: rgba(0, 0, 0, 0.75);
-    //overflow: visible;
-    //overflow-y: auto;
     transition: opacity 0.3s;
     z-index: 999;
 `

@@ -7,6 +7,14 @@ export const ShopTitle = styled(Title)`
     padding-top: 0;
     font-size: 80px;
     line-height: 80px;
+    @media ${devices.md} {
+        font-size: 54px;
+        line-height: 60px;
+    }
+    @media ${devices.xs} {
+        font-size: 40px;
+        line-height: 40px;
+    }
 `
 export const ShopPageWrapper = styled(PageWrapper)`
     display: flex;
