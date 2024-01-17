@@ -121,6 +121,10 @@ export const LangMenuBtn = styled.span`
     border-radius: 12px;
     padding: 8px 12px;
     cursor: pointer;
+    transition: 0.6s linear;
+    &:hover{
+        border: 1px solid ${({ theme }) => theme.colors.accentColor};
+    }
 `
 export const LangMenu = styled.div`
     display: flex;
