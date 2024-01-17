@@ -46,7 +46,6 @@ export const GalleryLink = styled(NavLink)`
     &:hover{
         color: ${({theme}) => theme.colors.white};
         border-bottom: 2px solid ${({ theme }) => theme.colors.white};
-        
     }
 `
 export const ImagesContainer = styled.div`
