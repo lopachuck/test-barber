@@ -174,22 +174,22 @@ export const LogoLine = styled.div`
         background-image: url(${logo});
         background-size: contain;
         margin-bottom: 4px;
-        //background-size: 1180px 34px;
+        background-size: 1180px 34px;
         background-repeat: repeat-x;
         height: 36px;
         overflow: hidden;
-        //transform: translate(100%, 0);
-            // animation: ${marqueeAnimation} linear infinite forwards;
-        //animation-direction: normal;
-        //animation-duration: 200s;
+        transform: translate(100%, 0);
+            animation: ${marqueeAnimation} linear infinite forwards;
+        animation-direction: normal;
+        animation-duration: 200s;
     }
-    //overflow: hidden;
-    //transform: translate(100%, 0);
+    overflow: hidden;
+    transform: translate(100%, 0);
 
 
-        //animation: ${marqueeAnimation} linear infinite forwards;
-    //animation-direction: normal;
-    //animation-duration: 200s;
+        animation: ${marqueeAnimation} linear infinite forwards;
+    animation-direction: normal;
+    animation-duration: 200s;
 `
 export const LogoLine2 = styled(LogoLine)`
     animation: 200s ${marqueeAnimation} 100s linear infinite forwards;

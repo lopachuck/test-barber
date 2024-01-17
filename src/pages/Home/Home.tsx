@@ -8,6 +8,7 @@ import Metrics from '../../components/Metrics/Metrics'
 import AboutUs from '../../components/AboutUs/AboutUs'
 import Localization from '../../components/Localization/Localization'
 import GalleryHome from '../../components/GalleryHome/GalleryHome'
+import LogoLine from "../../components/LogoLine/LogoLine";
 
 const Home: FC<IAppProps> = (props) => {
     const { t, i18n } = useTranslation()
@@ -27,7 +28,8 @@ const Home: FC<IAppProps> = (props) => {
                         <S.HomeSubtitle>{t('home_subtitle')}</S.HomeSubtitle>
                     </S.HomeTitleWrapper>
                 </S.HomePageWrapper>
-                <S.LogoLine />
+                {/*<S.LogoLine />*/}
+                <LogoLine />
             </BgImage>
             <PageWrapper>
                 <AboutUs />
