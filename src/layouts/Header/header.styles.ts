@@ -76,19 +76,10 @@ export const MenuWrapper = styled.div`
     display: flex;
     flex-direction: row;
     margin-left: 60px;
-    @media ${devices.md} {
+    @media ${devices.md}, ${devices.iphone12landscape} , ${devices.iphone12} {
         margin-left: unset;
     }
-    @media ${devices.iphone12landscape} {
-        margin-left: unset;
-    }
-    @media ${devices.iphone12} {
-        margin-left: unset;
-    }
-    @media ${devices.ipad7th} {
-        margin-left: 36px;
-    }
-    @media ${devices.ipad} {
+    @media ${devices.ipad7thLandscape}, ${devices.ipadLandscape} {
         margin-left: 36px;
     }
 `
@@ -198,10 +189,7 @@ export const BookingBtnWrapper = styled.div`
         height: 60px;
         gap: 16px;
     }
-    @media ${devices.ipad7th} {
-        gap: 16px;
-    }
-    @media ${devices.ipad} {
+    @media ${devices.ipad7thLandscape}, ${devices.ipadLandscape} {
         gap: 16px;
     }
 `

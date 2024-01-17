@@ -26,10 +26,10 @@ export const MenuWrapper = styled.nav<IOpenMenuProps>`
         overflow: scroll;
         background: ${({theme}) => theme.colors.background};
     }
-    @media ${devices.ipad7th} {
+    @media ${devices.ipad7thLandscape} {
         gap: 12px;
     }
-    @media ${devices.ipad} {
+    @media ${devices.ipadLandscape} {
         gap: 12px;
     }
     @media ${devices.redmi12proPlus5g} {

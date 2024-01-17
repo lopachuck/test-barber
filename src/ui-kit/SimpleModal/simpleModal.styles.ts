@@ -18,16 +18,7 @@ export const ContentWrapper = styled.div.attrs({
     justify-content: center;
     align-items: center;
     z-index: 100;
-    @media ${devices.md} {
-        top: 60px;
-    }
-    @media ${devices.xs} {
-        top: 60px;
-    }
-    @media ${devices.ipad7th} {
-        top: 60px;
-    }
-    @media ${devices.ipad} {
+    @media ${devices.md}, ${devices.xs}, ${devices.ipad7th}, ${devices.ipad} {
         top: 60px;
     }
 `
