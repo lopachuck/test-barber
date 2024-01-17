@@ -42,6 +42,11 @@ export const GalleryLink = styled(NavLink)`
     line-height: 24px;
     margin-left: 4px;
     border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+    transition: 0.6s linear;
+    &:hover{
+        color: ${({theme}) => theme.colors.white};
+        border-bottom: 2px solid ${({ theme }) => theme.colors.white};
+    }
 `
 export const ImagesContainer = styled.div`
     width: 100%;

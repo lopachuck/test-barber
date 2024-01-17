@@ -104,6 +104,10 @@ export const AboutUsWrapper = styled.div`
 `
 
 export const AboutLink = styled(NavLink)`
+    transition: 0.6s linear;
+    &:hover{
+        color: ${({theme}) => theme.colors.white};
+    }
 `
 
 export const HiringBlock = styled.p`
