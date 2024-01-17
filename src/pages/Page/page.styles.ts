@@ -74,14 +74,14 @@ export const BgImage = styled.div.attrs(props => ({
     background: url(${BG_4k}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-size: auto calc(100vh + 80px);
+    background-size: 100% calc(100vh + 80px);
     background-position-y: -80px;
     background-position-x: center;
     @media ${devices.fhd} {
         background: url(${BG_fhd}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
-        background-size: auto calc(100vh + 80px);
+        background-size: 100% calc(100vh + 80px);
         background-position-y: -80px;
         background-position-x: center;
     }
