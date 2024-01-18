@@ -59,5 +59,8 @@
   "contacts_sun": "P.",
   "coming_soon": "tulekul",
   "minutes": "min",
-  "hour": "t"
+  "hour": "t",
+  "error_oops": "oops!",
+  "error_smth_wrng": "Midagi läks valesti!",
+  "error_goback_btn": "Tagasi"
 }

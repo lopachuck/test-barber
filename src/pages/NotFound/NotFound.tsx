@@ -10,12 +10,12 @@ const NotFound: FC = () => {
             <S.ErrorPageWrapper>
                 <S.ErrorContainer>
                     <S.TitleWrapper>
-                        <S.ErrorTitle>OOPS!</S.ErrorTitle>
-                        <S.ErrorSubtitle>Something went wrong!</S.ErrorSubtitle>
+                        <S.ErrorTitle>{t('error_oops')}</S.ErrorTitle>
+                        <S.ErrorSubtitle>{t('error_smth_wrng')}</S.ErrorSubtitle>
                     </S.TitleWrapper>
                     <S.GoBack onClick={()=> navigate(-1)}>
-                        <p>Go Back</p>
-                        <p>Go Back</p>
+                        <p>{t('error_goback_btn')}</p>
+                        <p>{t('error_goback_btn')}</p>
                     </S.GoBack>
                 </S.ErrorContainer>
             </S.ErrorPageWrapper>

@@ -59,5 +59,8 @@
   "contacts_sun": "ВС",
   "coming_soon": "вскоре",
   "minutes": "мин",
-  "hour": "ч"
+  "hour": "ч",
+  "error_oops": "Упс!",
+  "error_smth_wrng": "Что-то пошло не так!",
+  "error_goback_btn": "Назад"
 }
