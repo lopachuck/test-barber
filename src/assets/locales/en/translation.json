@@ -59,5 +59,8 @@
   "contacts_sun": "Sun",
   "coming_soon": "coming soon",
   "minutes": "min",
-  "hour": "h"
+  "hour": "h",
+  "error_oops": "oops!",
+  "error_smth_wrng": "Something went wrong!",
+  "error_goback_btn": "Go back"
 }
