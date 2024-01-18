@@ -205,7 +205,6 @@ const Services: FC<IAppProps> = (props) => {
                     </S.Service>
                 </S.Services>
             </PageWrapper>
-            
         </>
     )
 }

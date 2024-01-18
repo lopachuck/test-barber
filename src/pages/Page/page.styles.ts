@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { devices } from '../../devices'
 import BG_4k from '../../assets/home/4k_3840_2160.jpeg'
 import BG_fhd from '../../assets/home/fhd_1920_1080.jpg'
-import BG_tablet_VERTICAL from '../../assets/home/tablet_768_829.jpg'
-import BG_mobile_VERTICAL from '../../assets/home/mobile_360_448.jpg'
+import BG_mobile_VERTICAL from '../../assets/home/mobile_2160_2880.jpg'
 
 export const PageWrapper = styled.div.attrs({
     className: 'container-wrapper',
@@ -86,7 +85,7 @@ export const BgImage = styled.div.attrs(props => ({
         background-position-x: center;
     }
     @media ${devices.md} {
-        background: url(${BG_tablet_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
+        background: url(${BG_mobile_VERTICAL}), ${({ theme }) => theme.colors.backgroundBlack} 50%;
         background-repeat: no-repeat;
         background-origin: border-box;
         background-size: auto calc(100vh + 80px);
