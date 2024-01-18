@@ -8,7 +8,10 @@ export const StyledContainer = styled.main`
     margin: 80px auto 0;
     width: 100%;
     @media ${devices.md} {
-    
+        margin: 120px auto 0;
+    }
+    @media ${devices.xs_Landscape}{
+        margin: 60px auto 0;
     }
 
     @media (max-width: 428px) {
