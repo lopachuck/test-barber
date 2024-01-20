@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.js": "/test-barber/static/js/main.4262abd5.js",
+    "static/js/787.897ba8a3.chunk.js": "/test-barber/static/js/787.897ba8a3.chunk.js",
+    "static/media/4k_3840_2160.jpeg": "/test-barber/static/media/4k_3840_2160.30b60263478b2ee77f90.jpeg",
+    "static/media/Animation.svg": "/test-barber/static/media/Animation.03530bdbc3d7abf31b1f805c2f78fbfb.svg",
+    "static/media/logo_big.svg": "/test-barber/static/media/logo_big.c525fca6132ad58170ec65981ba86c78.svg",
+    "static/media/LogoLine.svg": "/test-barber/static/media/LogoLine.6c128017d2c8f3519d407ed77750c8d4.svg",
+    "static/media/logo.svg": "/test-barber/static/media/logo.f4fbd1f4bc2236d7b9cc2160be3a3332.svg",
+    "static/media/mobile_2160_2880.jpg": "/test-barber/static/media/mobile_2160_2880.9a033849336af1642b8d.jpg",
+    "static/media/bg_shop.jpeg": "/test-barber/static/media/bg_shop.ba9d2726db678181ba02.jpeg",
+    "static/media/fhd_1920_1080.jpg": "/test-barber/static/media/fhd_1920_1080.f78a166436b895563051.jpg",
+    "static/media/Error404.png": "/test-barber/static/media/Error404.6f414a49744ef83d729d.png",
+    "static/media/Waze.svg": "/test-barber/static/media/Waze.373b3b65aecb41d3547d7e8959d97d8b.svg",
+    "static/media/google-maps.svg": "/test-barber/static/media/google-maps.1093a92a339c4b50ad012ef3fdf2e59c.svg",
+    "index.html": "/test-barber/index.html",
+    "static/media/instagram.svg": "/test-barber/static/media/instagram.c1b8ed78674da24d051350021941abd0.svg",
+    "static/media/location.svg": "/test-barber/static/media/location.ca62cf79c44dea6404e33f0c7fc539b8.svg",
+    "static/media/phone.svg": "/test-barber/static/media/phone.7fc2dad90f66b3d5afd19fa0845c540e.svg",
+    "static/media/time.svg": "/test-barber/static/media/time.bfa9a3fa3384cb372028c5d63e856830.svg",
+    "static/media/facebook.svg": "/test-barber/static/media/facebook.359e6fb2a15c8108126b68e57f2671cb.svg",
+    "static/media/arrow_down.svg": "/test-barber/static/media/arrow_down.34ccf8b4003e85d2b87868f373e25103.svg",
+    "static/media/checkmark.svg": "/test-barber/static/media/checkmark.acdb3a009aa06e9a67fbc8715736f0dc.svg",
+    "static/media/arrow_down32.svg": "/test-barber/static/media/arrow_down32.61b893c7b9e345f4afe969b576700085.svg",
+    "static/media/arrow_right.svg": "/test-barber/static/media/arrow_right.047911805d5041f732426189dd78d629.svg",
+    "static/media/arrow_left.svg": "/test-barber/static/media/arrow_left.d0fa974cbdc9355fcd00dd46b8064938.svg",
+    "static/media/letter.svg": "/test-barber/static/media/letter.a19a5a6cf5fc1e228059040693008e94.svg",
+    "static/media/arrow_back_black.svg": "/test-barber/static/media/arrow_back_black.9cd63d3ba5f7d78c971c8e424c31586e.svg",
+    "main.4262abd5.js.map": "/test-barber/static/js/main.4262abd5.js.map",
+    "787.897ba8a3.chunk.js.map": "/test-barber/static/js/787.897ba8a3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4262abd5.js"
+  ]
+}
